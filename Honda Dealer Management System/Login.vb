@@ -52,6 +52,7 @@ Public Class Login
     End Sub
 
     Sub CekMenu()
+        'salah dir 
         If UserAkses.HasPermission("GeneralModule") Then
             GeneralModule.Enabled = True
         End If
