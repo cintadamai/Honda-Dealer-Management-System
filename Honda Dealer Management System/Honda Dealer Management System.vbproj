@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DB6B24E-B071-4DAC-A632-D031BF05E7F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Honda_Dealer_Management_System.My.MyApplication</StartupObject>
+    <RootNamespace>Honda_Dealer_Management_System</RootNamespace>
+    <AssemblyName>Honda Dealer Management System</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Honda Dealer Management System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Honda Dealer Management System.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Npgsql, Version=3.2.5.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.5\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="DB\DMSCode\BranchModel.Designer.vb">
+      <DependentUpon>BranchModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\BranchModel.vb" />
+    <Compile Include="DB\DMSCode\ConnectionHelper.vb" />
+    <Compile Include="DB\DMSCode\DivisiModel.Designer.vb">
+      <DependentUpon>DivisiModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\DivisiModel.vb" />
+    <Compile Include="DB\DMSCode\JabatanModel.Designer.vb">
+      <DependentUpon>JabatanModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\JabatanModel.vb" />
+    <Compile Include="DB\DMSCode\KaryawanModel.Designer.vb">
+      <DependentUpon>KaryawanModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\KaryawanModel.vb" />
+    <Compile Include="DB\DMSCode\MenuModel.Designer.vb">
+      <DependentUpon>MenuModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\MenuModel.vb" />
+    <Compile Include="DB\DMSCode\RoleMenuModel.Designer.vb">
+      <DependentUpon>RoleMenuModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\RoleMenuModel.vb" />
+    <Compile Include="DB\DMSCode\RoleModel.Designer.vb">
+      <DependentUpon>RoleModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\RoleModel.vb" />
+    <Compile Include="DB\DMSCode\UnitCustomerModel.Designer.vb">
+      <DependentUpon>UnitCustomerModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitCustomerModel.vb" />
+    <Compile Include="DB\DMSCode\UnitGudangModel.Designer.vb">
+      <DependentUpon>UnitGudangModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitGudangModel.vb" />
+    <Compile Include="DB\DMSCode\UnitModelModel.Designer.vb">
+      <DependentUpon>UnitModelModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitModelModel.vb" />
+    <Compile Include="DB\DMSCode\UnitProspekFollowupModel.Designer.vb">
+      <DependentUpon>UnitProspekFollowupModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitProspekFollowupModel.vb" />
+    <Compile Include="DB\DMSCode\UnitProspekModel.Designer.vb">
+      <DependentUpon>UnitProspekModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitProspekModel.vb" />
+    <Compile Include="DB\DMSCode\UnitPurchaseDetailModel.Designer.vb">
+      <DependentUpon>UnitPurchaseDetailModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitPurchaseDetailModel.vb" />
+    <Compile Include="DB\DMSCode\UnitPurchaseModel.Designer.vb">
+      <DependentUpon>UnitPurchaseModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitPurchaseModel.vb" />
+    <Compile Include="DB\DMSCode\UnitReceiveModel.Designer.vb">
+      <DependentUpon>UnitReceiveModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitReceiveModel.vb" />
+    <Compile Include="DB\DMSCode\UnitSpkModel.Designer.vb">
+      <DependentUpon>UnitSpkModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitSpkModel.vb" />
+    <Compile Include="DB\DMSCode\UnitStockModel.Designer.vb">
+      <DependentUpon>UnitStockModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitStockModel.vb" />
+    <Compile Include="DB\DMSCode\UnitSupplierModel.Designer.vb">
+      <DependentUpon>UnitSupplierModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitSupplierModel.vb" />
+    <Compile Include="DB\DMSCode\UnitWarnaModel.Designer.vb">
+      <DependentUpon>UnitWarnaModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitWarnaModel.vb" />
+    <Compile Include="DB\DMSCode\UserModel.Designer.vb">
+      <DependentUpon>UserModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UserModel.vb" />
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul\UserAkses.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DB\DMS.xpo" />
+    <None Include="DB\DMS.xpo.diagram">
+      <DependentUpon>DMS.xpo</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1409092.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
