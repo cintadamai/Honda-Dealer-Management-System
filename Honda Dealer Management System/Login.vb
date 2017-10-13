@@ -46,12 +46,15 @@ Public Class Login
         End If
 
         If User.Count = 1 Then
+            UserAkses.User = User.First
             CekMenu()
         End If
     End Sub
 
     Sub CekMenu()
-
+        If UserAkses.HasPermission("GeneralModule") Then
+            GeneralModule.Enabled = True
+        End If
     End Sub
 
 End Class
