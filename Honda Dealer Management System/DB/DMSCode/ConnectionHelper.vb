@@ -16,7 +16,7 @@ Namespace HDMS
         Const ConnectionString As String = "XpoProvider=Postgres;Server=127.0.0.1;User Id=postgres;Password=110994;Database=HDMS;Encoding=UNICODE;"
         Public Shared Sub Connect(ByVal autoCreationOption As DB.AutoCreateOption)
             XpoDefault.DataLayer = XpoDefault.GetDataLayer(ConnectionString, autoCreationOption)
-            XpoDefault.Session = New Session(XpoDefault.DataLayer)
+            XpoDefault.Session = Nothing
         End Sub
         Public Shared Function GetConnectionProvider(ByVal autoCreationOption As DB.AutoCreateOption) As DB.IDataStore
             Return XpoDefault.GetConnectionProvider(ConnectionString, autoCreationOption)

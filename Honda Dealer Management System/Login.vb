@@ -52,10 +52,21 @@ Public Class Login
     End Sub
 
     Sub CekMenu()
-        'salah dir 
         If UserAkses.HasPermission("GeneralModule") Then
             GeneralModule.Enabled = True
         End If
     End Sub
 
+    Private Sub username_KeyPress(sender As Object, e As KeyPressEventArgs) Handles username.KeyPress
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
+            ''SendKeys.Send("{TAB}")
+            password.Select()
+        End If
+    End Sub
+
+    Private Sub password_KeyPress(sender As Object, e As KeyPressEventArgs) Handles password.KeyPress
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
+            masuk.PerformClick()
+        End If
+    End Sub
 End Class
