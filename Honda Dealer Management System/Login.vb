@@ -85,4 +85,19 @@ Public Class Login
         End If
     End Sub
 
+    Private Sub ITSModul_Click(sender As Object, e As EventArgs) Handles ITSModul.Click
+
+    End Sub
+
+    Private Sub username_KeyDown(sender As Object, e As KeyEventArgs) Handles username.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            password.Select()
+        End If
+    End Sub
+
+    Private Sub password_KeyDown(sender As Object, e As KeyEventArgs) Handles password.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            masuk.PerformClick()
+        End If
+    End Sub
 End Class
