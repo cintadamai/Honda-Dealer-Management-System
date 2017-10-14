@@ -34,18 +34,18 @@ Partial Class Login
         Me.username = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
+        Me.ITSModul = New DevExpress.XtraEditors.SimpleButton()
+        Me.About = New DevExpress.XtraEditors.SimpleButton()
+        Me.TaxModul = New DevExpress.XtraEditors.SimpleButton()
+        Me.FinanceModul = New DevExpress.XtraEditors.SimpleButton()
+        Me.ServiceModul = New DevExpress.XtraEditors.SimpleButton()
+        Me.SparepartModul = New DevExpress.XtraEditors.SimpleButton()
+        Me.UnitModul = New DevExpress.XtraEditors.SimpleButton()
         Me.GeneralModule = New DevExpress.XtraEditors.SimpleButton()
         Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit()
         Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
         Me.validator = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         Me.UOW = New DevExpress.Xpo.UnitOfWork(Me.components)
-        Me.UnitModul = New DevExpress.XtraEditors.SimpleButton()
-        Me.SparepartModul = New DevExpress.XtraEditors.SimpleButton()
-        Me.ServiceModul = New DevExpress.XtraEditors.SimpleButton()
-        Me.About = New DevExpress.XtraEditors.SimpleButton()
-        Me.TaxModul = New DevExpress.XtraEditors.SimpleButton()
-        Me.FinanceModul = New DevExpress.XtraEditors.SimpleButton()
-        Me.ITSModul = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.password.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,7 +62,7 @@ Partial Class Login
         Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Adobe Ming Std L", 20.0!, System.Drawing.FontStyle.Bold)
         Me.LabelControl1.Appearance.Options.UseFont = True
         Me.LabelControl1.LineVisible = True
-        Me.LabelControl1.Location = New System.Drawing.Point(193, 104)
+        Me.LabelControl1.Location = New System.Drawing.Point(183, 104)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(435, 28)
         Me.LabelControl1.TabIndex = 0
@@ -149,19 +149,84 @@ Partial Class Login
         Me.GroupControl1.Controls.Add(Me.SparepartModul)
         Me.GroupControl1.Controls.Add(Me.UnitModul)
         Me.GroupControl1.Controls.Add(Me.GeneralModule)
+        Me.GroupControl1.Enabled = False
         Me.GroupControl1.Location = New System.Drawing.Point(56, 382)
         Me.GroupControl1.Name = "GroupControl1"
         Me.GroupControl1.Size = New System.Drawing.Size(702, 134)
         Me.GroupControl1.TabIndex = 2
         Me.GroupControl1.Text = "Menu"
         '
+        'ITSModul
+        '
+        Me.ITSModul.Enabled = False
+        Me.ITSModul.Location = New System.Drawing.Point(365, 74)
+        Me.ITSModul.Name = "ITSModul"
+        Me.ITSModul.Size = New System.Drawing.Size(138, 35)
+        Me.ITSModul.TabIndex = 12
+        Me.ITSModul.Text = "ITS"
+        '
+        'About
+        '
+        Me.About.Enabled = False
+        Me.About.Location = New System.Drawing.Point(509, 74)
+        Me.About.Name = "About"
+        Me.About.Size = New System.Drawing.Size(138, 35)
+        Me.About.TabIndex = 11
+        Me.About.Text = "About"
+        '
+        'TaxModul
+        '
+        Me.TaxModul.Enabled = False
+        Me.TaxModul.Location = New System.Drawing.Point(221, 74)
+        Me.TaxModul.Name = "TaxModul"
+        Me.TaxModul.Size = New System.Drawing.Size(138, 35)
+        Me.TaxModul.TabIndex = 10
+        Me.TaxModul.Text = "Tax"
+        '
+        'FinanceModul
+        '
+        Me.FinanceModul.Enabled = False
+        Me.FinanceModul.Location = New System.Drawing.Point(77, 74)
+        Me.FinanceModul.Name = "FinanceModul"
+        Me.FinanceModul.Size = New System.Drawing.Size(138, 35)
+        Me.FinanceModul.TabIndex = 9
+        Me.FinanceModul.Text = "Finance"
+        '
+        'ServiceModul
+        '
+        Me.ServiceModul.Enabled = False
+        Me.ServiceModul.Location = New System.Drawing.Point(509, 33)
+        Me.ServiceModul.Name = "ServiceModul"
+        Me.ServiceModul.Size = New System.Drawing.Size(138, 35)
+        Me.ServiceModul.TabIndex = 8
+        Me.ServiceModul.Text = "Service"
+        '
+        'SparepartModul
+        '
+        Me.SparepartModul.Enabled = False
+        Me.SparepartModul.Location = New System.Drawing.Point(365, 33)
+        Me.SparepartModul.Name = "SparepartModul"
+        Me.SparepartModul.Size = New System.Drawing.Size(138, 35)
+        Me.SparepartModul.TabIndex = 7
+        Me.SparepartModul.Text = "Sparepart"
+        '
+        'UnitModul
+        '
+        Me.UnitModul.Enabled = False
+        Me.UnitModul.Location = New System.Drawing.Point(221, 33)
+        Me.UnitModul.Name = "UnitModul"
+        Me.UnitModul.Size = New System.Drawing.Size(138, 35)
+        Me.UnitModul.TabIndex = 6
+        Me.UnitModul.Text = "Unit"
+        '
         'GeneralModule
         '
+        Me.GeneralModule.Enabled = False
         Me.GeneralModule.Location = New System.Drawing.Point(77, 33)
         Me.GeneralModule.Name = "GeneralModule"
         Me.GeneralModule.Size = New System.Drawing.Size(138, 35)
         Me.GeneralModule.TabIndex = 5
-        Me.GeneralModule.Text = "General Modul"
+        Me.GeneralModule.Text = "General Module"
         '
         'PictureEdit1
         '
@@ -178,62 +243,6 @@ Partial Class Login
         '
         Me.UOW.IsObjectModifiedOnNonPersistentPropertyChange = Nothing
         Me.UOW.TrackPropertiesModifications = False
-        '
-        'UnitModul
-        '
-        Me.UnitModul.Location = New System.Drawing.Point(221, 33)
-        Me.UnitModul.Name = "UnitModul"
-        Me.UnitModul.Size = New System.Drawing.Size(138, 35)
-        Me.UnitModul.TabIndex = 6
-        Me.UnitModul.Text = "Unit"
-        '
-        'SparepartModul
-        '
-        Me.SparepartModul.Location = New System.Drawing.Point(365, 33)
-        Me.SparepartModul.Name = "SparepartModul"
-        Me.SparepartModul.Size = New System.Drawing.Size(138, 35)
-        Me.SparepartModul.TabIndex = 7
-        Me.SparepartModul.Text = "Sparepart"
-        '
-        'ServiceModul
-        '
-        Me.ServiceModul.Location = New System.Drawing.Point(509, 33)
-        Me.ServiceModul.Name = "ServiceModul"
-        Me.ServiceModul.Size = New System.Drawing.Size(138, 35)
-        Me.ServiceModul.TabIndex = 8
-        Me.ServiceModul.Text = "Service"
-        '
-        'About
-        '
-        Me.About.Location = New System.Drawing.Point(509, 74)
-        Me.About.Name = "About"
-        Me.About.Size = New System.Drawing.Size(138, 35)
-        Me.About.TabIndex = 11
-        Me.About.Text = "About"
-        '
-        'TaxModul
-        '
-        Me.TaxModul.Location = New System.Drawing.Point(221, 74)
-        Me.TaxModul.Name = "TaxModul"
-        Me.TaxModul.Size = New System.Drawing.Size(138, 35)
-        Me.TaxModul.TabIndex = 10
-        Me.TaxModul.Text = "Tax"
-        '
-        'FinanceModul
-        '
-        Me.FinanceModul.Location = New System.Drawing.Point(77, 74)
-        Me.FinanceModul.Name = "FinanceModul"
-        Me.FinanceModul.Size = New System.Drawing.Size(138, 35)
-        Me.FinanceModul.TabIndex = 9
-        Me.FinanceModul.Text = "Finance"
-        '
-        'ITSModul
-        '
-        Me.ITSModul.Location = New System.Drawing.Point(365, 74)
-        Me.ITSModul.Name = "ITSModul"
-        Me.ITSModul.Size = New System.Drawing.Size(138, 35)
-        Me.ITSModul.TabIndex = 12
-        Me.ITSModul.Text = "ITS"
         '
         'Login
         '

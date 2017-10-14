@@ -56,6 +56,9 @@
     <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Npgsql, Version=3.2.5.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.3.2.5\lib\net451\Npgsql.dll</HintPath>
     </Reference>
@@ -169,6 +172,24 @@
       <DependentUpon>UserModel.vb</DependentUpon>
     </Compile>
     <Compile Include="DB\DMSCode\UserModel.vb" />
+    <Compile Include="Forms\FormTemplate.Designer.vb">
+      <DependentUpon>FormTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralModule\GeneralModuleMDI.Designer.vb">
+      <DependentUpon>GeneralModuleMDI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralModule\GeneralModuleMDI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralModule\User\UserForm.Designer.vb">
+      <DependentUpon>UserForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralModule\User\UserForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -193,6 +214,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\FormTemplate.resx">
+      <DependentUpon>FormTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralModule\GeneralModuleMDI.resx">
+      <DependentUpon>GeneralModuleMDI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralModule\User\UserForm.resx">
+      <DependentUpon>UserForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -224,5 +254,9 @@
   <ItemGroup>
     <None Include="Resources\1409092.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\role_32x32.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

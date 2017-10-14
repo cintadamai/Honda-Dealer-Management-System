@@ -3,7 +3,7 @@ Imports System.Linq
 Imports System.Linq.Expressions
 Imports Honda_Dealer_Management_System.HDMS
 Module UserAkses
-    Dim UOW As New UnitOfWork()
+    Dim UOW As New UnitOfWork(XpoDefault.DataLayer)
     Public User As UserModel
     Dim Users As XPQuery(Of UserModel) = UOW.Query(Of UserModel)()
     Dim Roles As XPQuery(Of RoleModel) = UOW.Query(Of RoleModel)()

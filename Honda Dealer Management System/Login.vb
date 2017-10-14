@@ -47,15 +47,47 @@ Public Class Login
 
         If User.Count = 1 Then
             UserAkses.User = User.First
+            GroupControl1.Enabled = True
+            username.Enabled = False
+            password.Enabled = False
+            masuk.Enabled = False
             CekMenu()
         End If
     End Sub
 
     Sub CekMenu()
-        'salah dir 
         If UserAkses.HasPermission("GeneralModule") Then
             GeneralModule.Enabled = True
         End If
+
+        If UserAkses.HasPermission("UnitModul") Then
+            UnitModul.Enabled = True
+        End If
+
+        If UserAkses.HasPermission("SparepartModul") Then
+            SparepartModul.Enabled = True
+        End If
+
+        If UserAkses.HasPermission("ServiceModul") Then
+            ServiceModul.Enabled = True
+        End If
+
+        If UserAkses.HasPermission("FinanceModul") Then
+            FinanceModul.Enabled = True
+        End If
+
+        If UserAkses.HasPermission("TaxModul") Then
+            TaxModul.Enabled = True
+        End If
+
+        If UserAkses.HasPermission("ITSModul") Then
+            ITSModul.Enabled = True
+        End If
     End Sub
 
+    Private Sub GeneralModule_Click(sender As Object, e As EventArgs) Handles GeneralModule.Click
+        Dim f = New GeneralModuleMDI
+        f.Show()
+        f.Focus()
+    End Sub
 End Class
