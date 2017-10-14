@@ -100,4 +100,12 @@ Public Class Login
             masuk.PerformClick()
         End If
     End Sub
+
+    Private Sub About_Click(sender As Object, e As EventArgs) Handles About.Click
+        'coba coba
+    End Sub
+
+    Private Sub GeneralModule_Click(sender As Object, e As EventArgs) Handles GeneralModule.Click
+
+    End Sub
 End Class
