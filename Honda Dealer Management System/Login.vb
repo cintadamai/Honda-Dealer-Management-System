@@ -85,9 +85,4 @@ Public Class Login
         End If
     End Sub
 
-    Private Sub GeneralModule_Click(sender As Object, e As EventArgs) Handles GeneralModule.Click
-        Dim f = New GeneralModuleMDI
-        f.Show()
-        f.Focus()
-    End Sub
 End Class

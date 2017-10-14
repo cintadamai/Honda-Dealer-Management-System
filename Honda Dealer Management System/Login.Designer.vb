@@ -23,8 +23,8 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.keluar = New DevExpress.XtraEditors.SimpleButton()
@@ -106,9 +106,9 @@ Partial Class Login
         Me.password.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.password.Size = New System.Drawing.Size(160, 20)
         Me.password.TabIndex = 3
-        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule3.ErrorText = "Harus di isi."
-        Me.validator.SetValidationRule(Me.password, ConditionValidationRule3)
+        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule1.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.password, ConditionValidationRule1)
         '
         'LabelControl3
         '
@@ -127,9 +127,9 @@ Partial Class Login
         Me.username.Properties.Appearance.Options.UseBackColor = True
         Me.username.Size = New System.Drawing.Size(160, 20)
         Me.username.TabIndex = 1
-        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule1.ErrorText = "Harus di isi."
-        Me.validator.SetValidationRule(Me.username, ConditionValidationRule1)
+        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule2.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.username, ConditionValidationRule2)
         '
         'LabelControl2
         '
@@ -156,14 +156,53 @@ Partial Class Login
         Me.GroupControl1.TabIndex = 2
         Me.GroupControl1.Text = "Menu"
         '
-        'ITSModul
+        'GeneralModule
         '
-        Me.ITSModul.Enabled = False
-        Me.ITSModul.Location = New System.Drawing.Point(365, 74)
-        Me.ITSModul.Name = "ITSModul"
-        Me.ITSModul.Size = New System.Drawing.Size(138, 35)
-        Me.ITSModul.TabIndex = 12
-        Me.ITSModul.Text = "ITS"
+        Me.GeneralModule.Location = New System.Drawing.Point(77, 33)
+        Me.GeneralModule.Name = "GeneralModule"
+        Me.GeneralModule.Size = New System.Drawing.Size(138, 35)
+        Me.GeneralModule.TabIndex = 5
+        Me.GeneralModule.Text = "General Modul"
+        '
+        'PictureEdit1
+        '
+        Me.PictureEdit1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureEdit1.EditValue = Global.Honda_Dealer_Management_System.My.Resources.Resources._1409092
+        Me.PictureEdit1.Location = New System.Drawing.Point(349, 22)
+        Me.PictureEdit1.Name = "PictureEdit1"
+        Me.PictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
+        Me.PictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze
+        Me.PictureEdit1.Size = New System.Drawing.Size(95, 76)
+        Me.PictureEdit1.TabIndex = 3
+        '
+        'UOW
+        '
+        Me.UOW.IsObjectModifiedOnNonPersistentPropertyChange = Nothing
+        Me.UOW.TrackPropertiesModifications = False
+        '
+        'UnitModul
+        '
+        Me.UnitModul.Location = New System.Drawing.Point(221, 33)
+        Me.UnitModul.Name = "UnitModul"
+        Me.UnitModul.Size = New System.Drawing.Size(138, 35)
+        Me.UnitModul.TabIndex = 6
+        Me.UnitModul.Text = "Unit"
+        '
+        'SparepartModul
+        '
+        Me.SparepartModul.Location = New System.Drawing.Point(365, 33)
+        Me.SparepartModul.Name = "SparepartModul"
+        Me.SparepartModul.Size = New System.Drawing.Size(138, 35)
+        Me.SparepartModul.TabIndex = 7
+        Me.SparepartModul.Text = "Sparepart"
+        '
+        'ServiceModul
+        '
+        Me.ServiceModul.Location = New System.Drawing.Point(509, 33)
+        Me.ServiceModul.Name = "ServiceModul"
+        Me.ServiceModul.Size = New System.Drawing.Size(138, 35)
+        Me.ServiceModul.TabIndex = 8
+        Me.ServiceModul.Text = "Service"
         '
         'About
         '
@@ -192,54 +231,7 @@ Partial Class Login
         Me.FinanceModul.TabIndex = 9
         Me.FinanceModul.Text = "Finance"
         '
-        'ServiceModul
-        '
-        Me.ServiceModul.Enabled = False
-        Me.ServiceModul.Location = New System.Drawing.Point(509, 33)
-        Me.ServiceModul.Name = "ServiceModul"
-        Me.ServiceModul.Size = New System.Drawing.Size(138, 35)
-        Me.ServiceModul.TabIndex = 8
-        Me.ServiceModul.Text = "Service"
-        '
-        'SparepartModul
-        '
-        Me.SparepartModul.Enabled = False
-        Me.SparepartModul.Location = New System.Drawing.Point(365, 33)
-        Me.SparepartModul.Name = "SparepartModul"
-        Me.SparepartModul.Size = New System.Drawing.Size(138, 35)
-        Me.SparepartModul.TabIndex = 7
-        Me.SparepartModul.Text = "Sparepart"
-        '
-        'UnitModul
-        '
-        Me.UnitModul.Enabled = False
-        Me.UnitModul.Location = New System.Drawing.Point(221, 33)
-        Me.UnitModul.Name = "UnitModul"
-        Me.UnitModul.Size = New System.Drawing.Size(138, 35)
-        Me.UnitModul.TabIndex = 6
-        Me.UnitModul.Text = "Unit"
-        '
-        'GeneralModule
-        '
-        Me.GeneralModule.Enabled = False
-        Me.GeneralModule.Location = New System.Drawing.Point(77, 33)
-        Me.GeneralModule.Name = "GeneralModule"
-        Me.GeneralModule.Size = New System.Drawing.Size(138, 35)
-        Me.GeneralModule.TabIndex = 5
-        Me.GeneralModule.Text = "General Module"
-        '
-        'PictureEdit1
-        '
-        Me.PictureEdit1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureEdit1.EditValue = Global.Honda_Dealer_Management_System.My.Resources.Resources._1409092
-        Me.PictureEdit1.Location = New System.Drawing.Point(349, 22)
-        Me.PictureEdit1.Name = "PictureEdit1"
-        Me.PictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.[Auto]
-        Me.PictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze
-        Me.PictureEdit1.Size = New System.Drawing.Size(95, 76)
-        Me.PictureEdit1.TabIndex = 3
-        '
-        'UOW
+        'ITSModul
         '
         Me.UOW.IsObjectModifiedOnNonPersistentPropertyChange = Nothing
         Me.UOW.TrackPropertiesModifications = False
