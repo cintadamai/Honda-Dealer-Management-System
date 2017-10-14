@@ -100,4 +100,10 @@ Public Class Login
             masuk.PerformClick()
         End If
     End Sub
+
+    Private Sub GeneralModule_Click(sender As Object, e As EventArgs) Handles GeneralModule.Click
+        Dim f As New GeneralModuleMDI
+        f.Show()
+        f.Focus()
+    End Sub
 End Class
