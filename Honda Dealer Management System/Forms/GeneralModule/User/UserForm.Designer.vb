@@ -95,7 +95,7 @@ Partial Class UserForm
         'BatalBtn
         '
         Me.BatalBtn.Enabled = False
-        Me.BatalBtn.Location = New System.Drawing.Point(204, 14)
+        Me.BatalBtn.Location = New System.Drawing.Point(204, 12)
         Me.BatalBtn.Name = "BatalBtn"
         Me.BatalBtn.Size = New System.Drawing.Size(90, 32)
         Me.BatalBtn.TabIndex = 12
@@ -370,7 +370,7 @@ Partial Class UserForm
         Me.ClientSize = New System.Drawing.Size(840, 494)
         Me.Controls.Add(Me.XtraScrollableControl)
         Me.Name = "UserForm"
-        Me.Text = "UserForm"
+        Me.Text = "User"
         Me.XtraScrollableControl.ResumeLayout(False)
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl2.ResumeLayout(False)
