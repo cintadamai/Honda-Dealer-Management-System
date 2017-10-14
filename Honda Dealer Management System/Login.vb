@@ -105,4 +105,8 @@ Public Class Login
         GeneralModuleMDI.Show()
         GeneralModuleMDI.Focus()
     End Sub
+
+    Private Sub ServiceModul_Click(sender As Object, e As EventArgs) Handles ServiceModul.Click
+        'coba lagi
+    End Sub
 End Class
