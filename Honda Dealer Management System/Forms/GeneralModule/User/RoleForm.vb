@@ -43,6 +43,10 @@ Public Class RoleForm
 
     Private Sub SimpanBtn_Click(sender As Object, e As EventArgs) Handles SimpanBtn.Click
         Dim r As RoleModel = RoleBS.Current
+        If r.Id = vbNull Or r.Id = 0 Then
+            r.CreatedAt = Now
+            r.CreatedBy = UserAkses.User.Id
+        End If
         RoleXpCollection.Add(r)
         RoleBS.EndEdit()
         UOW.CommitChanges()

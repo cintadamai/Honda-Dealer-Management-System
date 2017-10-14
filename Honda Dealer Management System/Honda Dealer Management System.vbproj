@@ -230,6 +230,12 @@
     <Compile Include="Forms\GeneralModule\User\RoleForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\GeneralModule\User\RoleMenu.Designer.vb">
+      <DependentUpon>RoleMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralModule\User\RoleMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\GeneralModule\User\UserForm.Designer.vb">
       <DependentUpon>UserForm.vb</DependentUpon>
     </Compile>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GeneralModule\User\RoleForm.resx">
       <DependentUpon>RoleForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralModule\User\RoleMenu.resx">
+      <DependentUpon>RoleMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GeneralModule\User\UserForm.resx">
       <DependentUpon>UserForm.vb</DependentUpon>
@@ -320,6 +329,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="honda-multi-size.ico" />
+    <None Include="Resources\publicfix_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

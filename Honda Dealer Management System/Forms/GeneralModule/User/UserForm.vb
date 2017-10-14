@@ -2,9 +2,11 @@
 Imports DevExpress.Xpo
 Public Class UserForm
     Dim RoleColl As XPQuery(Of RoleModel)
+    Dim KaryawanColl As XPQuery(Of KaryawanModel)
     Private Sub UserForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ViewState()
         RoleColl = UOW.Query(Of RoleModel)()
+        KaryawanColl = UOW.Query(Of KaryawanModel)()
     End Sub
 
     Sub ViewState()
@@ -55,6 +57,7 @@ Public Class UserForm
         Dim user As UserModel
         user = UserBS.Current
         user.Role = (From r In RoleColl Where r.Id = Convert.ToInt64(role.EditValue) Select r).First
+        user.Karyawan = (From k In KaryawanColl Where k.Id = Convert.ToInt64(Karyawan.EditValue)).First
         If user.Id = 0 Or user.Id = vbNull Then
             user.Password = "123"
         End If

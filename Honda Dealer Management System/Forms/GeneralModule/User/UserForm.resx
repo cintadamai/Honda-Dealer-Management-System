@@ -126,6 +126,15 @@
   <metadata name="UOW.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="KaryawanBS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>839, 17</value>
+  </metadata>
+  <metadata name="KaryawanXpCollection.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>666, 17</value>
+  </metadata>
+  <data name="KaryawanXpCollection.DisplayableProperties" xml:space="preserve">
+    <value>Id;NoKtp;NamaKaryawan;Alamat;NoTelepon;Email;NoHandphone;Divisi;Jabatan;Isactive;Spv;TanggalMasuk;TanggalResign;KeteranganResign;CreatedBy;CreatedAt;UpdatedBy;UpdatedAt;Branch;KaryawanModelCollection;UnitProspeks;UnitProspeks1;Users</value>
+  </data>
   <metadata name="validator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>567, 17</value>
   </metadata>

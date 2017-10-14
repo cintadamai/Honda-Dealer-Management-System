@@ -21,8 +21,10 @@ Partial Class UserForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserForm))
         Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule4 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Me.XtraScrollableControl = New DevExpress.XtraEditors.XtraScrollableControl()
         Me.BatalBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
@@ -37,6 +39,14 @@ Partial Class UserForm
         Me.colIsactive = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
+        Me.Karyawan = New DevExpress.XtraEditors.GridLookUpEdit()
+        Me.KaryawanBS = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KaryawanXpCollection = New DevExpress.Xpo.XPCollection(Me.components)
+        Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.colId1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colNamaKaryawan = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colIsactive1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.LabelControl4 = New DevExpress.XtraEditors.LabelControl()
         Me.isActiveCkbx = New DevExpress.XtraEditors.CheckEdit()
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
@@ -55,6 +65,7 @@ Partial Class UserForm
         Me.SimpanBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.TambahBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.validator = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
+        Me.ResetPassBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.XtraScrollableControl.SuspendLayout()
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl2.SuspendLayout()
@@ -65,6 +76,10 @@ Partial Class UserForm
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
+        CType(Me.Karyawan.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KaryawanBS, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KaryawanXpCollection, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.isActiveCkbx.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.personName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.username.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -192,6 +207,9 @@ Partial Class UserForm
         '
         'PanelControl1
         '
+        Me.PanelControl1.Controls.Add(Me.ResetPassBtn)
+        Me.PanelControl1.Controls.Add(Me.LabelControl5)
+        Me.PanelControl1.Controls.Add(Me.Karyawan)
         Me.PanelControl1.Controls.Add(Me.LabelControl4)
         Me.PanelControl1.Controls.Add(Me.isActiveCkbx)
         Me.PanelControl1.Controls.Add(Me.LabelControl3)
@@ -206,9 +224,76 @@ Partial Class UserForm
         Me.PanelControl1.Size = New System.Drawing.Size(298, 404)
         Me.PanelControl1.TabIndex = 10
         '
+        'LabelControl5
+        '
+        Me.LabelControl5.Location = New System.Drawing.Point(16, 123)
+        Me.LabelControl5.Name = "LabelControl5"
+        Me.LabelControl5.Size = New System.Drawing.Size(59, 13)
+        Me.LabelControl5.TabIndex = 10
+        Me.LabelControl5.Text = "KaryawanID"
+        '
+        'Karyawan
+        '
+        Me.Karyawan.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.KaryawanBS, "Id", True))
+        Me.Karyawan.Location = New System.Drawing.Point(107, 120)
+        Me.Karyawan.Name = "Karyawan"
+        Me.Karyawan.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.Karyawan.Properties.Appearance.Options.UseBackColor = True
+        Me.Karyawan.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.Karyawan.Properties.DataSource = Me.KaryawanXpCollection
+        Me.Karyawan.Properties.DisplayMember = "NamaKaryawan"
+        Me.Karyawan.Properties.NullText = ""
+        Me.Karyawan.Properties.View = Me.GridView2
+        Me.Karyawan.Size = New System.Drawing.Size(159, 20)
+        Me.Karyawan.TabIndex = 9
+        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule1.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.Karyawan, ConditionValidationRule1)
+        '
+        'KaryawanBS
+        '
+        Me.KaryawanBS.DataMember = "Karyawan"
+        Me.KaryawanBS.DataSource = Me.UserBS
+        '
+        'KaryawanXpCollection
+        '
+        Me.KaryawanXpCollection.DisplayableProperties = resources.GetString("KaryawanXpCollection.DisplayableProperties")
+        Me.KaryawanXpCollection.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.KaryawanModel)
+        Me.KaryawanXpCollection.Session = Me.UOW
+        '
+        'GridView2
+        '
+        Me.GridView2.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colId1, Me.colNamaKaryawan, Me.colIsactive1})
+        Me.GridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
+        Me.GridView2.Name = "GridView2"
+        Me.GridView2.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.GridView2.OptionsView.ShowAutoFilterRow = True
+        Me.GridView2.OptionsView.ShowGroupPanel = False
+        '
+        'colId1
+        '
+        Me.colId1.FieldName = "Id"
+        Me.colId1.Name = "colId1"
+        Me.colId1.Visible = True
+        Me.colId1.VisibleIndex = 0
+        '
+        'colNamaKaryawan
+        '
+        Me.colNamaKaryawan.FieldName = "NamaKaryawan"
+        Me.colNamaKaryawan.Name = "colNamaKaryawan"
+        Me.colNamaKaryawan.Visible = True
+        Me.colNamaKaryawan.VisibleIndex = 1
+        '
+        'colIsactive1
+        '
+        Me.colIsactive1.FieldName = "Isactive"
+        Me.colIsactive1.Name = "colIsactive1"
+        Me.colIsactive1.Visible = True
+        Me.colIsactive1.VisibleIndex = 2
+        '
         'LabelControl4
         '
-        Me.LabelControl4.Location = New System.Drawing.Point(12, 96)
+        Me.LabelControl4.Location = New System.Drawing.Point(16, 97)
         Me.LabelControl4.Name = "LabelControl4"
         Me.LabelControl4.Size = New System.Drawing.Size(21, 13)
         Me.LabelControl4.TabIndex = 8
@@ -217,7 +302,7 @@ Partial Class UserForm
         'isActiveCkbx
         '
         Me.isActiveCkbx.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.UserBS, "Isactive", True))
-        Me.isActiveCkbx.Location = New System.Drawing.Point(103, 119)
+        Me.isActiveCkbx.Location = New System.Drawing.Point(107, 146)
         Me.isActiveCkbx.Name = "isActiveCkbx"
         Me.isActiveCkbx.Properties.Appearance.BackColor = System.Drawing.Color.Transparent
         Me.isActiveCkbx.Properties.Appearance.Options.UseBackColor = True
@@ -227,7 +312,7 @@ Partial Class UserForm
         '
         'LabelControl3
         '
-        Me.LabelControl3.Location = New System.Drawing.Point(12, 70)
+        Me.LabelControl3.Location = New System.Drawing.Point(16, 71)
         Me.LabelControl3.Name = "LabelControl3"
         Me.LabelControl3.Size = New System.Drawing.Size(63, 13)
         Me.LabelControl3.TabIndex = 5
@@ -236,19 +321,19 @@ Partial Class UserForm
         'personName
         '
         Me.personName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserBS, "PersonName", True))
-        Me.personName.Location = New System.Drawing.Point(103, 67)
+        Me.personName.Location = New System.Drawing.Point(107, 68)
         Me.personName.Name = "personName"
         Me.personName.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.personName.Properties.Appearance.Options.UseBackColor = True
         Me.personName.Size = New System.Drawing.Size(159, 20)
         Me.personName.TabIndex = 4
-        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule1.ErrorText = "Harus di isi."
-        Me.validator.SetValidationRule(Me.personName, ConditionValidationRule1)
+        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule2.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.personName, ConditionValidationRule2)
         '
         'LabelControl2
         '
-        Me.LabelControl2.Location = New System.Drawing.Point(12, 44)
+        Me.LabelControl2.Location = New System.Drawing.Point(16, 45)
         Me.LabelControl2.Name = "LabelControl2"
         Me.LabelControl2.Size = New System.Drawing.Size(48, 13)
         Me.LabelControl2.TabIndex = 3
@@ -257,19 +342,19 @@ Partial Class UserForm
         'username
         '
         Me.username.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserBS, "Username", True))
-        Me.username.Location = New System.Drawing.Point(103, 41)
+        Me.username.Location = New System.Drawing.Point(107, 42)
         Me.username.Name = "username"
         Me.username.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.username.Properties.Appearance.Options.UseBackColor = True
         Me.username.Size = New System.Drawing.Size(159, 20)
         Me.username.TabIndex = 2
-        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule2.ErrorText = "Harus di isi."
-        Me.validator.SetValidationRule(Me.username, ConditionValidationRule2)
+        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule3.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.username, ConditionValidationRule3)
         '
         'LabelControl1
         '
-        Me.LabelControl1.Location = New System.Drawing.Point(12, 18)
+        Me.LabelControl1.Location = New System.Drawing.Point(16, 19)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(11, 13)
         Me.LabelControl1.TabIndex = 1
@@ -278,7 +363,7 @@ Partial Class UserForm
         'id
         '
         Me.id.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UserBS, "Id", True))
-        Me.id.Location = New System.Drawing.Point(103, 15)
+        Me.id.Location = New System.Drawing.Point(107, 16)
         Me.id.Name = "id"
         Me.id.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.id.Properties.Appearance.Options.UseBackColor = True
@@ -288,7 +373,7 @@ Partial Class UserForm
         'role
         '
         Me.role.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.RoleBS, "Id", True))
-        Me.role.Location = New System.Drawing.Point(103, 93)
+        Me.role.Location = New System.Drawing.Point(107, 94)
         Me.role.Name = "role"
         Me.role.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.role.Properties.Appearance.Options.UseBackColor = True
@@ -300,9 +385,9 @@ Partial Class UserForm
         Me.role.Properties.View = Me.GridLookUpEdit1View
         Me.role.Size = New System.Drawing.Size(159, 20)
         Me.role.TabIndex = 7
-        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule3.ErrorText = "Harus di isi."
-        Me.validator.SetValidationRule(Me.role, ConditionValidationRule3)
+        ConditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule4.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.role, ConditionValidationRule4)
         '
         'RoleBS
         '
@@ -363,6 +448,14 @@ Partial Class UserForm
         Me.TambahBtn.TabIndex = 5
         Me.TambahBtn.Text = "Tambah"
         '
+        'ResetPassBtn
+        '
+        Me.ResetPassBtn.Location = New System.Drawing.Point(107, 185)
+        Me.ResetPassBtn.Name = "ResetPassBtn"
+        Me.ResetPassBtn.Size = New System.Drawing.Size(90, 24)
+        Me.ResetPassBtn.TabIndex = 11
+        Me.ResetPassBtn.Text = "Reset Password"
+        '
         'UserForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -382,6 +475,10 @@ Partial Class UserForm
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)
         Me.PanelControl1.PerformLayout()
+        CType(Me.Karyawan.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KaryawanBS, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KaryawanXpCollection, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.isActiveCkbx.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.personName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.username.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -427,4 +524,13 @@ Partial Class UserForm
     Friend WithEvents RoleXpCollection As DevExpress.Xpo.XPCollection
     Friend WithEvents BatalBtn As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents validator As DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider
+    Friend WithEvents LabelControl5 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents Karyawan As DevExpress.XtraEditors.GridLookUpEdit
+    Friend WithEvents GridView2 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents KaryawanXpCollection As DevExpress.Xpo.XPCollection
+    Friend WithEvents colId1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colNamaKaryawan As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colIsactive1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents KaryawanBS As BindingSource
+    Friend WithEvents ResetPassBtn As DevExpress.XtraEditors.SimpleButton
 End Class

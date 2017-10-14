@@ -24,6 +24,7 @@ Partial Class GeneralModuleMDI
         Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.UserFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.RoleFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.RolesMenuFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.UserPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.UserPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.MdiManager = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
@@ -34,9 +35,9 @@ Partial Class GeneralModuleMDI
         'RibbonControl1
         '
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.UserFormBtn, Me.RoleFormBtn})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.UserFormBtn, Me.RoleFormBtn, Me.RolesMenuFormBtn})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl1.MaxItemId = 3
+        Me.RibbonControl1.MaxItemId = 4
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.UserPage})
         Me.RibbonControl1.Size = New System.Drawing.Size(757, 116)
@@ -60,6 +61,15 @@ Partial Class GeneralModuleMDI
         Me.RoleFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
+        'RolesMenuFormBtn
+        '
+        Me.RolesMenuFormBtn.Caption = "Roles Menu"
+        Me.RolesMenuFormBtn.Id = 3
+        Me.RolesMenuFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.publicfix_32x32
+        Me.RolesMenuFormBtn.Name = "RolesMenuFormBtn"
+        Me.RolesMenuFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
         'UserPage
         '
         Me.UserPage.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.UserPageGroup})
@@ -70,6 +80,7 @@ Partial Class GeneralModuleMDI
         '
         Me.UserPageGroup.ItemLinks.Add(Me.UserFormBtn)
         Me.UserPageGroup.ItemLinks.Add(Me.RoleFormBtn)
+        Me.UserPageGroup.ItemLinks.Add(Me.RolesMenuFormBtn)
         Me.UserPageGroup.Name = "UserPageGroup"
         Me.UserPageGroup.Text = "User Akses"
         '
@@ -101,4 +112,5 @@ Partial Class GeneralModuleMDI
     Friend WithEvents MdiManager As DevExpress.XtraTabbedMdi.XtraTabbedMdiManager
     Friend WithEvents UserFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RoleFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RolesMenuFormBtn As DevExpress.XtraBars.BarButtonItem
 End Class
