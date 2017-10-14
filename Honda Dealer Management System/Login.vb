@@ -110,6 +110,10 @@ Public Class Login
         GeneralModuleMDI.Focus()
     End Sub
 
+    Private Sub ServiceModul_Click(sender As Object, e As EventArgs) Handles ServiceModul.Click
+        'coba lagi
+    End Sub
+
     Private Sub TaxModul_Click(sender As Object, e As EventArgs) Handles TaxModul.Click
         'coba 3
     End Sub
