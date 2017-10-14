@@ -100,8 +100,4 @@ Public Class Login
             masuk.PerformClick()
         End If
     End Sub
-
-    Private Sub About_Click(sender As Object, e As EventArgs) Handles About.Click
-        'coba aja
-    End Sub
 End Class
