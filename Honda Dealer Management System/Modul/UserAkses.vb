@@ -5,6 +5,7 @@ Imports Honda_Dealer_Management_System.HDMS
 Module UserAkses
     Dim UOW As New UnitOfWork(XpoDefault.DataLayer)
     Public User As UserModel
+    Public CurrentBranch As BranchModel
     Dim Users As XPQuery(Of UserModel) = UOW.Query(Of UserModel)()
     Dim Roles As XPQuery(Of RoleModel) = UOW.Query(Of RoleModel)()
     Dim Menus As XPQuery(Of MenuModel) = UOW.Query(Of MenuModel)()

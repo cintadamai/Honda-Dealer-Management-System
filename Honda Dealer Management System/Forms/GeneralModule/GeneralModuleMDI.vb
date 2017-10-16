@@ -19,4 +19,28 @@
         f.Show()
         f.Focus()
     End Sub
+
+    Private Sub KaryawanFormBtn_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles KaryawanFormBtn.ItemClick
+        Dim f As New KaryawanForm With {.MdiParent = Me}
+        f.Show()
+        f.Focus()
+    End Sub
+
+    Private Sub DivisiFormBtn_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles DivisiFormBtn.ItemClick
+        Dim f As New DivisiForm With {.MdiParent = Me}
+        f.Show()
+        f.Focus()
+    End Sub
+
+    Private Sub JabatanFormBtn_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles JabatanFormBtn.ItemClick
+        Dim f As New JabatanForm With {.MdiParent = Me}
+        f.Show()
+        f.Focus()
+    End Sub
+
+    Private Sub BranchFormBtn_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BranchFormBtn.ItemClick
+        Dim f As New BranchForm With {.MdiParent = Me}
+        f.Show()
+        f.Focus()
+    End Sub
 End Class

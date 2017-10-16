@@ -25,8 +25,14 @@ Partial Class GeneralModuleMDI
         Me.UserFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.RoleFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.RolesMenuFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.KaryawanFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.DivisiFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.JabatanFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.BranchFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.UserPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.UserPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.KaryawanPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.KaryawanPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.MdiManager = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MdiManager, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -35,11 +41,11 @@ Partial Class GeneralModuleMDI
         'RibbonControl1
         '
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.UserFormBtn, Me.RoleFormBtn, Me.RolesMenuFormBtn})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.UserFormBtn, Me.RoleFormBtn, Me.RolesMenuFormBtn, Me.KaryawanFormBtn, Me.DivisiFormBtn, Me.JabatanFormBtn, Me.BranchFormBtn})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl1.MaxItemId = 4
+        Me.RibbonControl1.MaxItemId = 8
         Me.RibbonControl1.Name = "RibbonControl1"
-        Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.UserPage})
+        Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.UserPage, Me.KaryawanPage})
         Me.RibbonControl1.Size = New System.Drawing.Size(757, 116)
         Me.RibbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden
         '
@@ -70,6 +76,42 @@ Partial Class GeneralModuleMDI
         Me.RolesMenuFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
+        'KaryawanFormBtn
+        '
+        Me.KaryawanFormBtn.Caption = "Karyawan"
+        Me.KaryawanFormBtn.Id = 4
+        Me.KaryawanFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.bocustomer_32x32
+        Me.KaryawanFormBtn.Name = "KaryawanFormBtn"
+        Me.KaryawanFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'DivisiFormBtn
+        '
+        Me.DivisiFormBtn.Caption = "Divisi"
+        Me.DivisiFormBtn.Id = 5
+        Me.DivisiFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.bocountry_32x32
+        Me.DivisiFormBtn.Name = "DivisiFormBtn"
+        Me.DivisiFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'JabatanFormBtn
+        '
+        Me.JabatanFormBtn.Caption = "Jabatan"
+        Me.JabatanFormBtn.Id = 6
+        Me.JabatanFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.boposition_32x32
+        Me.JabatanFormBtn.Name = "JabatanFormBtn"
+        Me.JabatanFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'BranchFormBtn
+        '
+        Me.BranchFormBtn.Caption = "Branch"
+        Me.BranchFormBtn.Id = 7
+        Me.BranchFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.home_32x32
+        Me.BranchFormBtn.Name = "BranchFormBtn"
+        Me.BranchFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
         'UserPage
         '
         Me.UserPage.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.UserPageGroup})
@@ -83,6 +125,21 @@ Partial Class GeneralModuleMDI
         Me.UserPageGroup.ItemLinks.Add(Me.RolesMenuFormBtn)
         Me.UserPageGroup.Name = "UserPageGroup"
         Me.UserPageGroup.Text = "User Akses"
+        '
+        'KaryawanPage
+        '
+        Me.KaryawanPage.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.KaryawanPageGroup})
+        Me.KaryawanPage.Name = "KaryawanPage"
+        Me.KaryawanPage.Text = "Karyawan"
+        '
+        'KaryawanPageGroup
+        '
+        Me.KaryawanPageGroup.ItemLinks.Add(Me.KaryawanFormBtn)
+        Me.KaryawanPageGroup.ItemLinks.Add(Me.DivisiFormBtn)
+        Me.KaryawanPageGroup.ItemLinks.Add(Me.JabatanFormBtn)
+        Me.KaryawanPageGroup.ItemLinks.Add(Me.BranchFormBtn)
+        Me.KaryawanPageGroup.Name = "KaryawanPageGroup"
+        Me.KaryawanPageGroup.Text = "Karyawan"
         '
         'MdiManager
         '
@@ -113,4 +170,10 @@ Partial Class GeneralModuleMDI
     Friend WithEvents UserFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RoleFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RolesMenuFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents KaryawanPage As DevExpress.XtraBars.Ribbon.RibbonPage
+    Friend WithEvents KaryawanPageGroup As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents KaryawanFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents DivisiFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents JabatanFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BranchFormBtn As DevExpress.XtraBars.BarButtonItem
 End Class

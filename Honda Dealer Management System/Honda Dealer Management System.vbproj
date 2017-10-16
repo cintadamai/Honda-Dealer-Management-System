@@ -224,6 +224,30 @@
     <Compile Include="Forms\GeneralModule\GeneralModuleMDI.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\GeneralModule\Karyawan\BranchForm.Designer.vb">
+      <DependentUpon>BranchForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralModule\Karyawan\BranchForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralModule\Karyawan\DivisiForm.Designer.vb">
+      <DependentUpon>DivisiForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralModule\Karyawan\DivisiForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralModule\Karyawan\JabatanForm.Designer.vb">
+      <DependentUpon>JabatanForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralModule\Karyawan\JabatanForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralModule\Karyawan\KaryawanForm.Designer.vb">
+      <DependentUpon>KaryawanForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralModule\Karyawan\KaryawanForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\GeneralModule\User\RoleForm.Designer.vb">
       <DependentUpon>RoleForm.vb</DependentUpon>
     </Compile>
@@ -271,6 +295,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GeneralModule\GeneralModuleMDI.resx">
       <DependentUpon>GeneralModuleMDI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralModule\Karyawan\BranchForm.resx">
+      <DependentUpon>BranchForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralModule\Karyawan\DivisiForm.resx">
+      <DependentUpon>DivisiForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralModule\Karyawan\JabatanForm.resx">
+      <DependentUpon>JabatanForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralModule\Karyawan\KaryawanForm.resx">
+      <DependentUpon>KaryawanForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GeneralModule\User\RoleForm.resx">
       <DependentUpon>RoleForm.vb</DependentUpon>
@@ -329,7 +365,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="honda-multi-size.ico" />
+    <None Include="Resources\home_32x32.png" />
+    <None Include="Resources\boposition_32x32.png" />
+    <None Include="Resources\bocountry_32x32.png" />
+    <None Include="Resources\bocustomer_32x32.png" />
     <None Include="Resources\publicfix_32x32.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
