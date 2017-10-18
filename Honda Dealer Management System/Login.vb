@@ -1,5 +1,6 @@
 ﻿Imports DevExpress.Xpo
 Imports Honda_Dealer_Management_System.HDMS
+Imports Humanizer
 Public Class Login
 
     Dim Users As XPQuery(Of UserModel)
@@ -20,6 +21,7 @@ Public Class Login
         ConnectionHelper.Connect(DB.AutoCreateOption.DatabaseAndSchema)
         Users = UOW.Query(Of UserModel)()
 
+        MessageBox.Show("NamaApaSajaBoleh".Humanize())
 
         'Users.First.Password = hasing.HashPassword("123")
         'Users.First.Save()
