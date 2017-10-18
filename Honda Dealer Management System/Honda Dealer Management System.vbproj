@@ -280,6 +280,30 @@
     <Compile Include="Forms\GeneralModule\User\UserForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\UnitModule\MasterData\DataGudangUnitForm.Designer.vb">
+      <DependentUpon>DataGudangUnitForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnitModule\MasterData\DataGudangUnitForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnitModule\MasterData\DataModelUnitForm.Designer.vb">
+      <DependentUpon>DataModelUnitForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnitModule\MasterData\DataModelUnitForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnitModule\MasterData\DataSupplierForm.Designer.vb">
+      <DependentUpon>DataSupplierForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnitModule\MasterData\DataSupplierForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnitModule\MasterData\DataWarnaUnitForm.Designer.vb">
+      <DependentUpon>DataWarnaUnitForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnitModule\MasterData\DataWarnaUnitForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\UnitModule\UnitModuleMDI.Designer.vb">
       <DependentUpon>UnitModuleMDI.vb</DependentUpon>
     </Compile>

@@ -19,14 +19,13 @@ Partial Class RoleMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.XtraScrollableControl1 = New DevExpress.XtraEditors.XtraScrollableControl()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
-        Me.RoleMenuBS = New System.Windows.Forms.BindingSource(Me.components)
-        Me.RoleMenuXpCollection = New DevExpress.Xpo.XPCollection(Me.components)
-        Me.UOW = New DevExpress.Xpo.UnitOfWork(Me.components)
+        Me.RoleMenuBS = New System.Windows.Forms.BindingSource()
+        Me.RoleMenuXpCollection = New DevExpress.Xpo.XPCollection()
+        Me.UOW = New DevExpress.Xpo.UnitOfWork()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colId = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -34,11 +33,11 @@ Partial Class RoleMenu
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.RoleNameTxt = New DevExpress.XtraEditors.GridLookUpEdit()
-        Me.RoleXpCollection = New DevExpress.Xpo.XPCollection(Me.components)
+        Me.RoleXpCollection = New DevExpress.Xpo.XPCollection()
         Me.GridLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.MenuNameTxt = New DevExpress.XtraEditors.GridLookUpEdit()
-        Me.MenuBS = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MenuXpCollection = New DevExpress.Xpo.XPCollection(Me.components)
+        Me.MenuBS = New System.Windows.Forms.BindingSource()
+        Me.MenuXpCollection = New DevExpress.Xpo.XPCollection()
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.BatalBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.HapusBtn = New DevExpress.XtraEditors.SimpleButton()
@@ -149,7 +148,7 @@ Partial Class RoleMenu
         'GridColumn2
         '
         Me.GridColumn2.Caption = "Menu Name"
-        Me.GridColumn2.FieldName = "MenuName"
+        Me.GridColumn2.FieldName = "MenuName1"
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 1
@@ -188,6 +187,7 @@ Partial Class RoleMenu
         Me.RoleNameTxt.Properties.DataSource = Me.RoleXpCollection
         Me.RoleNameTxt.Properties.DisplayMember = "RoleName"
         Me.RoleNameTxt.Properties.NullText = ""
+        Me.RoleNameTxt.Properties.PopupFormMinSize = New System.Drawing.Size(500, 0)
         Me.RoleNameTxt.Properties.View = Me.GridLookUpEdit1View
         Me.RoleNameTxt.Size = New System.Drawing.Size(185, 20)
         Me.RoleNameTxt.TabIndex = 1
@@ -213,6 +213,7 @@ Partial Class RoleMenu
         Me.MenuNameTxt.Properties.DataSource = Me.MenuBS
         Me.MenuNameTxt.Properties.DisplayMember = "MenuName"
         Me.MenuNameTxt.Properties.NullText = ""
+        Me.MenuNameTxt.Properties.PopupFormMinSize = New System.Drawing.Size(800, 0)
         Me.MenuNameTxt.Properties.ValueMember = "Id"
         Me.MenuNameTxt.Properties.View = Me.GridView2
         Me.MenuNameTxt.Size = New System.Drawing.Size(185, 20)

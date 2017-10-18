@@ -21,8 +21,6 @@ Public Class Login
         ConnectionHelper.Connect(DB.AutoCreateOption.DatabaseAndSchema)
         Users = UOW.Query(Of UserModel)()
 
-        MessageBox.Show("NamaApaSajaBoleh".Humanize())
-
         'Users.First.Password = hasing.HashPassword("123")
         'Users.First.Save()
         'UOW.CommitChanges()

@@ -19,29 +19,37 @@ Partial Class UnitModuleMDI
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UnitModuleMDI))
         Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.DataSupplierFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.DataModelUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.DataUnitWarnaFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.DataUnitGudangFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.InputPembelianFormBtn = New DevExpress.XtraBars.BarButtonItem()
-        Me.CetakBuktiPembelianFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.BuktiPembelianFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.LaporanPembelianFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.InputReturPembelianFormBtn = New DevExpress.XtraBars.BarButtonItem()
-        Me.CetakBuktiReturPembelianFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.BuktiReturPembelianFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.LaporanReturPembelianFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.PenerimaanPembelianUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
-        Me.CetakBuktiPenerimaanUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.BuktiPenerimaanUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.LaporanPenerimaanUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.PengirimanKendaraanFormBtn = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BuktiPengirimanKendaraanFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.LaporanPengirimanKendaraanFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.TransferInUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.TransferOutUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
-        Me.CetakBuktiTransferUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.BuktiTransferUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.LaporanTransferUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.TrackingStockUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.SalesOrderFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.InvoicePenjualanUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.DeliveryOrderUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.MenuCetakanPenjualanUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.LaporanPenjualanUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.ReturPenjualanUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.BuktiReturUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.LaporanReturPenjualanUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.MasterDataPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.MasterDataPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.PembelianUnitPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
@@ -54,18 +62,10 @@ Partial Class UnitModuleMDI
         Me.StockTrackingPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.PenjualanUnitPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.PenjualanPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
+        Me.ReturPenjualanPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
-        Me.ReturPenjualanPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem4 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem6 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem7 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem8 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem9 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem10 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -73,7 +73,7 @@ Partial Class UnitModuleMDI
         'RibbonControl1
         '
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.DataSupplierFormBtn, Me.DataModelUnitFormBtn, Me.DataUnitWarnaFormBtn, Me.DataUnitGudangFormBtn, Me.InputPembelianFormBtn, Me.CetakBuktiPembelianFormBtn, Me.LaporanPembelianFormBtn, Me.InputReturPembelianFormBtn, Me.CetakBuktiReturPembelianFormBtn, Me.LaporanReturPembelianFormBtn, Me.PenerimaanPembelianUnitFormBtn, Me.CetakBuktiPenerimaanUnitFormBtn, Me.LaporanPenerimaanUnitFormBtn, Me.PengirimanKendaraanFormBtn, Me.BarButtonItem3, Me.LaporanPengirimanKendaraanFormBtn, Me.TransferInUnitFormBtn, Me.TransferOutUnitFormBtn, Me.CetakBuktiTransferUnitFormBtn, Me.LaporanTransferUnitFormBtn, Me.TrackingStockUnitFormBtn, Me.BarButtonItem2, Me.BarButtonItem4, Me.BarButtonItem5, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarButtonItem10})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.DataSupplierFormBtn, Me.DataModelUnitFormBtn, Me.DataUnitWarnaFormBtn, Me.DataUnitGudangFormBtn, Me.InputPembelianFormBtn, Me.BuktiPembelianFormBtn, Me.LaporanPembelianFormBtn, Me.InputReturPembelianFormBtn, Me.BuktiReturPembelianFormBtn, Me.LaporanReturPembelianFormBtn, Me.PenerimaanPembelianUnitFormBtn, Me.BuktiPenerimaanUnitFormBtn, Me.LaporanPenerimaanUnitFormBtn, Me.PengirimanKendaraanFormBtn, Me.BuktiPengirimanKendaraanFormBtn, Me.LaporanPengirimanKendaraanFormBtn, Me.TransferInUnitFormBtn, Me.TransferOutUnitFormBtn, Me.BuktiTransferUnitFormBtn, Me.LaporanTransferUnitFormBtn, Me.TrackingStockUnitFormBtn, Me.SalesOrderFormBtn, Me.InvoicePenjualanUnitFormBtn, Me.DeliveryOrderUnitFormBtn, Me.MenuCetakanPenjualanUnitFormBtn, Me.LaporanPenjualanUnitFormBtn, Me.ReturPenjualanUnitFormBtn, Me.BuktiReturUnitFormBtn, Me.LaporanReturPenjualanUnitFormBtn})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl1.MaxItemId = 34
         Me.RibbonControl1.Name = "RibbonControl1"
@@ -126,13 +126,13 @@ Partial Class UnitModuleMDI
         Me.InputPembelianFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
-        'CetakBuktiPembelianFormBtn
+        'BuktiPembelianFormBtn
         '
-        Me.CetakBuktiPembelianFormBtn.Caption = "Cetak Bukti Pembelian"
-        Me.CetakBuktiPembelianFormBtn.Id = 8
-        Me.CetakBuktiPembelianFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.printer_32x32
-        Me.CetakBuktiPembelianFormBtn.Name = "CetakBuktiPembelianFormBtn"
-        Me.CetakBuktiPembelianFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+        Me.BuktiPembelianFormBtn.Caption = "Bukti Pembelian"
+        Me.BuktiPembelianFormBtn.Id = 8
+        Me.BuktiPembelianFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.printer_32x32
+        Me.BuktiPembelianFormBtn.Name = "BuktiPembelianFormBtn"
+        Me.BuktiPembelianFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'LaporanPembelianFormBtn
@@ -153,13 +153,13 @@ Partial Class UnitModuleMDI
         Me.InputReturPembelianFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
-        'CetakBuktiReturPembelianFormBtn
+        'BuktiReturPembelianFormBtn
         '
-        Me.CetakBuktiReturPembelianFormBtn.Caption = "Cetak Bukti Retur Pembelian"
-        Me.CetakBuktiReturPembelianFormBtn.Id = 11
-        Me.CetakBuktiReturPembelianFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.printer_32x321
-        Me.CetakBuktiReturPembelianFormBtn.Name = "CetakBuktiReturPembelianFormBtn"
-        Me.CetakBuktiReturPembelianFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+        Me.BuktiReturPembelianFormBtn.Caption = "Bukti Retur Pembelian"
+        Me.BuktiReturPembelianFormBtn.Id = 11
+        Me.BuktiReturPembelianFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.printer_32x321
+        Me.BuktiReturPembelianFormBtn.Name = "BuktiReturPembelianFormBtn"
+        Me.BuktiReturPembelianFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'LaporanReturPembelianFormBtn
@@ -180,13 +180,13 @@ Partial Class UnitModuleMDI
         Me.PenerimaanPembelianUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
-        'CetakBuktiPenerimaanUnitFormBtn
+        'BuktiPenerimaanUnitFormBtn
         '
-        Me.CetakBuktiPenerimaanUnitFormBtn.Caption = "Cetak Bukti Penerimaan"
-        Me.CetakBuktiPenerimaanUnitFormBtn.Id = 14
-        Me.CetakBuktiPenerimaanUnitFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.printer_32x322
-        Me.CetakBuktiPenerimaanUnitFormBtn.Name = "CetakBuktiPenerimaanUnitFormBtn"
-        Me.CetakBuktiPenerimaanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+        Me.BuktiPenerimaanUnitFormBtn.Caption = "Bukti Penerimaan"
+        Me.BuktiPenerimaanUnitFormBtn.Id = 14
+        Me.BuktiPenerimaanUnitFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.printer_32x322
+        Me.BuktiPenerimaanUnitFormBtn.Name = "BuktiPenerimaanUnitFormBtn"
+        Me.BuktiPenerimaanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'LaporanPenerimaanUnitFormBtn
@@ -207,13 +207,13 @@ Partial Class UnitModuleMDI
         Me.PengirimanKendaraanFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
-        'BarButtonItem3
+        'BuktiPengirimanKendaraanFormBtn
         '
-        Me.BarButtonItem3.Caption = "Cetak Bukti Pengiriman Kendaraan"
-        Me.BarButtonItem3.Id = 17
-        Me.BarButtonItem3.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.printer_32x323
-        Me.BarButtonItem3.Name = "BarButtonItem3"
-        Me.BarButtonItem3.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+        Me.BuktiPengirimanKendaraanFormBtn.Caption = "Bukti Pengiriman Kendaraan"
+        Me.BuktiPengirimanKendaraanFormBtn.Id = 17
+        Me.BuktiPengirimanKendaraanFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.printer_32x323
+        Me.BuktiPengirimanKendaraanFormBtn.Name = "BuktiPengirimanKendaraanFormBtn"
+        Me.BuktiPengirimanKendaraanFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'LaporanPengirimanKendaraanFormBtn
@@ -243,13 +243,13 @@ Partial Class UnitModuleMDI
         Me.TransferOutUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
-        'CetakBuktiTransferUnitFormBtn
+        'BuktiTransferUnitFormBtn
         '
-        Me.CetakBuktiTransferUnitFormBtn.Caption = "Cetak Bukti Transfer"
-        Me.CetakBuktiTransferUnitFormBtn.Id = 21
-        Me.CetakBuktiTransferUnitFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.printer_32x324
-        Me.CetakBuktiTransferUnitFormBtn.Name = "CetakBuktiTransferUnitFormBtn"
-        Me.CetakBuktiTransferUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+        Me.BuktiTransferUnitFormBtn.Caption = "Bukti Transfer"
+        Me.BuktiTransferUnitFormBtn.Id = 21
+        Me.BuktiTransferUnitFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.printer_32x324
+        Me.BuktiTransferUnitFormBtn.Name = "BuktiTransferUnitFormBtn"
+        Me.BuktiTransferUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'LaporanTransferUnitFormBtn
@@ -268,6 +268,78 @@ Partial Class UnitModuleMDI
         Me.TrackingStockUnitFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.preview_32x32
         Me.TrackingStockUnitFormBtn.Name = "TrackingStockUnitFormBtn"
         Me.TrackingStockUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'SalesOrderFormBtn
+        '
+        Me.SalesOrderFormBtn.Caption = "Sales Order"
+        Me.SalesOrderFormBtn.Id = 26
+        Me.SalesOrderFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem2.ImageOptions.Image"), System.Drawing.Image)
+        Me.SalesOrderFormBtn.Name = "SalesOrderFormBtn"
+        Me.SalesOrderFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'InvoicePenjualanUnitFormBtn
+        '
+        Me.InvoicePenjualanUnitFormBtn.Caption = "Invoice Penjualan"
+        Me.InvoicePenjualanUnitFormBtn.Id = 27
+        Me.InvoicePenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem4.ImageOptions.Image"), System.Drawing.Image)
+        Me.InvoicePenjualanUnitFormBtn.Name = "InvoicePenjualanUnitFormBtn"
+        Me.InvoicePenjualanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'DeliveryOrderUnitFormBtn
+        '
+        Me.DeliveryOrderUnitFormBtn.Caption = "Delivery Order"
+        Me.DeliveryOrderUnitFormBtn.Id = 28
+        Me.DeliveryOrderUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem5.ImageOptions.Image"), System.Drawing.Image)
+        Me.DeliveryOrderUnitFormBtn.Name = "DeliveryOrderUnitFormBtn"
+        Me.DeliveryOrderUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'MenuCetakanPenjualanUnitFormBtn
+        '
+        Me.MenuCetakanPenjualanUnitFormBtn.Caption = "Menu Cetakan"
+        Me.MenuCetakanPenjualanUnitFormBtn.Id = 29
+        Me.MenuCetakanPenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem6.ImageOptions.Image"), System.Drawing.Image)
+        Me.MenuCetakanPenjualanUnitFormBtn.Name = "MenuCetakanPenjualanUnitFormBtn"
+        Me.MenuCetakanPenjualanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'LaporanPenjualanUnitFormBtn
+        '
+        Me.LaporanPenjualanUnitFormBtn.Caption = "Laporan Penjualan"
+        Me.LaporanPenjualanUnitFormBtn.Id = 30
+        Me.LaporanPenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem7.ImageOptions.Image"), System.Drawing.Image)
+        Me.LaporanPenjualanUnitFormBtn.Name = "LaporanPenjualanUnitFormBtn"
+        Me.LaporanPenjualanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'ReturPenjualanUnitFormBtn
+        '
+        Me.ReturPenjualanUnitFormBtn.Caption = "Retur Penjualan"
+        Me.ReturPenjualanUnitFormBtn.Id = 31
+        Me.ReturPenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem8.ImageOptions.Image"), System.Drawing.Image)
+        Me.ReturPenjualanUnitFormBtn.Name = "ReturPenjualanUnitFormBtn"
+        Me.ReturPenjualanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'BuktiReturUnitFormBtn
+        '
+        Me.BuktiReturUnitFormBtn.Caption = "Bukti Retur"
+        Me.BuktiReturUnitFormBtn.Id = 32
+        Me.BuktiReturUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem9.ImageOptions.Image"), System.Drawing.Image)
+        Me.BuktiReturUnitFormBtn.Name = "BuktiReturUnitFormBtn"
+        Me.BuktiReturUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
+        'LaporanReturPenjualanUnitFormBtn
+        '
+        Me.LaporanReturPenjualanUnitFormBtn.Caption = "Laporan Retur Penjualan"
+        Me.LaporanReturPenjualanUnitFormBtn.Id = 33
+        Me.LaporanReturPenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem10.ImageOptions.Image"), System.Drawing.Image)
+        Me.LaporanReturPenjualanUnitFormBtn.Name = "LaporanReturPenjualanUnitFormBtn"
+        Me.LaporanReturPenjualanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'MasterDataPage
@@ -294,7 +366,7 @@ Partial Class UnitModuleMDI
         'PembelianPageGroup
         '
         Me.PembelianPageGroup.ItemLinks.Add(Me.InputPembelianFormBtn)
-        Me.PembelianPageGroup.ItemLinks.Add(Me.CetakBuktiPembelianFormBtn)
+        Me.PembelianPageGroup.ItemLinks.Add(Me.BuktiPembelianFormBtn)
         Me.PembelianPageGroup.ItemLinks.Add(Me.LaporanPembelianFormBtn)
         Me.PembelianPageGroup.Name = "PembelianPageGroup"
         Me.PembelianPageGroup.Text = "Pembelian"
@@ -302,7 +374,7 @@ Partial Class UnitModuleMDI
         'ReturPembelianPageGroup
         '
         Me.ReturPembelianPageGroup.ItemLinks.Add(Me.InputReturPembelianFormBtn)
-        Me.ReturPembelianPageGroup.ItemLinks.Add(Me.CetakBuktiReturPembelianFormBtn)
+        Me.ReturPembelianPageGroup.ItemLinks.Add(Me.BuktiReturPembelianFormBtn)
         Me.ReturPembelianPageGroup.ItemLinks.Add(Me.LaporanReturPembelianFormBtn)
         Me.ReturPembelianPageGroup.Name = "ReturPembelianPageGroup"
         Me.ReturPembelianPageGroup.Text = "Retur Pembelian"
@@ -316,7 +388,7 @@ Partial Class UnitModuleMDI
         'PenerimaanUnitPageGroup
         '
         Me.PenerimaanUnitPageGroup.ItemLinks.Add(Me.PenerimaanPembelianUnitFormBtn)
-        Me.PenerimaanUnitPageGroup.ItemLinks.Add(Me.CetakBuktiPenerimaanUnitFormBtn)
+        Me.PenerimaanUnitPageGroup.ItemLinks.Add(Me.BuktiPenerimaanUnitFormBtn)
         Me.PenerimaanUnitPageGroup.ItemLinks.Add(Me.LaporanPenerimaanUnitFormBtn)
         Me.PenerimaanUnitPageGroup.Name = "PenerimaanUnitPageGroup"
         Me.PenerimaanUnitPageGroup.Text = "Penerimaan"
@@ -324,7 +396,7 @@ Partial Class UnitModuleMDI
         'PengeluaranUnitPageGroup
         '
         Me.PengeluaranUnitPageGroup.ItemLinks.Add(Me.PengirimanKendaraanFormBtn)
-        Me.PengeluaranUnitPageGroup.ItemLinks.Add(Me.BarButtonItem3)
+        Me.PengeluaranUnitPageGroup.ItemLinks.Add(Me.BuktiPengirimanKendaraanFormBtn)
         Me.PengeluaranUnitPageGroup.ItemLinks.Add(Me.LaporanPengirimanKendaraanFormBtn)
         Me.PengeluaranUnitPageGroup.Name = "PengeluaranUnitPageGroup"
         Me.PengeluaranUnitPageGroup.Text = "Pengeluaran"
@@ -333,7 +405,7 @@ Partial Class UnitModuleMDI
         '
         Me.TransferUnitPageGroup.ItemLinks.Add(Me.TransferInUnitFormBtn)
         Me.TransferUnitPageGroup.ItemLinks.Add(Me.TransferOutUnitFormBtn)
-        Me.TransferUnitPageGroup.ItemLinks.Add(Me.CetakBuktiTransferUnitFormBtn)
+        Me.TransferUnitPageGroup.ItemLinks.Add(Me.BuktiTransferUnitFormBtn)
         Me.TransferUnitPageGroup.ItemLinks.Add(Me.LaporanTransferUnitFormBtn)
         Me.TransferUnitPageGroup.Name = "TransferUnitPageGroup"
         Me.TransferUnitPageGroup.Text = "Transfer Unit"
@@ -353,13 +425,22 @@ Partial Class UnitModuleMDI
         '
         'PenjualanPageGroup
         '
-        Me.PenjualanPageGroup.ItemLinks.Add(Me.BarButtonItem2)
-        Me.PenjualanPageGroup.ItemLinks.Add(Me.BarButtonItem4)
-        Me.PenjualanPageGroup.ItemLinks.Add(Me.BarButtonItem5)
-        Me.PenjualanPageGroup.ItemLinks.Add(Me.BarButtonItem6)
-        Me.PenjualanPageGroup.ItemLinks.Add(Me.BarButtonItem7)
+        Me.PenjualanPageGroup.ItemLinks.Add(Me.SalesOrderFormBtn)
+        Me.PenjualanPageGroup.ItemLinks.Add(Me.InvoicePenjualanUnitFormBtn)
+        Me.PenjualanPageGroup.ItemLinks.Add(Me.DeliveryOrderUnitFormBtn)
+        Me.PenjualanPageGroup.ItemLinks.Add(Me.MenuCetakanPenjualanUnitFormBtn)
+        Me.PenjualanPageGroup.ItemLinks.Add(Me.LaporanPenjualanUnitFormBtn)
         Me.PenjualanPageGroup.Name = "PenjualanPageGroup"
         Me.PenjualanPageGroup.Text = "Penjualan"
+        '
+        'ReturPenjualanPageGroup
+        '
+        Me.ReturPenjualanPageGroup.AllowTextClipping = False
+        Me.ReturPenjualanPageGroup.ItemLinks.Add(Me.ReturPenjualanUnitFormBtn)
+        Me.ReturPenjualanPageGroup.ItemLinks.Add(Me.BuktiReturUnitFormBtn)
+        Me.ReturPenjualanPageGroup.ItemLinks.Add(Me.LaporanReturPenjualanUnitFormBtn)
+        Me.ReturPenjualanPageGroup.Name = "ReturPenjualanPageGroup"
+        Me.ReturPenjualanPageGroup.Text = "Retur Penjualan"
         '
         'XtraTabbedMdiManager1
         '
@@ -374,79 +455,6 @@ Partial Class UnitModuleMDI
         Me.BarButtonItem1.Caption = "BarButtonItem1"
         Me.BarButtonItem1.Id = 7
         Me.BarButtonItem1.Name = "BarButtonItem1"
-        '
-        'ReturPenjualanPageGroup
-        '
-        Me.ReturPenjualanPageGroup.AllowTextClipping = False
-        Me.ReturPenjualanPageGroup.ItemLinks.Add(Me.BarButtonItem8)
-        Me.ReturPenjualanPageGroup.ItemLinks.Add(Me.BarButtonItem9)
-        Me.ReturPenjualanPageGroup.ItemLinks.Add(Me.BarButtonItem10)
-        Me.ReturPenjualanPageGroup.Name = "ReturPenjualanPageGroup"
-        Me.ReturPenjualanPageGroup.Text = "Retur Penjualan"
-        '
-        'BarButtonItem2
-        '
-        Me.BarButtonItem2.Caption = "Sales Order"
-        Me.BarButtonItem2.Id = 26
-        Me.BarButtonItem2.Name = "BarButtonItem2"
-        Me.BarButtonItem2.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
-            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
-        '
-        'BarButtonItem4
-        '
-        Me.BarButtonItem4.Caption = "Invoice Penjualan"
-        Me.BarButtonItem4.Id = 27
-        Me.BarButtonItem4.Name = "BarButtonItem4"
-        Me.BarButtonItem4.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
-            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
-        '
-        'BarButtonItem5
-        '
-        Me.BarButtonItem5.Caption = "Delivery Order"
-        Me.BarButtonItem5.Id = 28
-        Me.BarButtonItem5.Name = "BarButtonItem5"
-        Me.BarButtonItem5.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
-            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
-        '
-        'BarButtonItem6
-        '
-        Me.BarButtonItem6.Caption = "Menu Cetakan"
-        Me.BarButtonItem6.Id = 29
-        Me.BarButtonItem6.Name = "BarButtonItem6"
-        Me.BarButtonItem6.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
-            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
-        '
-        'BarButtonItem7
-        '
-        Me.BarButtonItem7.Caption = "Laporan Penjualan"
-        Me.BarButtonItem7.Id = 30
-        Me.BarButtonItem7.Name = "BarButtonItem7"
-        Me.BarButtonItem7.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
-            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
-        '
-        'BarButtonItem8
-        '
-        Me.BarButtonItem8.Caption = "Retur Penjualan"
-        Me.BarButtonItem8.Id = 31
-        Me.BarButtonItem8.Name = "BarButtonItem8"
-        Me.BarButtonItem8.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
-            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
-        '
-        'BarButtonItem9
-        '
-        Me.BarButtonItem9.Caption = "Cetak Bukti Retur"
-        Me.BarButtonItem9.Id = 32
-        Me.BarButtonItem9.Name = "BarButtonItem9"
-        Me.BarButtonItem9.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
-            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
-        '
-        'BarButtonItem10
-        '
-        Me.BarButtonItem10.Caption = "Laporan Retur Penjualan"
-        Me.BarButtonItem10.Id = 33
-        Me.BarButtonItem10.Name = "BarButtonItem10"
-        Me.BarButtonItem10.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
-            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'UnitModuleMDI
         '
@@ -478,11 +486,11 @@ Partial Class UnitModuleMDI
     Friend WithEvents InputPembelianFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents CetakBuktiPembelianFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BuktiPembelianFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents LaporanPembelianFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents ReturPembelianPageGroup As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents InputReturPembelianFormBtn As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents CetakBuktiReturPembelianFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BuktiReturPembelianFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents LaporanReturPembelianFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents StockUnitPage As DevExpress.XtraBars.Ribbon.RibbonPage
     Friend WithEvents PenerimaanUnitPageGroup As DevExpress.XtraBars.Ribbon.RibbonPageGroup
@@ -491,24 +499,24 @@ Partial Class UnitModuleMDI
     Friend WithEvents PenjualanPageGroup As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents TransferUnitPageGroup As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents PenerimaanPembelianUnitFormBtn As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents CetakBuktiPenerimaanUnitFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BuktiPenerimaanUnitFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents LaporanPenerimaanUnitFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents PengirimanKendaraanFormBtn As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem3 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BuktiPengirimanKendaraanFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents LaporanPengirimanKendaraanFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents TransferInUnitFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents TransferOutUnitFormBtn As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents CetakBuktiTransferUnitFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BuktiTransferUnitFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents LaporanTransferUnitFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents StockTrackingPageGroup As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents TrackingStockUnitFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents ReturPenjualanPageGroup As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-    Friend WithEvents BarButtonItem2 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem4 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem5 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem6 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem7 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem8 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem9 As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BarButtonItem10 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents SalesOrderFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents InvoicePenjualanUnitFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents DeliveryOrderUnitFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents MenuCetakanPenjualanUnitFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents LaporanPenjualanUnitFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents ReturPenjualanUnitFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BuktiReturUnitFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents LaporanReturPenjualanUnitFormBtn As DevExpress.XtraBars.BarButtonItem
 End Class

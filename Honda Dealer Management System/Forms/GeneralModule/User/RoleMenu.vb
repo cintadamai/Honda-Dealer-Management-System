@@ -1,5 +1,6 @@
 ﻿Imports DevExpress.Xpo
 Imports Honda_Dealer_Management_System.HDMS
+Imports Humanizer
 Public Class RoleMenu
     Dim RoleMenuColl As XPQuery(Of RoleMenuModel)
     Dim RoleColl As XPQuery(Of RoleModel)
@@ -23,7 +24,7 @@ Public Class RoleMenu
         Dim filtered = From rm In RoleMenuColl
                        Join m In MenuColl On rm.Menuid.Id Equals m.Id
                        Where rm.Roleid.RoleName = RoleNameTxt.Text
-                       Select New With {rm.Id, m.MenuName, m.MenuLevel}
+                       Select New With {rm.Id, m.MenuName, .MenuName1 = m.MenuName.ToString().Humanize(LetterCasing.AllCaps), m.MenuLevel}
 
         RoleMenuBS.DataSource = filtered
 
