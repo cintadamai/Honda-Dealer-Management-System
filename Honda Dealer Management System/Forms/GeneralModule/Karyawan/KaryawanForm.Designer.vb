@@ -20,6 +20,12 @@ Partial Class KaryawanForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule4 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule5 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule6 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Me.XtraScrollableControl1 = New DevExpress.XtraEditors.XtraScrollableControl()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
@@ -30,28 +36,17 @@ Partial Class KaryawanForm
         Me.colId = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colNoKtp = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colNamaKaryawan = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colAlamat = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colNoTelepon = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colEmail = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colNoHandphone = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colIsactive = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colTanggalMasuk = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colTanggalResign = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colKeteranganResign = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCreatedBy = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colCreatedAt = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colUpdatedBy = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colUpdatedAt = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.DivisiTxt = New DevExpress.XtraEditors.GridLookUpEdit()
+        Me.DivisiXP = New DevExpress.Xpo.XPCollection(Me.components)
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.LabelControl15 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl14 = New DevExpress.XtraEditors.LabelControl()
@@ -78,11 +73,13 @@ Partial Class KaryawanForm
         Me.TanggalMasukTxt = New DevExpress.XtraEditors.DateEdit()
         Me.TanggalResignTxt = New DevExpress.XtraEditors.DateEdit()
         Me.JabatanTxt = New DevExpress.XtraEditors.GridLookUpEdit()
+        Me.JabatanXP = New DevExpress.Xpo.XPCollection(Me.components)
         Me.GridLookUpEdit2View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.isActiveCk = New DevExpress.XtraEditors.CheckEdit()
         Me.SPVTxt = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.GridLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.BranchTxt = New DevExpress.XtraEditors.GridLookUpEdit()
+        Me.BranchXP = New DevExpress.Xpo.XPCollection(Me.components)
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.BatalBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.HapusBtn = New DevExpress.XtraEditors.SimpleButton()
@@ -90,9 +87,7 @@ Partial Class KaryawanForm
         Me.PrintBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpanBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.TambahBtn = New DevExpress.XtraEditors.SimpleButton()
-        Me.BranchXP = New DevExpress.Xpo.XPCollection(Me.components)
-        Me.DivisiXP = New DevExpress.Xpo.XPCollection(Me.components)
-        Me.JabatanXP = New DevExpress.Xpo.XPCollection(Me.components)
+        Me.validator = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         Me.XtraScrollableControl1.SuspendLayout()
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl2.SuspendLayout()
@@ -104,6 +99,7 @@ Partial Class KaryawanForm
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.DivisiTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DivisiXP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HpTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmailTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,15 +114,15 @@ Partial Class KaryawanForm
         CType(Me.TanggalResignTxt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TanggalResignTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.JabatanTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.JabatanXP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridLookUpEdit2View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.isActiveCk.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SPVTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BranchTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BranchXP, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DivisiXP, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.JabatanXP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.validator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'XtraScrollableControl1
@@ -181,9 +177,17 @@ Partial Class KaryawanForm
         '
         'GridView3
         '
-        Me.GridView3.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colId, Me.colNoKtp, Me.colNamaKaryawan, Me.colAlamat, Me.colNoTelepon, Me.colEmail, Me.colNoHandphone, Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.colIsactive, Me.GridColumn5, Me.GridColumn6, Me.colTanggalMasuk, Me.colTanggalResign, Me.colKeteranganResign, Me.colCreatedBy, Me.colCreatedAt, Me.colUpdatedBy, Me.colUpdatedAt, Me.GridColumn7, Me.GridColumn8})
+        Me.GridView3.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colId, Me.colNoKtp, Me.colNamaKaryawan, Me.colNoTelepon, Me.colEmail, Me.colNoHandphone, Me.GridColumn1, Me.GridColumn3, Me.colIsactive, Me.GridColumn5, Me.GridColumn8})
         Me.GridView3.GridControl = Me.GridControl1
         Me.GridView3.Name = "GridView3"
+        Me.GridView3.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.[False]
+        Me.GridView3.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.[False]
+        Me.GridView3.OptionsBehavior.Editable = False
+        Me.GridView3.OptionsBehavior.ReadOnly = True
+        Me.GridView3.OptionsDetail.EnableMasterViewMode = False
+        Me.GridView3.OptionsView.BestFitMode = DevExpress.XtraGrid.Views.Grid.GridBestFitMode.Full
+        Me.GridView3.OptionsView.ColumnAutoWidth = False
+        Me.GridView3.OptionsView.ShowAutoFilterRow = True
         '
         'colId
         '
@@ -198,6 +202,7 @@ Partial Class KaryawanForm
         Me.colNoKtp.Name = "colNoKtp"
         Me.colNoKtp.Visible = True
         Me.colNoKtp.VisibleIndex = 1
+        Me.colNoKtp.Width = 139
         '
         'colNamaKaryawan
         '
@@ -205,146 +210,75 @@ Partial Class KaryawanForm
         Me.colNamaKaryawan.Name = "colNamaKaryawan"
         Me.colNamaKaryawan.Visible = True
         Me.colNamaKaryawan.VisibleIndex = 2
-        '
-        'colAlamat
-        '
-        Me.colAlamat.FieldName = "Alamat"
-        Me.colAlamat.Name = "colAlamat"
-        Me.colAlamat.Visible = True
-        Me.colAlamat.VisibleIndex = 3
+        Me.colNamaKaryawan.Width = 153
         '
         'colNoTelepon
         '
         Me.colNoTelepon.FieldName = "NoTelepon"
         Me.colNoTelepon.Name = "colNoTelepon"
         Me.colNoTelepon.Visible = True
-        Me.colNoTelepon.VisibleIndex = 4
+        Me.colNoTelepon.VisibleIndex = 3
+        Me.colNoTelepon.Width = 124
         '
         'colEmail
         '
         Me.colEmail.FieldName = "Email"
         Me.colEmail.Name = "colEmail"
         Me.colEmail.Visible = True
-        Me.colEmail.VisibleIndex = 5
+        Me.colEmail.VisibleIndex = 4
+        Me.colEmail.Width = 122
         '
         'colNoHandphone
         '
         Me.colNoHandphone.FieldName = "NoHandphone"
         Me.colNoHandphone.Name = "colNoHandphone"
         Me.colNoHandphone.Visible = True
-        Me.colNoHandphone.VisibleIndex = 6
+        Me.colNoHandphone.VisibleIndex = 5
+        Me.colNoHandphone.Width = 143
         '
         'GridColumn1
         '
-        Me.GridColumn1.FieldName = "Divisi!"
+        Me.GridColumn1.Caption = "Divisi"
+        Me.GridColumn1.FieldName = "Divisi.DivisiName"
         Me.GridColumn1.Name = "GridColumn1"
         Me.GridColumn1.Visible = True
-        Me.GridColumn1.VisibleIndex = 7
-        '
-        'GridColumn2
-        '
-        Me.GridColumn2.FieldName = "Divisi!Key"
-        Me.GridColumn2.Name = "GridColumn2"
-        Me.GridColumn2.Visible = True
-        Me.GridColumn2.VisibleIndex = 8
+        Me.GridColumn1.VisibleIndex = 6
+        Me.GridColumn1.Width = 152
         '
         'GridColumn3
         '
-        Me.GridColumn3.FieldName = "Jabatan!"
+        Me.GridColumn3.Caption = "Jabatan"
+        Me.GridColumn3.FieldName = "Jabatan.JabatanName"
         Me.GridColumn3.Name = "GridColumn3"
         Me.GridColumn3.Visible = True
-        Me.GridColumn3.VisibleIndex = 9
-        '
-        'GridColumn4
-        '
-        Me.GridColumn4.FieldName = "Jabatan!Key"
-        Me.GridColumn4.Name = "GridColumn4"
-        Me.GridColumn4.Visible = True
-        Me.GridColumn4.VisibleIndex = 10
+        Me.GridColumn3.VisibleIndex = 7
+        Me.GridColumn3.Width = 170
         '
         'colIsactive
         '
         Me.colIsactive.FieldName = "Isactive"
         Me.colIsactive.Name = "colIsactive"
         Me.colIsactive.Visible = True
-        Me.colIsactive.VisibleIndex = 11
+        Me.colIsactive.VisibleIndex = 8
+        Me.colIsactive.Width = 65
         '
         'GridColumn5
         '
-        Me.GridColumn5.FieldName = "Spv!"
+        Me.GridColumn5.Caption = "SPV"
+        Me.GridColumn5.FieldName = "Spv.NamaKaryawan"
         Me.GridColumn5.Name = "GridColumn5"
         Me.GridColumn5.Visible = True
-        Me.GridColumn5.VisibleIndex = 12
-        '
-        'GridColumn6
-        '
-        Me.GridColumn6.FieldName = "Spv!Key"
-        Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.Visible = True
-        Me.GridColumn6.VisibleIndex = 13
-        '
-        'colTanggalMasuk
-        '
-        Me.colTanggalMasuk.FieldName = "TanggalMasuk"
-        Me.colTanggalMasuk.Name = "colTanggalMasuk"
-        Me.colTanggalMasuk.Visible = True
-        Me.colTanggalMasuk.VisibleIndex = 14
-        '
-        'colTanggalResign
-        '
-        Me.colTanggalResign.FieldName = "TanggalResign"
-        Me.colTanggalResign.Name = "colTanggalResign"
-        Me.colTanggalResign.Visible = True
-        Me.colTanggalResign.VisibleIndex = 15
-        '
-        'colKeteranganResign
-        '
-        Me.colKeteranganResign.FieldName = "KeteranganResign"
-        Me.colKeteranganResign.Name = "colKeteranganResign"
-        Me.colKeteranganResign.Visible = True
-        Me.colKeteranganResign.VisibleIndex = 16
-        '
-        'colCreatedBy
-        '
-        Me.colCreatedBy.FieldName = "CreatedBy"
-        Me.colCreatedBy.Name = "colCreatedBy"
-        Me.colCreatedBy.Visible = True
-        Me.colCreatedBy.VisibleIndex = 17
-        '
-        'colCreatedAt
-        '
-        Me.colCreatedAt.FieldName = "CreatedAt"
-        Me.colCreatedAt.Name = "colCreatedAt"
-        Me.colCreatedAt.Visible = True
-        Me.colCreatedAt.VisibleIndex = 18
-        '
-        'colUpdatedBy
-        '
-        Me.colUpdatedBy.FieldName = "UpdatedBy"
-        Me.colUpdatedBy.Name = "colUpdatedBy"
-        Me.colUpdatedBy.Visible = True
-        Me.colUpdatedBy.VisibleIndex = 19
-        '
-        'colUpdatedAt
-        '
-        Me.colUpdatedAt.FieldName = "UpdatedAt"
-        Me.colUpdatedAt.Name = "colUpdatedAt"
-        Me.colUpdatedAt.Visible = True
-        Me.colUpdatedAt.VisibleIndex = 20
-        '
-        'GridColumn7
-        '
-        Me.GridColumn7.FieldName = "Branch!"
-        Me.GridColumn7.Name = "GridColumn7"
-        Me.GridColumn7.Visible = True
-        Me.GridColumn7.VisibleIndex = 21
+        Me.GridColumn5.VisibleIndex = 9
+        Me.GridColumn5.Width = 131
         '
         'GridColumn8
         '
-        Me.GridColumn8.FieldName = "Branch!Key"
+        Me.GridColumn8.Caption = "Branch"
+        Me.GridColumn8.FieldName = "Branch.NamaBranch"
         Me.GridColumn8.Name = "GridColumn8"
         Me.GridColumn8.Visible = True
-        Me.GridColumn8.VisibleIndex = 22
+        Me.GridColumn8.VisibleIndex = 10
+        Me.GridColumn8.Width = 175
         '
         'PanelControl1
         '
@@ -387,11 +321,25 @@ Partial Class KaryawanForm
         Me.DivisiTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.KaryawanBS, "Divisi!Key", True))
         Me.DivisiTxt.Location = New System.Drawing.Point(132, 229)
         Me.DivisiTxt.Name = "DivisiTxt"
+        Me.DivisiTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.DivisiTxt.Properties.Appearance.Options.UseBackColor = True
         Me.DivisiTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DivisiTxt.Properties.DataSource = Me.DivisiXP
+        Me.DivisiTxt.Properties.DisplayMember = "DivisiName"
         Me.DivisiTxt.Properties.NullText = ""
+        Me.DivisiTxt.Properties.ValueMember = "Id"
         Me.DivisiTxt.Properties.View = Me.GridView1
         Me.DivisiTxt.Size = New System.Drawing.Size(166, 20)
         Me.DivisiTxt.TabIndex = 30
+        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule1.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.DivisiTxt, ConditionValidationRule1)
+        '
+        'DivisiXP
+        '
+        Me.DivisiXP.DeleteObjectOnRemove = True
+        Me.DivisiXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.DivisiModel)
+        Me.DivisiXP.Session = Me.uow
         '
         'GridView1
         '
@@ -477,8 +425,13 @@ Partial Class KaryawanForm
         Me.EmailTxt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KaryawanBS, "Email", True))
         Me.EmailTxt.Location = New System.Drawing.Point(132, 177)
         Me.EmailTxt.Name = "EmailTxt"
+        Me.EmailTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.EmailTxt.Properties.Appearance.Options.UseBackColor = True
         Me.EmailTxt.Size = New System.Drawing.Size(166, 20)
         Me.EmailTxt.TabIndex = 11
+        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule2.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.EmailTxt, ConditionValidationRule2)
         '
         'LabelControl6
         '
@@ -517,8 +470,13 @@ Partial Class KaryawanForm
         Me.NamaTxt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KaryawanBS, "NamaKaryawan", True))
         Me.NamaTxt.Location = New System.Drawing.Point(132, 72)
         Me.NamaTxt.Name = "NamaTxt"
+        Me.NamaTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.NamaTxt.Properties.Appearance.Options.UseBackColor = True
         Me.NamaTxt.Size = New System.Drawing.Size(166, 20)
         Me.NamaTxt.TabIndex = 5
+        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule3.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.NamaTxt, ConditionValidationRule3)
         '
         'LabelControl3
         '
@@ -549,6 +507,7 @@ Partial Class KaryawanForm
         Me.idTxt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KaryawanBS, "Id", True))
         Me.idTxt.Location = New System.Drawing.Point(132, 20)
         Me.idTxt.Name = "idTxt"
+        Me.idTxt.Properties.ReadOnly = True
         Me.idTxt.Size = New System.Drawing.Size(109, 20)
         Me.idTxt.TabIndex = 1
         '
@@ -565,8 +524,13 @@ Partial Class KaryawanForm
         Me.AlamatTxt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KaryawanBS, "Alamat", True))
         Me.AlamatTxt.Location = New System.Drawing.Point(132, 98)
         Me.AlamatTxt.Name = "AlamatTxt"
+        Me.AlamatTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.AlamatTxt.Properties.Appearance.Options.UseBackColor = True
         Me.AlamatTxt.Size = New System.Drawing.Size(203, 47)
         Me.AlamatTxt.TabIndex = 7
+        ConditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule4.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.AlamatTxt, ConditionValidationRule4)
         '
         'KeteranganResignTxt
         '
@@ -582,6 +546,8 @@ Partial Class KaryawanForm
         Me.TanggalMasukTxt.EditValue = Nothing
         Me.TanggalMasukTxt.Location = New System.Drawing.Point(132, 333)
         Me.TanggalMasukTxt.Name = "TanggalMasukTxt"
+        Me.TanggalMasukTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.TanggalMasukTxt.Properties.Appearance.Options.UseBackColor = True
         Me.TanggalMasukTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.TanggalMasukTxt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.TanggalMasukTxt.Properties.DisplayFormat.FormatString = ""
@@ -592,10 +558,13 @@ Partial Class KaryawanForm
         Me.TanggalMasukTxt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None
         Me.TanggalMasukTxt.Size = New System.Drawing.Size(166, 20)
         Me.TanggalMasukTxt.TabIndex = 23
+        ConditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule5.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.TanggalMasukTxt, ConditionValidationRule5)
         '
         'TanggalResignTxt
         '
-        Me.TanggalResignTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.KaryawanBS, "KeteranganResign", True))
+        Me.TanggalResignTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.KaryawanBS, "TanggalResign", True))
         Me.TanggalResignTxt.EditValue = Nothing
         Me.TanggalResignTxt.Location = New System.Drawing.Point(132, 359)
         Me.TanggalResignTxt.Name = "TanggalResignTxt"
@@ -615,11 +584,25 @@ Partial Class KaryawanForm
         Me.JabatanTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.KaryawanBS, "Jabatan!Key", True))
         Me.JabatanTxt.Location = New System.Drawing.Point(132, 255)
         Me.JabatanTxt.Name = "JabatanTxt"
+        Me.JabatanTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.JabatanTxt.Properties.Appearance.Options.UseBackColor = True
         Me.JabatanTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.JabatanTxt.Properties.DataSource = Me.JabatanXP
+        Me.JabatanTxt.Properties.DisplayMember = "JabatanName"
         Me.JabatanTxt.Properties.NullText = ""
+        Me.JabatanTxt.Properties.ValueMember = "Id"
         Me.JabatanTxt.Properties.View = Me.GridLookUpEdit2View
         Me.JabatanTxt.Size = New System.Drawing.Size(166, 20)
         Me.JabatanTxt.TabIndex = 17
+        ConditionValidationRule6.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule6.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.JabatanTxt, ConditionValidationRule6)
+        '
+        'JabatanXP
+        '
+        Me.JabatanXP.DeleteObjectOnRemove = True
+        Me.JabatanXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.JabatanModel)
+        Me.JabatanXP.Session = Me.uow
         '
         'GridLookUpEdit2View
         '
@@ -645,7 +628,10 @@ Partial Class KaryawanForm
         Me.SPVTxt.Location = New System.Drawing.Point(132, 307)
         Me.SPVTxt.Name = "SPVTxt"
         Me.SPVTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.SPVTxt.Properties.DataSource = Me.karyawanXP
+        Me.SPVTxt.Properties.DisplayMember = "Divisi.DivisiName"
         Me.SPVTxt.Properties.NullText = ""
+        Me.SPVTxt.Properties.ValueMember = "Id"
         Me.SPVTxt.Properties.View = Me.GridLookUpEdit1View
         Me.SPVTxt.Size = New System.Drawing.Size(166, 20)
         Me.SPVTxt.TabIndex = 21
@@ -663,10 +649,19 @@ Partial Class KaryawanForm
         Me.BranchTxt.Location = New System.Drawing.Point(132, 442)
         Me.BranchTxt.Name = "BranchTxt"
         Me.BranchTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.BranchTxt.Properties.DataSource = Me.BranchXP
+        Me.BranchTxt.Properties.DisplayMember = "Alamat"
         Me.BranchTxt.Properties.NullText = ""
+        Me.BranchTxt.Properties.ValueMember = "Id"
         Me.BranchTxt.Properties.View = Me.GridView2
         Me.BranchTxt.Size = New System.Drawing.Size(166, 20)
         Me.BranchTxt.TabIndex = 29
+        '
+        'BranchXP
+        '
+        Me.BranchXP.DeleteObjectOnRemove = True
+        Me.BranchXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.BranchModel)
+        Me.BranchXP.Session = Me.uow
         '
         'GridView2
         '
@@ -726,24 +721,6 @@ Partial Class KaryawanForm
         Me.TambahBtn.TabIndex = 13
         Me.TambahBtn.Text = "Tambah"
         '
-        'BranchXP
-        '
-        Me.BranchXP.DeleteObjectOnRemove = True
-        Me.BranchXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.BranchModel)
-        Me.BranchXP.Session = Me.uow
-        '
-        'DivisiXP
-        '
-        Me.DivisiXP.DeleteObjectOnRemove = True
-        Me.DivisiXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.DivisiModel)
-        Me.DivisiXP.Session = Me.uow
-        '
-        'JabatanXP
-        '
-        Me.JabatanXP.DeleteObjectOnRemove = True
-        Me.JabatanXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.JabatanModel)
-        Me.JabatanXP.Session = Me.uow
-        '
         'KaryawanForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -751,7 +728,7 @@ Partial Class KaryawanForm
         Me.ClientSize = New System.Drawing.Size(1132, 554)
         Me.Controls.Add(Me.XtraScrollableControl1)
         Me.Name = "KaryawanForm"
-        Me.Text = "KaryawanForm"
+        Me.Text = "Karyawan"
         Me.XtraScrollableControl1.ResumeLayout(False)
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl2.ResumeLayout(False)
@@ -764,6 +741,7 @@ Partial Class KaryawanForm
         Me.PanelControl1.ResumeLayout(False)
         Me.PanelControl1.PerformLayout()
         CType(Me.DivisiTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DivisiXP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.HpTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmailTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -778,15 +756,15 @@ Partial Class KaryawanForm
         CType(Me.TanggalResignTxt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TanggalResignTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.JabatanTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.JabatanXP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridLookUpEdit2View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.isActiveCk.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SPVTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BranchTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BranchXP, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DivisiXP, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.JabatanXP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.validator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -844,24 +822,13 @@ Partial Class KaryawanForm
     Friend WithEvents colId As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colNoKtp As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colNamaKaryawan As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colAlamat As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colNoTelepon As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colEmail As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colNoHandphone As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colIsactive As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colTanggalMasuk As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colTanggalResign As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colKeteranganResign As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colCreatedBy As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colCreatedAt As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colUpdatedBy As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents colUpdatedAt As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn7 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn8 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents validator As DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider
 End Class

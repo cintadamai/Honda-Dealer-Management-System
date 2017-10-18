@@ -1,10 +1,9 @@
 ﻿Imports DevExpress.Xpo
-Imports System.Linq
-Imports System.Linq.Expressions
 Imports Honda_Dealer_Management_System.HDMS
 Public Class Login
 
     Dim Users As XPQuery(Of UserModel)
+    Dim hasing As New Hashing
     Sub New()
         InitializeComponent()
     End Sub
@@ -20,6 +19,11 @@ Public Class Login
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConnectionHelper.Connect(DB.AutoCreateOption.DatabaseAndSchema)
         Users = UOW.Query(Of UserModel)()
+
+
+        'Users.First.Password = hasing.HashPassword("123")
+        'Users.First.Save()
+        'UOW.CommitChanges()
     End Sub
 
     Private Sub Keluar_Click(sender As Object, e As EventArgs) Handles keluar.Click
@@ -32,11 +36,11 @@ Public Class Login
         End If
 
         Dim User = From u In Users
-                   Where u.Username = username.Text And u.Password = password.Text
+                   Where u.Username = username.Text
                    Select u
 
         If User.Count < 1 Then
-            MsgBox("Username atau Password tidak Valid", MsgBoxStyle.Critical, "Error")
+            MsgBox("Username tidak Valid", MsgBoxStyle.Critical, "Error")
             Exit Sub
         End If
 
@@ -47,11 +51,16 @@ Public Class Login
 
         If User.Count = 1 Then
             UserAkses.User = User.First
-            GroupControl1.Enabled = True
-            username.Enabled = False
-            password.Enabled = False
-            masuk.Enabled = False
-            CekMenu()
+            If hasing.ValidatePass(password.Text, UserAkses.User.Password) Then
+                GroupControl1.Enabled = True
+                username.Enabled = False
+                password.Enabled = False
+                masuk.Enabled = False
+                CekMenu()
+            Else
+                MsgBox("Password tidak Valid", MsgBoxStyle.Critical, "Error")
+                Exit Sub
+            End If
         End If
     End Sub
 
@@ -116,5 +125,10 @@ Public Class Login
 
     Private Sub TaxModul_Click(sender As Object, e As EventArgs) Handles TaxModul.Click
         'coba 3
+    End Sub
+
+    Private Sub UnitModul_Click(sender As Object, e As EventArgs) Handles UnitModul.Click
+        UnitModuleMDI.Show()
+        UnitModuleMDI.Focus()
     End Sub
 End Class

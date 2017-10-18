@@ -3,6 +3,7 @@ Imports DevExpress.Xpo
 Public Class UserForm
     Dim RoleColl As XPQuery(Of RoleModel)
     Dim KaryawanColl As XPQuery(Of KaryawanModel)
+    Dim hash As New Hashing
     Private Sub UserForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ViewState()
         RoleColl = UOW.Query(Of RoleModel)()
@@ -22,6 +23,7 @@ Public Class UserForm
         PrintBtn.Enabled = False
         EditBtn.Enabled = True
         HapusBtn.Enabled = True
+        ResetPassBtn.Enabled = False
     End Sub
 
     Sub EditState()
@@ -37,6 +39,7 @@ Public Class UserForm
         PrintBtn.Enabled = False
         EditBtn.Enabled = False
         HapusBtn.Enabled = False
+        ResetPassBtn.Enabled = True
     End Sub
 
     Private Sub TambahBtn_Click(sender As Object, e As EventArgs) Handles TambahBtn.Click
@@ -78,5 +81,12 @@ Public Class UserForm
             UserXpCollection.Remove(UserBS.Current)
             UOW.CommitChanges()
         End If
+    End Sub
+
+    Private Sub ResetPassBtn_Click(sender As Object, e As EventArgs) Handles ResetPassBtn.Click
+        Dim u As UserModel = UserBS.Current
+        u.Password = hash.HashPassword("123")
+        u.Save()
+        UOW.CommitChanges()
     End Sub
 End Class

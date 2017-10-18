@@ -20,11 +20,11 @@ Partial Class UserForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule5 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserForm))
+        Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
-        Dim ConditionValidationRule4 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Me.XtraScrollableControl = New DevExpress.XtraEditors.XtraScrollableControl()
         Me.BatalBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.PanelControl2 = New DevExpress.XtraEditors.PanelControl()
@@ -39,6 +39,7 @@ Partial Class UserForm
         Me.colIsactive = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.ResetPassBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
         Me.Karyawan = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.KaryawanBS = New System.Windows.Forms.BindingSource(Me.components)
@@ -65,7 +66,6 @@ Partial Class UserForm
         Me.SimpanBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.TambahBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.validator = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
-        Me.ResetPassBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.XtraScrollableControl.SuspendLayout()
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl2.SuspendLayout()
@@ -224,6 +224,14 @@ Partial Class UserForm
         Me.PanelControl1.Size = New System.Drawing.Size(298, 404)
         Me.PanelControl1.TabIndex = 10
         '
+        'ResetPassBtn
+        '
+        Me.ResetPassBtn.Location = New System.Drawing.Point(107, 185)
+        Me.ResetPassBtn.Name = "ResetPassBtn"
+        Me.ResetPassBtn.Size = New System.Drawing.Size(90, 24)
+        Me.ResetPassBtn.TabIndex = 11
+        Me.ResetPassBtn.Text = "Reset Password"
+        '
         'LabelControl5
         '
         Me.LabelControl5.Location = New System.Drawing.Point(16, 123)
@@ -243,12 +251,13 @@ Partial Class UserForm
         Me.Karyawan.Properties.DataSource = Me.KaryawanXpCollection
         Me.Karyawan.Properties.DisplayMember = "NamaKaryawan"
         Me.Karyawan.Properties.NullText = ""
+        Me.Karyawan.Properties.ValueMember = "Id"
         Me.Karyawan.Properties.View = Me.GridView2
         Me.Karyawan.Size = New System.Drawing.Size(159, 20)
         Me.Karyawan.TabIndex = 9
-        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule1.ErrorText = "Harus di isi."
-        Me.validator.SetValidationRule(Me.Karyawan, ConditionValidationRule1)
+        ConditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule5.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.Karyawan, ConditionValidationRule5)
         '
         'KaryawanBS
         '
@@ -327,9 +336,9 @@ Partial Class UserForm
         Me.personName.Properties.Appearance.Options.UseBackColor = True
         Me.personName.Size = New System.Drawing.Size(159, 20)
         Me.personName.TabIndex = 4
-        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule2.ErrorText = "Harus di isi."
-        Me.validator.SetValidationRule(Me.personName, ConditionValidationRule2)
+        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule1.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.personName, ConditionValidationRule1)
         '
         'LabelControl2
         '
@@ -348,9 +357,9 @@ Partial Class UserForm
         Me.username.Properties.Appearance.Options.UseBackColor = True
         Me.username.Size = New System.Drawing.Size(159, 20)
         Me.username.TabIndex = 2
-        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule3.ErrorText = "Harus di isi."
-        Me.validator.SetValidationRule(Me.username, ConditionValidationRule3)
+        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule2.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.username, ConditionValidationRule2)
         '
         'LabelControl1
         '
@@ -385,9 +394,9 @@ Partial Class UserForm
         Me.role.Properties.View = Me.GridLookUpEdit1View
         Me.role.Size = New System.Drawing.Size(159, 20)
         Me.role.TabIndex = 7
-        ConditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule4.ErrorText = "Harus di isi."
-        Me.validator.SetValidationRule(Me.role, ConditionValidationRule4)
+        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule3.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.role, ConditionValidationRule3)
         '
         'RoleBS
         '
@@ -447,14 +456,6 @@ Partial Class UserForm
         Me.TambahBtn.Size = New System.Drawing.Size(90, 32)
         Me.TambahBtn.TabIndex = 5
         Me.TambahBtn.Text = "Tambah"
-        '
-        'ResetPassBtn
-        '
-        Me.ResetPassBtn.Location = New System.Drawing.Point(107, 185)
-        Me.ResetPassBtn.Name = "ResetPassBtn"
-        Me.ResetPassBtn.Size = New System.Drawing.Size(90, 24)
-        Me.ResetPassBtn.TabIndex = 11
-        Me.ResetPassBtn.Text = "Reset Password"
         '
         'UserForm
         '

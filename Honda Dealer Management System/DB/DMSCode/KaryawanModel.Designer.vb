@@ -38,14 +38,15 @@ Namespace HDMS
                 SetPropertyValue(Of String)("NoKtp", fNoKtp, value)
             End Set
         End Property
-        Dim fNamaKaryawan As Long
+        Dim fNamaKaryawan As String
+        <Size(64)>
         <Persistent("nama_karyawan")>
-        Public Property NamaKaryawan() As Long
+        Public Property NamaKaryawan() As String
             Get
                 Return fNamaKaryawan
             End Get
-            Set(ByVal value As Long)
-                SetPropertyValue(Of Long)("NamaKaryawan", fNamaKaryawan, value)
+            Set(ByVal value As String)
+                SetPropertyValue(Of String)("NamaKaryawan", fNamaKaryawan, value)
             End Set
         End Property
         Dim fAlamat As String
