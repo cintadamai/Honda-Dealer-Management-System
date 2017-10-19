@@ -49,17 +49,6 @@ Namespace HDMS
                 SetPropertyValue(Of String)("Tipe", fTipe, value)
             End Set
         End Property
-        Dim fVariant1 As String
-        <Size(SizeAttribute.Unlimited)>
-        <Persistent("variant")>
-        Public Property Variant1() As String
-            Get
-                Return fVariant1
-            End Get
-            Set(ByVal value As String)
-                SetPropertyValue(Of String)("Variant1", fVariant1, value)
-            End Set
-        End Property
         Dim fCreatedBy As Long
         <Persistent("created_by")>
         Public Property CreatedBy() As Long
@@ -98,6 +87,17 @@ Namespace HDMS
             End Get
             Set(ByVal value As DateTime)
                 SetPropertyValue(Of DateTime)("UpdatedAt", fUpdatedAt, value)
+            End Set
+        End Property
+        Dim fTransmisi As String
+        <Size(SizeAttribute.Unlimited)>
+        <Persistent("transmisi")>
+        Public Property Transmisi() As String
+            Get
+                Return fTransmisi
+            End Get
+            Set(ByVal value As String)
+                SetPropertyValue(Of String)("Transmisi", fTransmisi, value)
             End Set
         End Property
         <Association("UnitProspekModelReferencesUnitModelModel")>

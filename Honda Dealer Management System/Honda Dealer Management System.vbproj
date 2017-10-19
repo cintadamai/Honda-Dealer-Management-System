@@ -365,6 +365,9 @@
     <EmbeddedResource Include="Forms\UnitModule\MasterData\DataGudangUnitForm.resx">
       <DependentUpon>DataGudangUnitForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnitModule\MasterData\DataModelUnitForm.resx">
+      <DependentUpon>DataModelUnitForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UnitModule\MasterData\DataSupplierForm.resx">
       <DependentUpon>DataSupplierForm.vb</DependentUpon>
     </EmbeddedResource>

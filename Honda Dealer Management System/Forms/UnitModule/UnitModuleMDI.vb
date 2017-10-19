@@ -13,4 +13,16 @@
         f.Show()
         f.Focus()
     End Sub
+
+    Private Sub DataUnitWarnaFormBtn_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles DataUnitWarnaFormBtn.ItemClick
+        Dim f As New DataWarnaUnitForm With {.MdiParent = Me}
+        f.Show()
+        f.Focus()
+    End Sub
+
+    Private Sub DataModelUnitFormBtn_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles DataModelUnitFormBtn.ItemClick
+        Dim f As New DataModelUnitForm With {.MdiParent = Me}
+        f.Show()
+        f.Focus()
+    End Sub
 End Class

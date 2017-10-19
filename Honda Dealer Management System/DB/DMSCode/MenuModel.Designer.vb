@@ -11,7 +11,6 @@ Imports DevExpress.Xpo
 Imports DevExpress.Data.Filtering
 Imports System.Collections.Generic
 Imports System.ComponentModel
-Imports Humanizer
 Namespace HDMS
 
     <Persistent("menu")>
@@ -33,7 +32,7 @@ Namespace HDMS
         <Persistent("menu_name")>
         Public Property MenuName() As String
             Get
-                Return fMenuName.Humanize(LetterCasing.AllCaps)
+                Return fMenuName
             End Get
             Set(ByVal value As String)
                 SetPropertyValue(Of String)("MenuName", fMenuName, value)
