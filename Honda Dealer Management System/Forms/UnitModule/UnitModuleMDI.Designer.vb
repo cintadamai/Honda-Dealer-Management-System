@@ -19,6 +19,7 @@ Partial Class UnitModuleMDI
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UnitModuleMDI))
         Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.DataSupplierFormBtn = New DevExpress.XtraBars.BarButtonItem()
@@ -63,7 +64,7 @@ Partial Class UnitModuleMDI
         Me.PenjualanUnitPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.PenjualanPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.ReturPenjualanPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager()
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -274,7 +275,7 @@ Partial Class UnitModuleMDI
         '
         Me.SalesOrderFormBtn.Caption = "Sales Order"
         Me.SalesOrderFormBtn.Id = 26
-        Me.SalesOrderFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem2.ImageOptions.Image"), System.Drawing.Image)
+        Me.SalesOrderFormBtn.ImageOptions.Image = CType(resources.GetObject("SalesOrderFormBtn.ImageOptions.Image"), System.Drawing.Image)
         Me.SalesOrderFormBtn.Name = "SalesOrderFormBtn"
         Me.SalesOrderFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
@@ -283,7 +284,7 @@ Partial Class UnitModuleMDI
         '
         Me.InvoicePenjualanUnitFormBtn.Caption = "Invoice Penjualan"
         Me.InvoicePenjualanUnitFormBtn.Id = 27
-        Me.InvoicePenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem4.ImageOptions.Image"), System.Drawing.Image)
+        Me.InvoicePenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("InvoicePenjualanUnitFormBtn.ImageOptions.Image"), System.Drawing.Image)
         Me.InvoicePenjualanUnitFormBtn.Name = "InvoicePenjualanUnitFormBtn"
         Me.InvoicePenjualanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
@@ -292,7 +293,7 @@ Partial Class UnitModuleMDI
         '
         Me.DeliveryOrderUnitFormBtn.Caption = "Delivery Order"
         Me.DeliveryOrderUnitFormBtn.Id = 28
-        Me.DeliveryOrderUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem5.ImageOptions.Image"), System.Drawing.Image)
+        Me.DeliveryOrderUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("DeliveryOrderUnitFormBtn.ImageOptions.Image"), System.Drawing.Image)
         Me.DeliveryOrderUnitFormBtn.Name = "DeliveryOrderUnitFormBtn"
         Me.DeliveryOrderUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
@@ -301,7 +302,7 @@ Partial Class UnitModuleMDI
         '
         Me.MenuCetakanPenjualanUnitFormBtn.Caption = "Menu Cetakan"
         Me.MenuCetakanPenjualanUnitFormBtn.Id = 29
-        Me.MenuCetakanPenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem6.ImageOptions.Image"), System.Drawing.Image)
+        Me.MenuCetakanPenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("MenuCetakanPenjualanUnitFormBtn.ImageOptions.Image"), System.Drawing.Image)
         Me.MenuCetakanPenjualanUnitFormBtn.Name = "MenuCetakanPenjualanUnitFormBtn"
         Me.MenuCetakanPenjualanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
@@ -310,7 +311,7 @@ Partial Class UnitModuleMDI
         '
         Me.LaporanPenjualanUnitFormBtn.Caption = "Laporan Penjualan"
         Me.LaporanPenjualanUnitFormBtn.Id = 30
-        Me.LaporanPenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem7.ImageOptions.Image"), System.Drawing.Image)
+        Me.LaporanPenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("LaporanPenjualanUnitFormBtn.ImageOptions.Image"), System.Drawing.Image)
         Me.LaporanPenjualanUnitFormBtn.Name = "LaporanPenjualanUnitFormBtn"
         Me.LaporanPenjualanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
@@ -319,7 +320,7 @@ Partial Class UnitModuleMDI
         '
         Me.ReturPenjualanUnitFormBtn.Caption = "Retur Penjualan"
         Me.ReturPenjualanUnitFormBtn.Id = 31
-        Me.ReturPenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem8.ImageOptions.Image"), System.Drawing.Image)
+        Me.ReturPenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("ReturPenjualanUnitFormBtn.ImageOptions.Image"), System.Drawing.Image)
         Me.ReturPenjualanUnitFormBtn.Name = "ReturPenjualanUnitFormBtn"
         Me.ReturPenjualanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
@@ -328,7 +329,7 @@ Partial Class UnitModuleMDI
         '
         Me.BuktiReturUnitFormBtn.Caption = "Bukti Retur"
         Me.BuktiReturUnitFormBtn.Id = 32
-        Me.BuktiReturUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem9.ImageOptions.Image"), System.Drawing.Image)
+        Me.BuktiReturUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BuktiReturUnitFormBtn.ImageOptions.Image"), System.Drawing.Image)
         Me.BuktiReturUnitFormBtn.Name = "BuktiReturUnitFormBtn"
         Me.BuktiReturUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
@@ -337,7 +338,7 @@ Partial Class UnitModuleMDI
         '
         Me.LaporanReturPenjualanUnitFormBtn.Caption = "Laporan Retur Penjualan"
         Me.LaporanReturPenjualanUnitFormBtn.Id = 33
-        Me.LaporanReturPenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("BarButtonItem10.ImageOptions.Image"), System.Drawing.Image)
+        Me.LaporanReturPenjualanUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("LaporanReturPenjualanUnitFormBtn.ImageOptions.Image"), System.Drawing.Image)
         Me.LaporanReturPenjualanUnitFormBtn.Name = "LaporanReturPenjualanUnitFormBtn"
         Me.LaporanReturPenjualanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)

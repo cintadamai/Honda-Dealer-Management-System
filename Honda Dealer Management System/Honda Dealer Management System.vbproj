@@ -362,6 +362,15 @@
     <EmbeddedResource Include="Forms\GeneralModule\User\UserForm.resx">
       <DependentUpon>UserForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnitModule\MasterData\DataGudangUnitForm.resx">
+      <DependentUpon>DataGudangUnitForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnitModule\MasterData\DataSupplierForm.resx">
+      <DependentUpon>DataSupplierForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnitModule\MasterData\DataWarnaUnitForm.resx">
+      <DependentUpon>DataWarnaUnitForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UnitModule\UnitModuleMDI.resx">
       <DependentUpon>UnitModuleMDI.vb</DependentUpon>
     </EmbeddedResource>
