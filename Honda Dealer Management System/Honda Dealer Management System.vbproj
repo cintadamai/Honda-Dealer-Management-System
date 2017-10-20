@@ -318,6 +318,12 @@
     <Compile Include="Forms\UnitModule\MasterData\DataWarnaUnitForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\UnitModule\Pembelian\InputPembelianForm.Designer.vb">
+      <DependentUpon>InputPembelianForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnitModule\Pembelian\InputPembelianForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\UnitModule\UnitModuleMDI.Designer.vb">
       <DependentUpon>UnitModuleMDI.vb</DependentUpon>
     </Compile>
@@ -391,6 +397,9 @@
     <EmbeddedResource Include="Forms\UnitModule\MasterData\DataWarnaUnitForm.resx">
       <DependentUpon>DataWarnaUnitForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnitModule\Pembelian\InputPembelianForm.resx">
+      <DependentUpon>InputPembelianForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UnitModule\UnitModuleMDI.resx">
       <DependentUpon>UnitModuleMDI.vb</DependentUpon>
     </EmbeddedResource>
@@ -420,7 +429,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1409092.png" />
