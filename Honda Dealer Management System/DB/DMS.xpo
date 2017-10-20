@@ -970,7 +970,7 @@
       <xpObject Id="16e134d8-eb6e-47e9-a040-7d92885e3c59" name="UnitAccessoryModel" baseClass="XPLiteObject" userFileName="UnitAccessoryModel" designerFileName="UnitAccessoryModel.Designer" className="UnitAccessoryModel" virtualBaseClass="XPLiteObject" persistent="unit_accessory" virtualName="UnitAccessoryModel">
         <fields>
           <generalXpObjectHasFields Id="426403a5-cd34-49ef-b9de-d959b4b5c38f">
-            <field Id="e3dbf0e3-85bd-427c-b4ba-26cd5d89b5de" name="Id" columnType="Int16" key="true" persistent="id" virtualColumnType="Int16" delayedUpdateModifiedOnly="false" />
+            <field Id="e3dbf0e3-85bd-427c-b4ba-26cd5d89b5de" name="Id" columnType="Int64" key="true" isIdentity="true" persistent="id" virtualColumnType="Int64" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="c625da7f-a29a-4e1c-b9e8-8bd4b85b7741">
             <field Id="b7647a56-401d-444f-be35-790584c0bf0d" name="NamaAccessory" persistent="nama_accessory" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="Unlimited" />
@@ -998,7 +998,7 @@
       <xpObject Id="baecdebd-bd5c-44c2-99d6-fefb76dea6e3" name="UnitAccessoryModelModel" baseClass="XPLiteObject" userFileName="UnitAccessoryModelModel" designerFileName="UnitAccessoryModelModel.Designer" className="UnitAccessoryModelModel" virtualBaseClass="XPLiteObject" persistent="unit_accessory_model" virtualName="UnitAccessoryModelModel">
         <fields>
           <generalXpObjectHasFields Id="7beae71d-4cae-47b4-91b2-39c4076001f3">
-            <field Id="e9239466-8c40-4ec6-9395-c4e7ca5a670c" name="Id" columnType="Int16" key="true" persistent="id" virtualColumnType="Int16" delayedUpdateModifiedOnly="false" />
+            <field Id="e9239466-8c40-4ec6-9395-c4e7ca5a670c" name="Id" columnType="Int64" key="true" isIdentity="true" persistent="id" virtualColumnType="Int64" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="f5ac1491-b6d5-40bc-839c-cd92783dd12e">
             <field Id="ef8e3183-ecef-47eb-97ae-6e9450554d10" name="UnitId" columnType="Int64" persistent="unit_id" virtualColumnType="UnitModelModel" logicalType="UnitModelModel" delayedUpdateModifiedOnly="false" />

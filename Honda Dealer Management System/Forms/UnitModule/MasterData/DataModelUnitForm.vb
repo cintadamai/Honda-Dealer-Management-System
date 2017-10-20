@@ -1,8 +1,12 @@
 ﻿Imports Honda_Dealer_Management_System.HDMS
+Imports DevExpress.Xpo
 
 Public Class DataModelUnitForm
+
+    Dim UAMoColl As XPQuery(Of UnitAccessoryModelModel)
     Private Sub DataModelUnitForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ViewState()
+        RefreshGrid()
     End Sub
 
     Sub ViewState()
@@ -12,6 +16,8 @@ Public Class DataModelUnitForm
         PrintBtn.Enabled = False
         EditBtn.Enabled = True
         HapusBtn.Enabled = True
+        TambahAccBtn.Enabled = False
+        HapusAccBtn.Enabled = False
 
         idTxt.ReadOnly = True
         ModelTxt.ReadOnly = True
@@ -26,6 +32,8 @@ Public Class DataModelUnitForm
         PrintBtn.Enabled = False
         EditBtn.Enabled = False
         HapusBtn.Enabled = False
+        TambahAccBtn.Enabled = True
+        HapusAccBtn.Enabled = True
 
         ModelTxt.ReadOnly = False
         TipeTxt.ReadOnly = False
@@ -64,5 +72,39 @@ Public Class DataModelUnitForm
 
             ViewState()
         End If
+    End Sub
+
+    Private Sub TambahAccBtn_Click(sender As Object, e As EventArgs) Handles TambahAccBtn.Click
+        Dim u As UnitModelModel = UnitModelBS.Current
+        Dim UAMo As New UnitAccessoryModelModel(UOW) With {
+            .AccId = idAccTxt.EditValue,
+            .UnitId = u
+        }
+        u.UnitAccessoryModels.Add(UAMo)
+        UOW.CommitChanges()
+
+        RefreshGrid()
+    End Sub
+
+    Private Sub HapusAccBtn_Click(sender As Object, e As EventArgs) Handles HapusAccBtn.Click
+        Dim UAMo As UnitAccessoryModelModel = UAccMoBS.Current
+        UOW.Delete(UAMo)
+        UOW.CommitChanges()
+
+        RefreshGrid()
+    End Sub
+
+    Sub RefreshGrid()
+        UAMoColl = UOW.Query(Of UnitAccessoryModelModel)()
+        Dim u As UnitModelModel = UnitModelBS.Current
+        Dim Result = From i In UAMoColl
+                     Where i.UnitId.Id = u.Id
+                     Select i
+
+        GridControl2.DataSource = Result
+    End Sub
+
+    Private Sub UnitModelBS_PositionChanged(sender As Object, e As EventArgs) Handles UnitModelBS.PositionChanged
+        RefreshGrid()
     End Sub
 End Class

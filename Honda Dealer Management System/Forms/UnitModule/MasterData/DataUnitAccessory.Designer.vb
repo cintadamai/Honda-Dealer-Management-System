@@ -25,6 +25,7 @@ Partial Class DataUnitAccessory
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.UnitAccessoryBS = New System.Windows.Forms.BindingSource(Me.components)
         Me.UnitAccessoryXP = New DevExpress.Xpo.XPCollection(Me.components)
+        Me.UOW = New DevExpress.Xpo.UnitOfWork(Me.components)
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colId = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colNamaAccessory = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -44,13 +45,13 @@ Partial Class DataUnitAccessory
         Me.PrintBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpanBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.TambahBtn = New DevExpress.XtraEditors.SimpleButton()
-        Me.UOW = New DevExpress.Xpo.UnitOfWork(Me.components)
         Me.XtraScrollableControl1.SuspendLayout()
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl2.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UnitAccessoryBS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UnitAccessoryXP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UOW, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
@@ -58,7 +59,6 @@ Partial Class DataUnitAccessory
         CType(Me.statusTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.keteranganTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.idTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.UOW, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'XtraScrollableControl1
@@ -102,7 +102,15 @@ Partial Class DataUnitAccessory
         '
         'UnitAccessoryXP
         '
+        Me.UnitAccessoryXP.DeleteObjectOnRemove = True
         Me.UnitAccessoryXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.UnitAccessoryModel)
+        Me.UnitAccessoryXP.Session = Me.UOW
+        '
+        'UOW
+        '
+        Me.UOW.CaseSensitive = False
+        Me.UOW.IsObjectModifiedOnNonPersistentPropertyChange = Nothing
+        Me.UOW.TrackPropertiesModifications = False
         '
         'GridView1
         '
@@ -165,6 +173,7 @@ Partial Class DataUnitAccessory
         '
         'NamaAccessoryTxt
         '
+        Me.NamaAccessoryTxt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitAccessoryBS, "NamaAccessory", True))
         Me.NamaAccessoryTxt.Location = New System.Drawing.Point(118, 46)
         Me.NamaAccessoryTxt.Name = "NamaAccessoryTxt"
         Me.NamaAccessoryTxt.Size = New System.Drawing.Size(189, 20)
@@ -196,6 +205,7 @@ Partial Class DataUnitAccessory
         '
         'statusTxt
         '
+        Me.statusTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.UnitAccessoryBS, "Status", True))
         Me.statusTxt.EditValue = Nothing
         Me.statusTxt.Location = New System.Drawing.Point(118, 134)
         Me.statusTxt.Name = "statusTxt"
@@ -206,6 +216,7 @@ Partial Class DataUnitAccessory
         '
         'keteranganTxt
         '
+        Me.keteranganTxt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitAccessoryBS, "Keterangan", True))
         Me.keteranganTxt.Location = New System.Drawing.Point(118, 72)
         Me.keteranganTxt.Name = "keteranganTxt"
         Me.keteranganTxt.Size = New System.Drawing.Size(260, 56)
@@ -213,6 +224,7 @@ Partial Class DataUnitAccessory
         '
         'idTxt
         '
+        Me.idTxt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UnitAccessoryBS, "Id", True))
         Me.idTxt.Location = New System.Drawing.Point(118, 20)
         Me.idTxt.Name = "idTxt"
         Me.idTxt.Size = New System.Drawing.Size(100, 20)
@@ -269,11 +281,6 @@ Partial Class DataUnitAccessory
         Me.TambahBtn.TabIndex = 43
         Me.TambahBtn.Text = "Tambah"
         '
-        'UOW
-        '
-        Me.UOW.IsObjectModifiedOnNonPersistentPropertyChange = Nothing
-        Me.UOW.TrackPropertiesModifications = False
-        '
         'DataUnitAccessory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -288,6 +295,7 @@ Partial Class DataUnitAccessory
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UnitAccessoryBS, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UnitAccessoryXP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UOW, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelControl1.ResumeLayout(False)
@@ -296,7 +304,6 @@ Partial Class DataUnitAccessory
         CType(Me.statusTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.keteranganTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.idTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UOW, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

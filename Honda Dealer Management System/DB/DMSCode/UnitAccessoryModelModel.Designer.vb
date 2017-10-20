@@ -16,15 +16,15 @@ Namespace HDMS
     <Persistent("unit_accessory_model")>
     Partial Public Class UnitAccessoryModelModel
         Inherits XPLiteObject
-        Dim fId As Short
-        <Key()>
+        Dim fId As Long
+        <Key(True)>
         <Persistent("id")>
-        Public Property Id() As Short
+        Public Property Id() As Long
             Get
                 Return fId
             End Get
-            Set(ByVal value As Short)
-                SetPropertyValue(Of Short)("Id", fId, value)
+            Set(ByVal value As Long)
+                SetPropertyValue(Of Long)("Id", fId, value)
             End Set
         End Property
         Dim fUnitId As UnitModelModel
