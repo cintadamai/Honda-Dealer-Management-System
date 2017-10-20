@@ -306,6 +306,12 @@
     <Compile Include="Forms\UnitModule\MasterData\DataSupplierForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\UnitModule\MasterData\DataUnitAccessory.Designer.vb">
+      <DependentUpon>DataUnitAccessory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnitModule\MasterData\DataUnitAccessory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\UnitModule\MasterData\DataWarnaUnitForm.Designer.vb">
       <DependentUpon>DataWarnaUnitForm.vb</DependentUpon>
     </Compile>
@@ -378,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UnitModule\MasterData\DataSupplierForm.resx">
       <DependentUpon>DataSupplierForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnitModule\MasterData\DataUnitAccessory.resx">
+      <DependentUpon>DataUnitAccessory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UnitModule\MasterData\DataWarnaUnitForm.resx">
       <DependentUpon>DataWarnaUnitForm.vb</DependentUpon>

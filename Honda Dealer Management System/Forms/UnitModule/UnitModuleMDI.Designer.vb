@@ -51,6 +51,7 @@ Partial Class UnitModuleMDI
         Me.ReturPenjualanUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.BuktiReturUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.LaporanReturPenjualanUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.DataUnitAccessoryFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.MasterDataPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.MasterDataPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.PembelianUnitPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
@@ -74,9 +75,9 @@ Partial Class UnitModuleMDI
         'RibbonControl1
         '
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.DataSupplierFormBtn, Me.DataModelUnitFormBtn, Me.DataUnitWarnaFormBtn, Me.DataUnitGudangFormBtn, Me.InputPembelianFormBtn, Me.BuktiPembelianFormBtn, Me.LaporanPembelianFormBtn, Me.InputReturPembelianFormBtn, Me.BuktiReturPembelianFormBtn, Me.LaporanReturPembelianFormBtn, Me.PenerimaanPembelianUnitFormBtn, Me.BuktiPenerimaanUnitFormBtn, Me.LaporanPenerimaanUnitFormBtn, Me.PengirimanKendaraanFormBtn, Me.BuktiPengirimanKendaraanFormBtn, Me.LaporanPengirimanKendaraanFormBtn, Me.TransferInUnitFormBtn, Me.TransferOutUnitFormBtn, Me.BuktiTransferUnitFormBtn, Me.LaporanTransferUnitFormBtn, Me.TrackingStockUnitFormBtn, Me.SalesOrderFormBtn, Me.InvoicePenjualanUnitFormBtn, Me.DeliveryOrderUnitFormBtn, Me.MenuCetakanPenjualanUnitFormBtn, Me.LaporanPenjualanUnitFormBtn, Me.ReturPenjualanUnitFormBtn, Me.BuktiReturUnitFormBtn, Me.LaporanReturPenjualanUnitFormBtn})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.DataSupplierFormBtn, Me.DataModelUnitFormBtn, Me.DataUnitWarnaFormBtn, Me.DataUnitGudangFormBtn, Me.InputPembelianFormBtn, Me.BuktiPembelianFormBtn, Me.LaporanPembelianFormBtn, Me.InputReturPembelianFormBtn, Me.BuktiReturPembelianFormBtn, Me.LaporanReturPembelianFormBtn, Me.PenerimaanPembelianUnitFormBtn, Me.BuktiPenerimaanUnitFormBtn, Me.LaporanPenerimaanUnitFormBtn, Me.PengirimanKendaraanFormBtn, Me.BuktiPengirimanKendaraanFormBtn, Me.LaporanPengirimanKendaraanFormBtn, Me.TransferInUnitFormBtn, Me.TransferOutUnitFormBtn, Me.BuktiTransferUnitFormBtn, Me.LaporanTransferUnitFormBtn, Me.TrackingStockUnitFormBtn, Me.SalesOrderFormBtn, Me.InvoicePenjualanUnitFormBtn, Me.DeliveryOrderUnitFormBtn, Me.MenuCetakanPenjualanUnitFormBtn, Me.LaporanPenjualanUnitFormBtn, Me.ReturPenjualanUnitFormBtn, Me.BuktiReturUnitFormBtn, Me.LaporanReturPenjualanUnitFormBtn, Me.DataUnitAccessoryFormBtn})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl1.MaxItemId = 34
+        Me.RibbonControl1.MaxItemId = 35
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.MasterDataPage, Me.PembelianUnitPage, Me.StockUnitPage, Me.PenjualanUnitPage})
         Me.RibbonControl1.Size = New System.Drawing.Size(1194, 116)
@@ -343,6 +344,15 @@ Partial Class UnitModuleMDI
         Me.LaporanReturPenjualanUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
+        'DataUnitAccessoryFormBtn
+        '
+        Me.DataUnitAccessoryFormBtn.Caption = "Data Unit Accesory"
+        Me.DataUnitAccessoryFormBtn.Id = 34
+        Me.DataUnitAccessoryFormBtn.ImageOptions.Image = CType(resources.GetObject("DataUnitAccessoryFormBtn.ImageOptions.Image"), System.Drawing.Image)
+        Me.DataUnitAccessoryFormBtn.Name = "DataUnitAccessoryFormBtn"
+        Me.DataUnitAccessoryFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        '
         'MasterDataPage
         '
         Me.MasterDataPage.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.MasterDataPageGroup})
@@ -355,6 +365,7 @@ Partial Class UnitModuleMDI
         Me.MasterDataPageGroup.ItemLinks.Add(Me.DataModelUnitFormBtn)
         Me.MasterDataPageGroup.ItemLinks.Add(Me.DataUnitWarnaFormBtn)
         Me.MasterDataPageGroup.ItemLinks.Add(Me.DataUnitGudangFormBtn)
+        Me.MasterDataPageGroup.ItemLinks.Add(Me.DataUnitAccessoryFormBtn)
         Me.MasterDataPageGroup.Name = "MasterDataPageGroup"
         Me.MasterDataPageGroup.Text = "Master Data"
         '
@@ -520,4 +531,5 @@ Partial Class UnitModuleMDI
     Friend WithEvents ReturPenjualanUnitFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BuktiReturUnitFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents LaporanReturPenjualanUnitFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents DataUnitAccessoryFormBtn As DevExpress.XtraBars.BarButtonItem
 End Class

@@ -25,4 +25,10 @@
         f.Show()
         f.Focus()
     End Sub
+
+    Private Sub DataUnitAccessoryFormBtn_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles DataUnitAccessoryFormBtn.ItemClick
+        Dim f As New DataUnitAccessory With {.MdiParent = Me}
+        f.Show()
+        f.Focus()
+    End Sub
 End Class
