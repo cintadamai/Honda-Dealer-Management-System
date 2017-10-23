@@ -31,4 +31,8 @@
         f.Show()
         f.Focus()
     End Sub
+
+    Private Sub BuktiPenerimaanUnitFormBtn_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BuktiPenerimaanUnitFormBtn.ItemClick
+
+    End Sub
 End Class
