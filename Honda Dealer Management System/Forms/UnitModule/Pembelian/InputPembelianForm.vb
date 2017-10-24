@@ -172,8 +172,13 @@ Public Class InputPembelianForm
         UOW.CommitChanges()
         PembelianDetailBS.EndEdit()
 
+        Dim total As Long = 0
+        For Each d As UnitPurchaseDetailModel In PembelianDetailXP
+            total += d.Total
+        Next
+
         P = PembelianBS.Current
-        P.Nilai = P.Nilai + pd.Total
+        P.Nilai = total
         P.Dpp = P.Nilai - P.Potongan
         P.Ppn = P.Dpp / 10
         P.Total = P.Dpp + P.Ppn
@@ -194,8 +199,13 @@ Public Class InputPembelianForm
         UOW.CommitChanges()
         PembelianDetailBS.EndEdit()
 
+        Dim total As Long = 0
+        For Each d As UnitPurchaseDetailModel In PembelianDetailXP
+            total += d.Total
+        Next
+
         Dim p As UnitPurchaseModel = PembelianBS.Current
-        p.Nilai = p.Nilai - pd.Total
+        p.Nilai = total
         p.Dpp = p.Nilai - p.Potongan
         p.Ppn = p.Dpp / 10
         p.Total = p.Dpp + p.Ppn
