@@ -188,6 +188,7 @@ Public Class InputPembelianForm
     End Sub
 
     Private Sub HapusDetailBtn_Click(sender As Object, e As EventArgs) Handles HapusDetailBtn.Click
+        'a
         Dim pd As UnitPurchaseDetailModel = PembelianDetailBS.Current
         PembelianDetailXP.Remove(pd)
         UOW.CommitChanges()
