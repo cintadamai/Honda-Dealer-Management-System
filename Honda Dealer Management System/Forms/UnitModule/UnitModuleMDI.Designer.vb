@@ -19,7 +19,6 @@ Partial Class UnitModuleMDI
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UnitModuleMDI))
         Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.DataSupplierFormBtn = New DevExpress.XtraBars.BarButtonItem()
@@ -65,7 +64,7 @@ Partial Class UnitModuleMDI
         Me.PenjualanUnitPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.PenjualanPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.ReturPenjualanPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
