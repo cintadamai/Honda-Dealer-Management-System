@@ -31,4 +31,10 @@
         f.Show()
         f.Focus()
     End Sub
+
+    Private Sub InputPembelianFormBtn_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles InputPembelianFormBtn.ItemClick
+        Dim f As New InputPembelianForm With {.MdiParent = Me}
+        f.Show()
+        f.Focus()
+    End Sub
 End Class
