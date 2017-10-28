@@ -96,6 +96,12 @@ Namespace HDMS
                 Return GetCollection(Of UnitStockModel)("UnitStocks")
             End Get
         End Property
+        <Association("UnitReceiveModelReferencesUnitWarnaModel")>
+        Public ReadOnly Property UnitReceives() As XPCollection(Of UnitReceiveModel)
+            Get
+                Return GetCollection(Of UnitReceiveModel)("UnitReceives")
+            End Get
+        End Property
     End Class
 
 End Namespace

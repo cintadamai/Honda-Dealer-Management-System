@@ -1,6 +1,5 @@
 ﻿Imports DevExpress.Xpo
 Imports Honda_Dealer_Management_System.HDMS
-Imports Humanizer
 Public Class Login
 
     Dim Users As XPQuery(Of UserModel)
@@ -19,6 +18,7 @@ Public Class Login
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConnectionHelper.Connect(DB.AutoCreateOption.DatabaseAndSchema)
+        XpoDefault.Session = New Session(XpoDefault.DataLayer)
         Users = UOW.Query(Of UserModel)()
 
         'Users.First.Password = hasing.HashPassword("123")

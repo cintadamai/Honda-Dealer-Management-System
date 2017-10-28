@@ -184,6 +184,26 @@ Namespace HDMS
                 SetPropertyValue(Of DateTime)("UpdatedAt", fUpdatedAt, value)
             End Set
         End Property
+        Dim fSuratjalanmasuk As Long
+        <Persistent("suratJalanMasuk")>
+        Public Property Suratjalanmasuk() As Long
+            Get
+                Return fSuratjalanmasuk
+            End Get
+            Set(ByVal value As Long)
+                SetPropertyValue(Of Long)("Suratjalanmasuk", fSuratjalanmasuk, value)
+            End Set
+        End Property
+        Dim fSuratjalankeluar As Long
+        <Persistent("suratJalanKeluar")>
+        Public Property Suratjalankeluar() As Long
+            Get
+                Return fSuratjalankeluar
+            End Get
+            Set(ByVal value As Long)
+                SetPropertyValue(Of Long)("Suratjalankeluar", fSuratjalankeluar, value)
+            End Set
+        End Property
     End Class
 
 End Namespace

@@ -28,6 +28,7 @@ Namespace HDMS
             End Set
         End Property
         Dim fUnitPembelian As UnitPurchaseDetailModel
+        <Indexed(Name:="iunit_pembelian_unit_receive")>
         <Persistent("unit_pembelian")>
         <Association("UnitReceiveModelReferencesUnitPurchaseDetailModel")>
         Public Property UnitPembelian() As UnitPurchaseDetailModel
@@ -108,6 +109,94 @@ Namespace HDMS
             End Get
             Set(ByVal value As DateTime)
                 SetPropertyValue(Of DateTime)("UpdatedAt", fUpdatedAt, value)
+            End Set
+        End Property
+        Dim fModel As UnitModelModel
+        <Persistent("model")>
+        <Association("UnitReceiveModelReferencesUnitModelModel")>
+        Public Property Model() As UnitModelModel
+            Get
+                Return fModel
+            End Get
+            Set(ByVal value As UnitModelModel)
+                SetPropertyValue(Of UnitModelModel)("Model", fModel, value)
+            End Set
+        End Property
+        Dim fWarna As UnitWarnaModel
+        <Persistent("warna")>
+        <Association("UnitReceiveModelReferencesUnitWarnaModel")>
+        Public Property Warna() As UnitWarnaModel
+            Get
+                Return fWarna
+            End Get
+            Set(ByVal value As UnitWarnaModel)
+                SetPropertyValue(Of UnitWarnaModel)("Warna", fWarna, value)
+            End Set
+        End Property
+        Dim fTahun As String
+        <Size(255)>
+        <Persistent("tahun")>
+        Public Property Tahun() As String
+            Get
+                Return fTahun
+            End Get
+            Set(ByVal value As String)
+                SetPropertyValue(Of String)("Tahun", fTahun, value)
+            End Set
+        End Property
+        Dim fNoRangka As String
+        <Size(255)>
+        <Persistent("no_rangka")>
+        Public Property NoRangka() As String
+            Get
+                Return fNoRangka
+            End Get
+            Set(ByVal value As String)
+                SetPropertyValue(Of String)("NoRangka", fNoRangka, value)
+            End Set
+        End Property
+        Dim fNoMesin As String
+        <Size(255)>
+        <Persistent("no_mesin")>
+        Public Property NoMesin() As String
+            Get
+                Return fNoMesin
+            End Get
+            Set(ByVal value As String)
+                SetPropertyValue(Of String)("NoMesin", fNoMesin, value)
+            End Set
+        End Property
+        Dim fNoFaktur As String
+        <Size(255)>
+        <Persistent("no_faktur")>
+        Public Property NoFaktur() As String
+            Get
+                Return fNoFaktur
+            End Get
+            Set(ByVal value As String)
+                SetPropertyValue(Of String)("NoFaktur", fNoFaktur, value)
+            End Set
+        End Property
+        Dim fNoKunci As String
+        <Size(255)>
+        <Persistent("no_kunci")>
+        Public Property NoKunci() As String
+            Get
+                Return fNoKunci
+            End Get
+            Set(ByVal value As String)
+                SetPropertyValue(Of String)("NoKunci", fNoKunci, value)
+            End Set
+        End Property
+        Dim fKeterangan As String
+        <Size(255)>
+        <Persistent("keterangan")>
+        Public Property Keterangan() As String
+            Get
+                Return fKeterangan
+            End Get
+            Set(ByVal value As String)
+                SetPropertyValue(Of String)("Keterangan", fKeterangan, value)
             End Set
         End Property
     End Class

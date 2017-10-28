@@ -174,7 +174,7 @@ Partial Class UnitModuleMDI
         '
         'PenerimaanPembelianUnitFormBtn
         '
-        Me.PenerimaanPembelianUnitFormBtn.Caption = "Penerimaan Pembelian"
+        Me.PenerimaanPembelianUnitFormBtn.Caption = "Penerimaan Kendaraan"
         Me.PenerimaanPembelianUnitFormBtn.Id = 13
         Me.PenerimaanPembelianUnitFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.next_32x32
         Me.PenerimaanPembelianUnitFormBtn.Name = "PenerimaanPembelianUnitFormBtn"
