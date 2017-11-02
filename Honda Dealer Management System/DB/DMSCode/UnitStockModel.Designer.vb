@@ -204,6 +204,12 @@ Namespace HDMS
                 SetPropertyValue(Of Long)("Suratjalankeluar", fSuratjalankeluar, value)
             End Set
         End Property
+        <Association("UnitTransferModelReferencesUnitStockModel")>
+        Public ReadOnly Property UnitTransfers() As XPCollection(Of UnitTransferModel)
+            Get
+                Return GetCollection(Of UnitTransferModel)("UnitTransfers")
+            End Get
+        End Property
     End Class
 
 End Namespace

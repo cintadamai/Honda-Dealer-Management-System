@@ -20,16 +20,28 @@ Partial Class InputPembelianForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ConditionValidationRule4 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
-        Dim ConditionValidationRule5 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InputPembelianForm))
         Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InputPembelianForm))
+        Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule4 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Me.XtraScrollableControl1 = New DevExpress.XtraEditors.XtraScrollableControl()
+        Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.PembelianBS = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PembelianXP = New DevExpress.Xpo.XPCollection(Me.components)
+        Me.UOW = New DevExpress.Xpo.UnitOfWork(Me.components)
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.DetailGrid = New DevExpress.XtraGrid.GridControl()
         Me.PembelianDetailBS = New System.Windows.Forms.BindingSource(Me.components)
         Me.PembelianDetailXP = New DevExpress.Xpo.XPCollection(Me.components)
-        Me.UOW = New DevExpress.Xpo.UnitOfWork(Me.components)
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -63,8 +75,6 @@ Partial Class InputPembelianForm
         Me.TotalDetailTxt = New DevExpress.XtraEditors.SpinEdit()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
         Me.TanggalPembelianTxt = New DevExpress.XtraEditors.DateEdit()
-        Me.PembelianBS = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PembelianXP = New DevExpress.Xpo.XPCollection(Me.components)
         Me.KeteranganTxt = New DevExpress.XtraEditors.MemoEdit()
         Me.PPNCheckEdit = New DevExpress.XtraEditors.CheckEdit()
         Me.NoFakturTxt = New DevExpress.XtraEditors.TextEdit()
@@ -100,21 +110,15 @@ Partial Class InputPembelianForm
         Me.TambahBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.HapusBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.HeaderValidator = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
-        Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.XtraScrollableControl1.SuspendLayout()
+        CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BindingNavigator1.SuspendLayout()
+        CType(Me.PembelianBS, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PembelianXP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UOW, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DetailGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PembelianDetailBS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PembelianDetailXP, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.UOW, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelDetail, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDetail.SuspendLayout()
@@ -131,8 +135,6 @@ Partial Class InputPembelianForm
         Me.PanelControl1.SuspendLayout()
         CType(Me.TanggalPembelianTxt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TanggalPembelianTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PembelianBS, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PembelianXP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KeteranganTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PPNCheckEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NoFakturTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -147,8 +149,6 @@ Partial Class InputPembelianForm
         CType(Me.PPNtxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TotalTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HeaderValidator, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.BindingNavigator1.SuspendLayout()
         Me.SuspendLayout()
         '
         'XtraScrollableControl1
@@ -168,6 +168,106 @@ Partial Class InputPembelianForm
         Me.XtraScrollableControl1.Name = "XtraScrollableControl1"
         Me.XtraScrollableControl1.Size = New System.Drawing.Size(1008, 532)
         Me.XtraScrollableControl1.TabIndex = 0
+        '
+        'BindingNavigator1
+        '
+        Me.BindingNavigator1.AddNewItem = Nothing
+        Me.BindingNavigator1.BindingSource = Me.PembelianBS
+        Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
+        Me.BindingNavigator1.DeleteItem = Nothing
+        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2})
+        Me.BindingNavigator1.Location = New System.Drawing.Point(0, 0)
+        Me.BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.BindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.BindingNavigator1.Name = "BindingNavigator1"
+        Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
+        Me.BindingNavigator1.Size = New System.Drawing.Size(1008, 25)
+        Me.BindingNavigator1.TabIndex = 53
+        Me.BindingNavigator1.Text = "BindingNavigator1"
+        '
+        'PembelianBS
+        '
+        Me.PembelianBS.DataSource = Me.PembelianXP
+        '
+        'PembelianXP
+        '
+        Me.PembelianXP.DeleteObjectOnRemove = True
+        Me.PembelianXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.UnitPurchaseModel)
+        Me.PembelianXP.Session = Me.UOW
+        '
+        'UOW
+        '
+        Me.UOW.IsObjectModifiedOnNonPersistentPropertyChange = Nothing
+        Me.UOW.TrackPropertiesModifications = False
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'DetailGrid
         '
@@ -189,11 +289,6 @@ Partial Class InputPembelianForm
         Me.PembelianDetailXP.DeleteObjectOnRemove = True
         Me.PembelianDetailXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.UnitPurchaseDetailModel)
         Me.PembelianDetailXP.Session = Me.UOW
-        '
-        'UOW
-        '
-        Me.UOW.IsObjectModifiedOnNonPersistentPropertyChange = Nothing
-        Me.UOW.TrackPropertiesModifications = False
         '
         'GridView2
         '
@@ -548,19 +643,9 @@ Partial Class InputPembelianForm
         Me.TanggalPembelianTxt.Properties.Mask.UseMaskAsDisplayFormat = True
         Me.TanggalPembelianTxt.Size = New System.Drawing.Size(142, 20)
         Me.TanggalPembelianTxt.TabIndex = 53
-        ConditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule4.ErrorText = "Harus di isi."
-        Me.HeaderValidator.SetValidationRule(Me.TanggalPembelianTxt, ConditionValidationRule4)
-        '
-        'PembelianBS
-        '
-        Me.PembelianBS.DataSource = Me.PembelianXP
-        '
-        'PembelianXP
-        '
-        Me.PembelianXP.DeleteObjectOnRemove = True
-        Me.PembelianXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.UnitPurchaseModel)
-        Me.PembelianXP.Session = Me.UOW
+        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule1.ErrorText = "Harus di isi."
+        Me.HeaderValidator.SetValidationRule(Me.TanggalPembelianTxt, ConditionValidationRule1)
         '
         'KeteranganTxt
         '
@@ -589,9 +674,9 @@ Partial Class InputPembelianForm
         Me.NoFakturTxt.Properties.Appearance.Options.UseBackColor = True
         Me.NoFakturTxt.Size = New System.Drawing.Size(142, 20)
         Me.NoFakturTxt.TabIndex = 16
-        ConditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule5.ErrorText = "Harus di isi."
-        Me.HeaderValidator.SetValidationRule(Me.NoFakturTxt, ConditionValidationRule5)
+        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule2.ErrorText = "Harus di isi."
+        Me.HeaderValidator.SetValidationRule(Me.NoFakturTxt, ConditionValidationRule2)
         '
         'NoInvoiceTxt
         '
@@ -602,9 +687,9 @@ Partial Class InputPembelianForm
         Me.NoInvoiceTxt.Properties.Appearance.Options.UseBackColor = True
         Me.NoInvoiceTxt.Size = New System.Drawing.Size(142, 20)
         Me.NoInvoiceTxt.TabIndex = 15
-        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule1.ErrorText = "Harus di isi."
-        Me.HeaderValidator.SetValidationRule(Me.NoInvoiceTxt, ConditionValidationRule1)
+        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule3.ErrorText = "Harus di isi."
+        Me.HeaderValidator.SetValidationRule(Me.NoInvoiceTxt, ConditionValidationRule3)
         '
         'LabelControl12
         '
@@ -722,9 +807,9 @@ Partial Class InputPembelianForm
         Me.SupplierTxt.Properties.View = Me.GridLookUpEdit1View
         Me.SupplierTxt.Size = New System.Drawing.Size(142, 20)
         Me.SupplierTxt.TabIndex = 13
-        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule2.ErrorText = "Pilih Salah Satu."
-        Me.HeaderValidator.SetValidationRule(Me.SupplierTxt, ConditionValidationRule2)
+        ConditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule4.ErrorText = "Pilih Salah Satu."
+        Me.HeaderValidator.SetValidationRule(Me.SupplierTxt, ConditionValidationRule4)
         '
         'SupplierXP
         '
@@ -901,91 +986,6 @@ Partial Class InputPembelianForm
         Me.HapusBtn.TabIndex = 47
         Me.HapusBtn.Text = "Hapus"
         '
-        'BindingNavigator1
-        '
-        Me.BindingNavigator1.AddNewItem = Nothing
-        Me.BindingNavigator1.BindingSource = Me.PembelianBS
-        Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
-        Me.BindingNavigator1.DeleteItem = Nothing
-        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(0, 0)
-        Me.BindingNavigator1.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
-        Me.BindingNavigator1.MoveLastItem = Me.BindingNavigatorMoveLastItem
-        Me.BindingNavigator1.MoveNextItem = Me.BindingNavigatorMoveNextItem
-        Me.BindingNavigator1.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
-        Me.BindingNavigator1.Name = "BindingNavigator1"
-        Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(1008, 25)
-        Me.BindingNavigator1.TabIndex = 53
-        Me.BindingNavigator1.Text = "BindingNavigator1"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
-        'BindingNavigatorSeparator
-        '
-        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorPositionItem
-        '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
-        '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
-        'BindingNavigatorSeparator1
-        '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
         'InputPembelianForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -996,10 +996,15 @@ Partial Class InputPembelianForm
         Me.Text = "Pembelian"
         Me.XtraScrollableControl1.ResumeLayout(False)
         Me.XtraScrollableControl1.PerformLayout()
+        CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.BindingNavigator1.ResumeLayout(False)
+        Me.BindingNavigator1.PerformLayout()
+        CType(Me.PembelianBS, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PembelianXP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UOW, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DetailGrid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PembelianDetailBS, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PembelianDetailXP, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UOW, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelDetail, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelDetail.ResumeLayout(False)
@@ -1018,8 +1023,6 @@ Partial Class InputPembelianForm
         Me.PanelControl1.PerformLayout()
         CType(Me.TanggalPembelianTxt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TanggalPembelianTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PembelianBS, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PembelianXP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KeteranganTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PPNCheckEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NoFakturTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1034,9 +1037,6 @@ Partial Class InputPembelianForm
         CType(Me.PPNtxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TotalTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.HeaderValidator, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.BindingNavigator1.ResumeLayout(False)
-        Me.BindingNavigator1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

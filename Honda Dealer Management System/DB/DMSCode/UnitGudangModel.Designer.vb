@@ -101,6 +101,18 @@ Namespace HDMS
                 Return GetCollection(Of UnitStockModel)("UnitStocks")
             End Get
         End Property
+        <Association("UnitTransferModelReferencesUnitGudangModel")>
+        Public ReadOnly Property UnitTransfers() As XPCollection(Of UnitTransferModel)
+            Get
+                Return GetCollection(Of UnitTransferModel)("UnitTransfers")
+            End Get
+        End Property
+        <Association("UnitTransferModelReferencesUnitGudangModel1")>
+        Public ReadOnly Property UnitTransfers1() As XPCollection(Of UnitTransferModel)
+            Get
+                Return GetCollection(Of UnitTransferModel)("UnitTransfers1")
+            End Get
+        End Property
     End Class
 
 End Namespace

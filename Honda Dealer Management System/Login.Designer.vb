@@ -22,8 +22,9 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
-        Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
@@ -43,9 +44,9 @@ Partial Class Login
         Me.UnitModul = New DevExpress.XtraEditors.SimpleButton()
         Me.GeneralModule = New DevExpress.XtraEditors.SimpleButton()
         Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit()
-        Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel()
-        Me.validator = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider()
-        Me.UOW = New DevExpress.Xpo.UnitOfWork()
+        Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
+        Me.validator = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
+        Me.UOW = New DevExpress.Xpo.UnitOfWork(Me.components)
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.password.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,9 +107,9 @@ Partial Class Login
         Me.password.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.password.Size = New System.Drawing.Size(160, 20)
         Me.password.TabIndex = 3
-        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule1.ErrorText = "Harus di isi."
-        Me.validator.SetValidationRule(Me.password, ConditionValidationRule1)
+        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule3.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.password, ConditionValidationRule3)
         '
         'LabelControl3
         '
@@ -127,9 +128,9 @@ Partial Class Login
         Me.username.Properties.Appearance.Options.UseBackColor = True
         Me.username.Size = New System.Drawing.Size(160, 20)
         Me.username.TabIndex = 1
-        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule2.ErrorText = "Harus di isi."
-        Me.validator.SetValidationRule(Me.username, ConditionValidationRule2)
+        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule1.ErrorText = "Harus di isi."
+        Me.validator.SetValidationRule(Me.username, ConditionValidationRule1)
         '
         'LabelControl2
         '
@@ -233,6 +234,10 @@ Partial Class Login
         Me.PictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze
         Me.PictureEdit1.Size = New System.Drawing.Size(95, 76)
         Me.PictureEdit1.TabIndex = 3
+        '
+        'DefaultLookAndFeel1
+        '
+        Me.DefaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Light"
         '
         'UOW
         '

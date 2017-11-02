@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class BuktiPenerimaanForm
+Partial Class PenerimaanKendaraanForm
     Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
@@ -20,7 +20,7 @@ Partial Class BuktiPenerimaanForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BuktiPenerimaanForm))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PenerimaanKendaraanForm))
         Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
@@ -775,14 +775,14 @@ Partial Class BuktiPenerimaanForm
         Me.colTransmisi.VisibleIndex = 3
         Me.colTransmisi.Width = 316
         '
-        'BuktiPenerimaanForm
+        'PenerimaanKendaraan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1014, 611)
         Me.Controls.Add(Me.XtraScrollableControl1)
-        Me.Name = "BuktiPenerimaanForm"
-        Me.Text = "Penerimaan Pembelian "
+        Me.Name = "PenerimaanKendaraan"
+        Me.Text = "Penerimaan Kendaraan"
         Me.XtraScrollableControl1.ResumeLayout(False)
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PenerimaanBS, System.ComponentModel.ISupportInitialize).EndInit()

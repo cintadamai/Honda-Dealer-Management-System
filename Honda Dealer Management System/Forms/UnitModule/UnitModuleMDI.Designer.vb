@@ -19,6 +19,7 @@ Partial Class UnitModuleMDI
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UnitModuleMDI))
         Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.DataSupplierFormBtn = New DevExpress.XtraBars.BarButtonItem()
@@ -37,8 +38,7 @@ Partial Class UnitModuleMDI
         Me.PengirimanKendaraanFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.BuktiPengirimanKendaraanFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.LaporanPengirimanKendaraanFormBtn = New DevExpress.XtraBars.BarButtonItem()
-        Me.TransferInUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
-        Me.TransferOutUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
+        Me.TransferUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.BuktiTransferUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.LaporanTransferUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
         Me.TrackingStockUnitFormBtn = New DevExpress.XtraBars.BarButtonItem()
@@ -64,7 +64,7 @@ Partial Class UnitModuleMDI
         Me.PenjualanUnitPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.PenjualanPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.ReturPenjualanPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager()
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,12 +74,12 @@ Partial Class UnitModuleMDI
         'RibbonControl1
         '
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.DataSupplierFormBtn, Me.DataModelUnitFormBtn, Me.DataUnitWarnaFormBtn, Me.DataUnitGudangFormBtn, Me.InputPembelianFormBtn, Me.BuktiPembelianFormBtn, Me.LaporanPembelianFormBtn, Me.InputReturPembelianFormBtn, Me.BuktiReturPembelianFormBtn, Me.LaporanReturPembelianFormBtn, Me.PenerimaanPembelianUnitFormBtn, Me.BuktiPenerimaanUnitFormBtn, Me.LaporanPenerimaanUnitFormBtn, Me.PengirimanKendaraanFormBtn, Me.BuktiPengirimanKendaraanFormBtn, Me.LaporanPengirimanKendaraanFormBtn, Me.TransferInUnitFormBtn, Me.TransferOutUnitFormBtn, Me.BuktiTransferUnitFormBtn, Me.LaporanTransferUnitFormBtn, Me.TrackingStockUnitFormBtn, Me.SalesOrderFormBtn, Me.InvoicePenjualanUnitFormBtn, Me.DeliveryOrderUnitFormBtn, Me.MenuCetakanPenjualanUnitFormBtn, Me.LaporanPenjualanUnitFormBtn, Me.ReturPenjualanUnitFormBtn, Me.BuktiReturUnitFormBtn, Me.LaporanReturPenjualanUnitFormBtn, Me.DataUnitAccessoryFormBtn})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.DataSupplierFormBtn, Me.DataModelUnitFormBtn, Me.DataUnitWarnaFormBtn, Me.DataUnitGudangFormBtn, Me.InputPembelianFormBtn, Me.BuktiPembelianFormBtn, Me.LaporanPembelianFormBtn, Me.InputReturPembelianFormBtn, Me.BuktiReturPembelianFormBtn, Me.LaporanReturPembelianFormBtn, Me.PenerimaanPembelianUnitFormBtn, Me.BuktiPenerimaanUnitFormBtn, Me.LaporanPenerimaanUnitFormBtn, Me.PengirimanKendaraanFormBtn, Me.BuktiPengirimanKendaraanFormBtn, Me.LaporanPengirimanKendaraanFormBtn, Me.TransferUnitFormBtn, Me.BuktiTransferUnitFormBtn, Me.LaporanTransferUnitFormBtn, Me.TrackingStockUnitFormBtn, Me.SalesOrderFormBtn, Me.InvoicePenjualanUnitFormBtn, Me.DeliveryOrderUnitFormBtn, Me.MenuCetakanPenjualanUnitFormBtn, Me.LaporanPenjualanUnitFormBtn, Me.ReturPenjualanUnitFormBtn, Me.BuktiReturUnitFormBtn, Me.LaporanReturPenjualanUnitFormBtn, Me.DataUnitAccessoryFormBtn})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl1.MaxItemId = 35
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.MasterDataPage, Me.PembelianUnitPage, Me.StockUnitPage, Me.PenjualanUnitPage})
-        Me.RibbonControl1.Size = New System.Drawing.Size(1194, 116)
+        Me.RibbonControl1.Size = New System.Drawing.Size(1194, 115)
         Me.RibbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden
         '
         'DataSupplierFormBtn
@@ -226,22 +226,13 @@ Partial Class UnitModuleMDI
         Me.LaporanPengirimanKendaraanFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
-        'TransferInUnitFormBtn
+        'TransferUnitFormBtn
         '
-        Me.TransferInUnitFormBtn.Caption = "Transfer In"
-        Me.TransferInUnitFormBtn.Id = 19
-        Me.TransferInUnitFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.down_32x32
-        Me.TransferInUnitFormBtn.Name = "TransferInUnitFormBtn"
-        Me.TransferInUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
-            Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
-        '
-        'TransferOutUnitFormBtn
-        '
-        Me.TransferOutUnitFormBtn.Caption = "Transfer Out"
-        Me.TransferOutUnitFormBtn.Id = 20
-        Me.TransferOutUnitFormBtn.ImageOptions.Image = Global.Honda_Dealer_Management_System.My.Resources.Resources.up2_32x32
-        Me.TransferOutUnitFormBtn.Name = "TransferOutUnitFormBtn"
-        Me.TransferOutUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
+        Me.TransferUnitFormBtn.Caption = "Transfer Unit"
+        Me.TransferUnitFormBtn.Id = 19
+        Me.TransferUnitFormBtn.ImageOptions.Image = CType(resources.GetObject("TransferUnitFormBtn.ImageOptions.Image"), System.Drawing.Image)
+        Me.TransferUnitFormBtn.Name = "TransferUnitFormBtn"
+        Me.TransferUnitFormBtn.RibbonStyle = CType(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) _
             Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'BuktiTransferUnitFormBtn
@@ -414,8 +405,7 @@ Partial Class UnitModuleMDI
         '
         'TransferUnitPageGroup
         '
-        Me.TransferUnitPageGroup.ItemLinks.Add(Me.TransferInUnitFormBtn)
-        Me.TransferUnitPageGroup.ItemLinks.Add(Me.TransferOutUnitFormBtn)
+        Me.TransferUnitPageGroup.ItemLinks.Add(Me.TransferUnitFormBtn)
         Me.TransferUnitPageGroup.ItemLinks.Add(Me.BuktiTransferUnitFormBtn)
         Me.TransferUnitPageGroup.ItemLinks.Add(Me.LaporanTransferUnitFormBtn)
         Me.TransferUnitPageGroup.Name = "TransferUnitPageGroup"
@@ -515,8 +505,7 @@ Partial Class UnitModuleMDI
     Friend WithEvents PengirimanKendaraanFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BuktiPengirimanKendaraanFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents LaporanPengirimanKendaraanFormBtn As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents TransferInUnitFormBtn As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents TransferOutUnitFormBtn As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents TransferUnitFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BuktiTransferUnitFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents LaporanTransferUnitFormBtn As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents StockTrackingPageGroup As DevExpress.XtraBars.Ribbon.RibbonPageGroup

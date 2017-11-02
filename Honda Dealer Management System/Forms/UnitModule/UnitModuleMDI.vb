@@ -43,7 +43,13 @@
     End Sub
 
     Private Sub PenerimaanPembelianUnitFormBtn_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles PenerimaanPembelianUnitFormBtn.ItemClick
-        Dim f As New BuktiPenerimaanForm With {.MdiParent = Me}
+        Dim f As New PenerimaanKendaraanForm With {.MdiParent = Me}
+        f.Show()
+        f.Focus()
+    End Sub
+
+    Private Sub TransferUnitFormBtn_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles TransferUnitFormBtn.ItemClick
+        Dim f As New UnitTransferForm With {.MdiParent = Me}
         f.Show()
         f.Focus()
     End Sub

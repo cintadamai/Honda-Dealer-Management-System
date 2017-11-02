@@ -1,6 +1,6 @@
 ﻿Imports Honda_Dealer_Management_System.HDMS
 Imports DevExpress.Xpo
-Public Class BuktiPenerimaanForm
+Public Class PenerimaanKendaraanForm
     Private Sub XtraScrollableControl1_Click(sender As Object, e As EventArgs) Handles XtraScrollableControl1.Click
 
     End Sub

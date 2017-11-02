@@ -230,6 +230,10 @@
       <DependentUpon>UnitSupplierModel.vb</DependentUpon>
     </Compile>
     <Compile Include="DB\DMSCode\UnitSupplierModel.vb" />
+    <Compile Include="DB\DMSCode\UnitTransferModel.Designer.vb">
+      <DependentUpon>UnitTransferModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitTransferModel.vb" />
     <Compile Include="DB\DMSCode\UnitWarnaModel.Designer.vb">
       <DependentUpon>UnitWarnaModel.vb</DependentUpon>
     </Compile>
@@ -328,10 +332,28 @@
     <Compile Include="Forms\UnitModule\Pembelian\InputPembelianForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UnitModule\StokUnit\BuktiPenerimaanForm.Designer.vb">
-      <DependentUpon>BuktiPenerimaanForm.vb</DependentUpon>
+    <Compile Include="Forms\UnitModule\Pembelian\InputReturPembelianForm.Designer.vb">
+      <DependentUpon>InputReturPembelianForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UnitModule\StokUnit\BuktiPenerimaanForm.vb">
+    <Compile Include="Forms\UnitModule\Pembelian\InputReturPembelianForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnitModule\Pembelian\NoPembelianLookupForm.Designer.vb">
+      <DependentUpon>NoPembelianLookupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnitModule\Pembelian\NoPembelianLookupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnitModule\StokUnit\PenerimaanKendaraanForm.Designer.vb">
+      <DependentUpon>PenerimaanKendaraanForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnitModule\StokUnit\PenerimaanKendaraanForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UnitModule\StokUnit\UnitTransferForm.Designer.vb">
+      <DependentUpon>UnitTransferForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnitModule\StokUnit\UnitTransferForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\UnitModule\UnitModuleMDI.Designer.vb">
@@ -410,8 +432,17 @@
     <EmbeddedResource Include="Forms\UnitModule\Pembelian\InputPembelianForm.resx">
       <DependentUpon>InputPembelianForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UnitModule\StokUnit\BuktiPenerimaanForm.resx">
-      <DependentUpon>BuktiPenerimaanForm.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\UnitModule\Pembelian\InputReturPembelianForm.resx">
+      <DependentUpon>InputReturPembelianForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnitModule\Pembelian\NoPembelianLookupForm.resx">
+      <DependentUpon>NoPembelianLookupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnitModule\StokUnit\PenerimaanKendaraanForm.resx">
+      <DependentUpon>PenerimaanKendaraanForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnitModule\StokUnit\UnitTransferForm.resx">
+      <DependentUpon>UnitTransferForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UnitModule\UnitModuleMDI.resx">
       <DependentUpon>UnitModuleMDI.vb</DependentUpon>

@@ -1,6 +1,7 @@
 ﻿Imports DevExpress.Xpo
 Imports Honda_Dealer_Management_System.HDMS
 Imports DevExpress.Data.Filtering
+Imports DevExpress.XtraEditors.Controls
 
 Public Class InputPembelianForm
     Dim ModelColl As XPQuery(Of UnitModelModel)
@@ -221,5 +222,18 @@ Public Class InputPembelianForm
 
     Private Sub PotonganDetailTxt_EditValueChanged(sender As Object, e As EventArgs) Handles PotonganDetailTxt.EditValueChanged
         CountDetail()
+    End Sub
+
+    Private Sub IDTxt_EditValueChanged(sender As Object, e As EventArgs) Handles IDTxt.EditValueChanged
+
+    End Sub
+
+    Private Sub IDTxt_ButtonClick(sender As Object, e As ButtonPressedEventArgs) Handles IDTxt.ButtonClick
+        Dim f As New NoPembelianLookupForm
+        Dim d As DialogResult = f.ShowDialog(Me)
+        If d = DialogResult.OK Then
+            PembelianBS.Position = f.PembelianBS.IndexOf(f.PembelianBS.Current)
+            HeaderViewState()
+        End If
     End Sub
 End Class
