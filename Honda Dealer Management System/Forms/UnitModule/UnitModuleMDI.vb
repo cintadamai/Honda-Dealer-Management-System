@@ -53,4 +53,10 @@
         f.Show()
         f.Focus()
     End Sub
+
+    Private Sub InputReturPembelianFormBtn_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles InputReturPembelianFormBtn.ItemClick
+        Dim f As New InputReturPembelianForm With {.MdiParent = Me}
+        f.Show()
+        f.Focus()
+    End Sub
 End Class

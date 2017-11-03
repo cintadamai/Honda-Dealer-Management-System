@@ -11,6 +11,7 @@ Public Class InputPembelianForm
     End Sub
 
     Private Sub InputPembelianForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        BindingNavigator1.Visible = False
         HeaderViewState()
         DetailColl = UOW.Query(Of UnitPurchaseDetailModel)
         ModelColl = UOW.Query(Of UnitModelModel)

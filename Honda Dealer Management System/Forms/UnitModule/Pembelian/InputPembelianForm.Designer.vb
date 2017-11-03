@@ -21,10 +21,10 @@ Partial Class InputPembelianForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InputPembelianForm))
+        Dim ConditionValidationRule5 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
-        Dim ConditionValidationRule4 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Me.XtraScrollableControl1 = New DevExpress.XtraEditors.XtraScrollableControl()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.PembelianBS = New System.Windows.Forms.BindingSource(Me.components)
@@ -643,9 +643,9 @@ Partial Class InputPembelianForm
         Me.TanggalPembelianTxt.Properties.Mask.UseMaskAsDisplayFormat = True
         Me.TanggalPembelianTxt.Size = New System.Drawing.Size(142, 20)
         Me.TanggalPembelianTxt.TabIndex = 53
-        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule1.ErrorText = "Harus di isi."
-        Me.HeaderValidator.SetValidationRule(Me.TanggalPembelianTxt, ConditionValidationRule1)
+        ConditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule5.ErrorText = "Harus di isi."
+        Me.HeaderValidator.SetValidationRule(Me.TanggalPembelianTxt, ConditionValidationRule5)
         '
         'KeteranganTxt
         '
@@ -674,9 +674,9 @@ Partial Class InputPembelianForm
         Me.NoFakturTxt.Properties.Appearance.Options.UseBackColor = True
         Me.NoFakturTxt.Size = New System.Drawing.Size(142, 20)
         Me.NoFakturTxt.TabIndex = 16
-        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule2.ErrorText = "Harus di isi."
-        Me.HeaderValidator.SetValidationRule(Me.NoFakturTxt, ConditionValidationRule2)
+        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule1.ErrorText = "Harus di isi."
+        Me.HeaderValidator.SetValidationRule(Me.NoFakturTxt, ConditionValidationRule1)
         '
         'NoInvoiceTxt
         '
@@ -687,9 +687,9 @@ Partial Class InputPembelianForm
         Me.NoInvoiceTxt.Properties.Appearance.Options.UseBackColor = True
         Me.NoInvoiceTxt.Size = New System.Drawing.Size(142, 20)
         Me.NoInvoiceTxt.TabIndex = 15
-        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule3.ErrorText = "Harus di isi."
-        Me.HeaderValidator.SetValidationRule(Me.NoInvoiceTxt, ConditionValidationRule3)
+        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule2.ErrorText = "Harus di isi."
+        Me.HeaderValidator.SetValidationRule(Me.NoInvoiceTxt, ConditionValidationRule2)
         '
         'LabelControl12
         '
@@ -807,9 +807,9 @@ Partial Class InputPembelianForm
         Me.SupplierTxt.Properties.View = Me.GridLookUpEdit1View
         Me.SupplierTxt.Size = New System.Drawing.Size(142, 20)
         Me.SupplierTxt.TabIndex = 13
-        ConditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule4.ErrorText = "Pilih Salah Satu."
-        Me.HeaderValidator.SetValidationRule(Me.SupplierTxt, ConditionValidationRule4)
+        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule3.ErrorText = "Pilih Salah Satu."
+        Me.HeaderValidator.SetValidationRule(Me.SupplierTxt, ConditionValidationRule3)
         '
         'SupplierXP
         '

@@ -79,7 +79,7 @@ Partial Class UnitModuleMDI
         Me.RibbonControl1.MaxItemId = 35
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.MasterDataPage, Me.PembelianUnitPage, Me.StockUnitPage, Me.PenjualanUnitPage})
-        Me.RibbonControl1.Size = New System.Drawing.Size(1194, 115)
+        Me.RibbonControl1.Size = New System.Drawing.Size(1194, 116)
         Me.RibbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden
         '
         'DataSupplierFormBtn
