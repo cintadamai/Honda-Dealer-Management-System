@@ -77,7 +77,15 @@ Public Class InputPembelianForm
     End Sub
 
     Private Sub HapusBtn_Click(sender As Object, e As EventArgs) Handles HapusBtn.Click
+        Dim ask = MessageBox.Show("Apakah anda yakin ?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If ask = DialogResult.Yes Then
+            Dim r As UnitPurchaseModel = PembelianBS.Current
+            PembelianXP.Remove(r)
+            UOW.CommitChanges()
 
+            PembelianBS.EndEdit()
+            HeaderViewState()
+        End If
     End Sub
 
     Private Sub SimpanBtn_Click(sender As Object, e As EventArgs) Handles SimpanBtn.Click
@@ -236,5 +244,13 @@ Public Class InputPembelianForm
             PembelianBS.Position = f.PembelianBS.IndexOf(f.PembelianBS.Current)
             HeaderViewState()
         End If
+    End Sub
+
+    Private Sub PembelianDetailBS_CurrentChanged(sender As Object, e As EventArgs) Handles PembelianDetailBS.CurrentChanged
+
+    End Sub
+
+    Private Sub PembelianBS_CurrentChanged(sender As Object, e As EventArgs) Handles PembelianBS.CurrentChanged
+
     End Sub
 End Class

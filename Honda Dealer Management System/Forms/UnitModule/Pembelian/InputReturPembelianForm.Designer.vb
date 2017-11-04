@@ -19,44 +19,17 @@ Partial Class InputReturPembelianForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InputReturPembelianForm))
+        Dim ConditionValidationRule5 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Me.XtraScrollableControl1 = New DevExpress.XtraEditors.XtraScrollableControl()
-        Me.SimpanBtn = New DevExpress.XtraEditors.SimpleButton()
-        Me.PrintBtn = New DevExpress.XtraEditors.SimpleButton()
-        Me.BatalBtn = New DevExpress.XtraEditors.SimpleButton()
-        Me.EditBtn = New DevExpress.XtraEditors.SimpleButton()
-        Me.TambahBtn = New DevExpress.XtraEditors.SimpleButton()
-        Me.HapusBtn = New DevExpress.XtraEditors.SimpleButton()
-        Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
-        Me.TanggalPembelianTxt = New DevExpress.XtraEditors.DateEdit()
-        Me.KeteranganTxt = New DevExpress.XtraEditors.MemoEdit()
-        Me.PPNCheckEdit = New DevExpress.XtraEditors.CheckEdit()
-        Me.NoFakturTxt = New DevExpress.XtraEditors.TextEdit()
-        Me.NoInvoiceTxt = New DevExpress.XtraEditors.TextEdit()
-        Me.LabelControl12 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl11 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl10 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl9 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl8 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl4 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
-        Me.IDTxt = New DevExpress.XtraEditors.ButtonEdit()
-        Me.SupplierTxt = New DevExpress.XtraEditors.GridLookUpEdit()
-        Me.GridLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.colId = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colNamaSupplier = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colNpwp = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.colNamaNpwp = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.NilaiTxt = New DevExpress.XtraEditors.SpinEdit()
-        Me.PotonganTxt = New DevExpress.XtraEditors.SpinEdit()
-        Me.DppTxt = New DevExpress.XtraEditors.SpinEdit()
-        Me.PPNtxt = New DevExpress.XtraEditors.SpinEdit()
-        Me.TotalTxt = New DevExpress.XtraEditors.SpinEdit()
         Me.DetailGrid = New DevExpress.XtraGrid.GridControl()
+        Me.DetailBS = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DetailXP = New DevExpress.Xpo.XPCollection(Me.components)
+        Me.UOW = New DevExpress.Xpo.UnitOfWork(Me.components)
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -78,6 +51,7 @@ Partial Class InputReturPembelianForm
         Me.LabelControl13 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl7 = New DevExpress.XtraEditors.LabelControl()
         Me.ModelTxt = New DevExpress.XtraEditors.GridLookUpEdit()
+        Me.ModelXP = New DevExpress.Xpo.XPCollection(Me.components)
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colId1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colModel = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -86,34 +60,83 @@ Partial Class InputReturPembelianForm
         Me.NilaiPembelianDetTxt = New DevExpress.XtraEditors.SpinEdit()
         Me.PotonganDetailTxt = New DevExpress.XtraEditors.SpinEdit()
         Me.TotalDetailTxt = New DevExpress.XtraEditors.SpinEdit()
+        Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
+        Me.TanggalReturPembelianTxt = New DevExpress.XtraEditors.DateEdit()
+        Me.ReturBS = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ReturXP = New DevExpress.Xpo.XPCollection(Me.components)
+        Me.KeteranganTxt = New DevExpress.XtraEditors.MemoEdit()
+        Me.PPNCheckEdit = New DevExpress.XtraEditors.CheckEdit()
+        Me.NoFakturTxt = New DevExpress.XtraEditors.TextEdit()
+        Me.NoInvoiceTxt = New DevExpress.XtraEditors.TextEdit()
+        Me.LabelControl12 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl11 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl10 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl9 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl8 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl4 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
+        Me.IDTxt = New DevExpress.XtraEditors.ButtonEdit()
+        Me.SupplierTxt = New DevExpress.XtraEditors.GridLookUpEdit()
+        Me.SupplierXP = New DevExpress.Xpo.XPCollection(Me.components)
+        Me.GridLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.colId = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colNamaSupplier = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colNpwp = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.colNamaNpwp = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.NilaiTxt = New DevExpress.XtraEditors.SpinEdit()
+        Me.PotonganTxt = New DevExpress.XtraEditors.SpinEdit()
+        Me.DppTxt = New DevExpress.XtraEditors.SpinEdit()
+        Me.PPNtxt = New DevExpress.XtraEditors.SpinEdit()
+        Me.TotalTxt = New DevExpress.XtraEditors.SpinEdit()
+        Me.SimpanBtn = New DevExpress.XtraEditors.SimpleButton()
+        Me.PrintBtn = New DevExpress.XtraEditors.SimpleButton()
+        Me.BatalBtn = New DevExpress.XtraEditors.SimpleButton()
+        Me.EditBtn = New DevExpress.XtraEditors.SimpleButton()
+        Me.TambahBtn = New DevExpress.XtraEditors.SimpleButton()
+        Me.HapusBtn = New DevExpress.XtraEditors.SimpleButton()
+        Me.HeaderValidator = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
+        Me.DetailValidator = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         Me.XtraScrollableControl1.SuspendLayout()
-        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelControl1.SuspendLayout()
-        CType(Me.TanggalPembelianTxt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TanggalPembelianTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KeteranganTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PPNCheckEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NoFakturTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NoInvoiceTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.IDTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SupplierTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GridLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NilaiTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PotonganTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DppTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PPNtxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TotalTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DetailGrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DetailBS, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DetailXP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UOW, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PanelDetail, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelDetail.SuspendLayout()
         CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ModelTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ModelXP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NilaiPembelianDetTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PotonganDetailTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TotalDetailTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelControl1.SuspendLayout()
+        CType(Me.TanggalReturPembelianTxt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TanggalReturPembelianTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReturBS, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReturXP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KeteranganTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PPNCheckEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NoFakturTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NoInvoiceTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.IDTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SupplierTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SupplierXP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridLookUpEdit1View, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NilaiTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PotonganTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DppTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PPNtxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TotalTxt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HeaderValidator, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DetailValidator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'XtraScrollableControl1
@@ -133,368 +156,9 @@ Partial Class InputReturPembelianForm
         Me.XtraScrollableControl1.Size = New System.Drawing.Size(975, 515)
         Me.XtraScrollableControl1.TabIndex = 0
         '
-        'SimpanBtn
-        '
-        Me.SimpanBtn.Enabled = False
-        Me.SimpanBtn.Location = New System.Drawing.Point(108, 12)
-        Me.SimpanBtn.Name = "SimpanBtn"
-        Me.SimpanBtn.Size = New System.Drawing.Size(90, 32)
-        Me.SimpanBtn.TabIndex = 50
-        Me.SimpanBtn.Text = "Simpan"
-        '
-        'PrintBtn
-        '
-        Me.PrintBtn.Enabled = False
-        Me.PrintBtn.Location = New System.Drawing.Point(300, 12)
-        Me.PrintBtn.Name = "PrintBtn"
-        Me.PrintBtn.Size = New System.Drawing.Size(90, 32)
-        Me.PrintBtn.TabIndex = 51
-        Me.PrintBtn.Text = "Print"
-        '
-        'BatalBtn
-        '
-        Me.BatalBtn.Enabled = False
-        Me.BatalBtn.Location = New System.Drawing.Point(204, 12)
-        Me.BatalBtn.Name = "BatalBtn"
-        Me.BatalBtn.Size = New System.Drawing.Size(90, 32)
-        Me.BatalBtn.TabIndex = 54
-        Me.BatalBtn.Text = "Batal"
-        '
-        'EditBtn
-        '
-        Me.EditBtn.Location = New System.Drawing.Point(396, 12)
-        Me.EditBtn.Name = "EditBtn"
-        Me.EditBtn.Size = New System.Drawing.Size(90, 32)
-        Me.EditBtn.TabIndex = 52
-        Me.EditBtn.Text = "Edit"
-        '
-        'TambahBtn
-        '
-        Me.TambahBtn.Location = New System.Drawing.Point(12, 12)
-        Me.TambahBtn.Name = "TambahBtn"
-        Me.TambahBtn.Size = New System.Drawing.Size(90, 32)
-        Me.TambahBtn.TabIndex = 49
-        Me.TambahBtn.Text = "Tambah"
-        '
-        'HapusBtn
-        '
-        Me.HapusBtn.Location = New System.Drawing.Point(492, 12)
-        Me.HapusBtn.Name = "HapusBtn"
-        Me.HapusBtn.Size = New System.Drawing.Size(90, 32)
-        Me.HapusBtn.TabIndex = 53
-        Me.HapusBtn.Text = "Hapus"
-        '
-        'PanelControl1
-        '
-        Me.PanelControl1.Controls.Add(Me.TanggalPembelianTxt)
-        Me.PanelControl1.Controls.Add(Me.KeteranganTxt)
-        Me.PanelControl1.Controls.Add(Me.PPNCheckEdit)
-        Me.PanelControl1.Controls.Add(Me.NoFakturTxt)
-        Me.PanelControl1.Controls.Add(Me.NoInvoiceTxt)
-        Me.PanelControl1.Controls.Add(Me.LabelControl12)
-        Me.PanelControl1.Controls.Add(Me.LabelControl11)
-        Me.PanelControl1.Controls.Add(Me.LabelControl10)
-        Me.PanelControl1.Controls.Add(Me.LabelControl9)
-        Me.PanelControl1.Controls.Add(Me.LabelControl8)
-        Me.PanelControl1.Controls.Add(Me.LabelControl6)
-        Me.PanelControl1.Controls.Add(Me.LabelControl5)
-        Me.PanelControl1.Controls.Add(Me.LabelControl4)
-        Me.PanelControl1.Controls.Add(Me.LabelControl3)
-        Me.PanelControl1.Controls.Add(Me.LabelControl2)
-        Me.PanelControl1.Controls.Add(Me.LabelControl1)
-        Me.PanelControl1.Controls.Add(Me.IDTxt)
-        Me.PanelControl1.Controls.Add(Me.SupplierTxt)
-        Me.PanelControl1.Controls.Add(Me.NilaiTxt)
-        Me.PanelControl1.Controls.Add(Me.PotonganTxt)
-        Me.PanelControl1.Controls.Add(Me.DppTxt)
-        Me.PanelControl1.Controls.Add(Me.PPNtxt)
-        Me.PanelControl1.Controls.Add(Me.TotalTxt)
-        Me.PanelControl1.Location = New System.Drawing.Point(12, 50)
-        Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(941, 169)
-        Me.PanelControl1.TabIndex = 55
-        '
-        'TanggalPembelianTxt
-        '
-        Me.TanggalPembelianTxt.EditValue = Nothing
-        Me.TanggalPembelianTxt.Location = New System.Drawing.Point(129, 67)
-        Me.TanggalPembelianTxt.Name = "TanggalPembelianTxt"
-        Me.TanggalPembelianTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
-        Me.TanggalPembelianTxt.Properties.Appearance.Options.UseBackColor = True
-        Me.TanggalPembelianTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.TanggalPembelianTxt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.TanggalPembelianTxt.Properties.DisplayFormat.FormatString = ""
-        Me.TanggalPembelianTxt.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.TanggalPembelianTxt.Properties.EditFormat.FormatString = ""
-        Me.TanggalPembelianTxt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
-        Me.TanggalPembelianTxt.Properties.Mask.EditMask = "d MMMM yyyy"
-        Me.TanggalPembelianTxt.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.TanggalPembelianTxt.Size = New System.Drawing.Size(142, 20)
-        Me.TanggalPembelianTxt.TabIndex = 53
-        '
-        'KeteranganTxt
-        '
-        Me.KeteranganTxt.Location = New System.Drawing.Point(635, 47)
-        Me.KeteranganTxt.Name = "KeteranganTxt"
-        Me.KeteranganTxt.Size = New System.Drawing.Size(202, 110)
-        Me.KeteranganTxt.TabIndex = 52
-        '
-        'PPNCheckEdit
-        '
-        Me.PPNCheckEdit.EditValue = True
-        Me.PPNCheckEdit.Location = New System.Drawing.Point(379, 94)
-        Me.PPNCheckEdit.Name = "PPNCheckEdit"
-        Me.PPNCheckEdit.Properties.Caption = "PPN"
-        Me.PPNCheckEdit.Size = New System.Drawing.Size(75, 19)
-        Me.PPNCheckEdit.TabIndex = 17
-        '
-        'NoFakturTxt
-        '
-        Me.NoFakturTxt.Location = New System.Drawing.Point(129, 119)
-        Me.NoFakturTxt.Name = "NoFakturTxt"
-        Me.NoFakturTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
-        Me.NoFakturTxt.Properties.Appearance.Options.UseBackColor = True
-        Me.NoFakturTxt.Size = New System.Drawing.Size(142, 20)
-        Me.NoFakturTxt.TabIndex = 16
-        '
-        'NoInvoiceTxt
-        '
-        Me.NoInvoiceTxt.Location = New System.Drawing.Point(129, 93)
-        Me.NoInvoiceTxt.Name = "NoInvoiceTxt"
-        Me.NoInvoiceTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
-        Me.NoInvoiceTxt.Properties.Appearance.Options.UseBackColor = True
-        Me.NoInvoiceTxt.Size = New System.Drawing.Size(142, 20)
-        Me.NoInvoiceTxt.TabIndex = 15
-        '
-        'LabelControl12
-        '
-        Me.LabelControl12.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.LabelControl12.Appearance.Options.UseFont = True
-        Me.LabelControl12.Location = New System.Drawing.Point(544, 18)
-        Me.LabelControl12.Name = "LabelControl12"
-        Me.LabelControl12.Size = New System.Drawing.Size(43, 19)
-        Me.LabelControl12.TabIndex = 11
-        Me.LabelControl12.Text = "Total"
-        '
-        'LabelControl11
-        '
-        Me.LabelControl11.Location = New System.Drawing.Point(302, 122)
-        Me.LabelControl11.Name = "LabelControl11"
-        Me.LabelControl11.Size = New System.Drawing.Size(19, 13)
-        Me.LabelControl11.TabIndex = 10
-        Me.LabelControl11.Text = "PPN"
-        '
-        'LabelControl10
-        '
-        Me.LabelControl10.Location = New System.Drawing.Point(302, 71)
-        Me.LabelControl10.Name = "LabelControl10"
-        Me.LabelControl10.Size = New System.Drawing.Size(19, 13)
-        Me.LabelControl10.TabIndex = 9
-        Me.LabelControl10.Text = "Dpp"
-        '
-        'LabelControl9
-        '
-        Me.LabelControl9.Location = New System.Drawing.Point(302, 45)
-        Me.LabelControl9.Name = "LabelControl9"
-        Me.LabelControl9.Size = New System.Drawing.Size(46, 13)
-        Me.LabelControl9.TabIndex = 8
-        Me.LabelControl9.Text = "Potongan"
-        '
-        'LabelControl8
-        '
-        Me.LabelControl8.Location = New System.Drawing.Point(302, 19)
-        Me.LabelControl8.Name = "LabelControl8"
-        Me.LabelControl8.Size = New System.Drawing.Size(19, 13)
-        Me.LabelControl8.TabIndex = 7
-        Me.LabelControl8.Text = "Nilai"
-        '
-        'LabelControl6
-        '
-        Me.LabelControl6.Location = New System.Drawing.Point(544, 65)
-        Me.LabelControl6.Name = "LabelControl6"
-        Me.LabelControl6.Size = New System.Drawing.Size(56, 13)
-        Me.LabelControl6.TabIndex = 5
-        Me.LabelControl6.Text = "Keterangan"
-        '
-        'LabelControl5
-        '
-        Me.LabelControl5.Location = New System.Drawing.Point(21, 122)
-        Me.LabelControl5.Name = "LabelControl5"
-        Me.LabelControl5.Size = New System.Drawing.Size(47, 13)
-        Me.LabelControl5.TabIndex = 4
-        Me.LabelControl5.Text = "No Faktur"
-        '
-        'LabelControl4
-        '
-        Me.LabelControl4.Location = New System.Drawing.Point(21, 96)
-        Me.LabelControl4.Name = "LabelControl4"
-        Me.LabelControl4.Size = New System.Drawing.Size(51, 13)
-        Me.LabelControl4.TabIndex = 3
-        Me.LabelControl4.Text = "No Invoice"
-        '
-        'LabelControl3
-        '
-        Me.LabelControl3.Location = New System.Drawing.Point(21, 69)
-        Me.LabelControl3.Name = "LabelControl3"
-        Me.LabelControl3.Size = New System.Drawing.Size(89, 13)
-        Me.LabelControl3.TabIndex = 2
-        Me.LabelControl3.Text = "Tanggal Pembelian"
-        '
-        'LabelControl2
-        '
-        Me.LabelControl2.Location = New System.Drawing.Point(21, 41)
-        Me.LabelControl2.Name = "LabelControl2"
-        Me.LabelControl2.Size = New System.Drawing.Size(38, 13)
-        Me.LabelControl2.TabIndex = 1
-        Me.LabelControl2.Text = "Supplier"
-        '
-        'LabelControl1
-        '
-        Me.LabelControl1.Location = New System.Drawing.Point(21, 18)
-        Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(64, 13)
-        Me.LabelControl1.TabIndex = 0
-        Me.LabelControl1.Text = "No Pembelian"
-        '
-        'IDTxt
-        '
-        Me.IDTxt.Location = New System.Drawing.Point(129, 15)
-        Me.IDTxt.Name = "IDTxt"
-        Me.IDTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.IDTxt.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
-        Me.IDTxt.Size = New System.Drawing.Size(142, 20)
-        Me.IDTxt.TabIndex = 12
-        '
-        'SupplierTxt
-        '
-        Me.SupplierTxt.Location = New System.Drawing.Point(129, 41)
-        Me.SupplierTxt.Name = "SupplierTxt"
-        Me.SupplierTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
-        Me.SupplierTxt.Properties.Appearance.Options.UseBackColor = True
-        Me.SupplierTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.SupplierTxt.Properties.DisplayMember = "NamaSupplier"
-        Me.SupplierTxt.Properties.NullText = ""
-        Me.SupplierTxt.Properties.PopupFormMinSize = New System.Drawing.Size(800, 0)
-        Me.SupplierTxt.Properties.ValueMember = "Id"
-        Me.SupplierTxt.Properties.View = Me.GridLookUpEdit1View
-        Me.SupplierTxt.Size = New System.Drawing.Size(142, 20)
-        Me.SupplierTxt.TabIndex = 13
-        '
-        'GridLookUpEdit1View
-        '
-        Me.GridLookUpEdit1View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colId, Me.colNamaSupplier, Me.colNpwp, Me.colNamaNpwp})
-        Me.GridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
-        Me.GridLookUpEdit1View.Name = "GridLookUpEdit1View"
-        Me.GridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
-        Me.GridLookUpEdit1View.OptionsView.ShowAutoFilterRow = True
-        Me.GridLookUpEdit1View.OptionsView.ShowGroupPanel = False
-        Me.GridLookUpEdit1View.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.colNamaSupplier, DevExpress.Data.ColumnSortOrder.Ascending)})
-        '
-        'colId
-        '
-        Me.colId.FieldName = "Id"
-        Me.colId.Name = "colId"
-        Me.colId.Visible = True
-        Me.colId.VisibleIndex = 0
-        Me.colId.Width = 77
-        '
-        'colNamaSupplier
-        '
-        Me.colNamaSupplier.FieldName = "NamaSupplier"
-        Me.colNamaSupplier.Name = "colNamaSupplier"
-        Me.colNamaSupplier.Visible = True
-        Me.colNamaSupplier.VisibleIndex = 1
-        Me.colNamaSupplier.Width = 164
-        '
-        'colNpwp
-        '
-        Me.colNpwp.FieldName = "Npwp"
-        Me.colNpwp.Name = "colNpwp"
-        Me.colNpwp.Visible = True
-        Me.colNpwp.VisibleIndex = 2
-        Me.colNpwp.Width = 164
-        '
-        'colNamaNpwp
-        '
-        Me.colNamaNpwp.FieldName = "NamaNpwp"
-        Me.colNamaNpwp.Name = "colNamaNpwp"
-        Me.colNamaNpwp.Visible = True
-        Me.colNamaNpwp.VisibleIndex = 3
-        Me.colNamaNpwp.Width = 171
-        '
-        'NilaiTxt
-        '
-        Me.NilaiTxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.NilaiTxt.Location = New System.Drawing.Point(379, 15)
-        Me.NilaiTxt.Name = "NilaiTxt"
-        Me.NilaiTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.NilaiTxt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.NilaiTxt.Properties.IsFloatValue = False
-        Me.NilaiTxt.Properties.Mask.EditMask = "N00"
-        Me.NilaiTxt.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.NilaiTxt.Properties.ReadOnly = True
-        Me.NilaiTxt.Size = New System.Drawing.Size(142, 20)
-        Me.NilaiTxt.TabIndex = 49
-        '
-        'PotonganTxt
-        '
-        Me.PotonganTxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.PotonganTxt.Location = New System.Drawing.Point(379, 41)
-        Me.PotonganTxt.Name = "PotonganTxt"
-        Me.PotonganTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.PotonganTxt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.PotonganTxt.Properties.IsFloatValue = False
-        Me.PotonganTxt.Properties.Mask.EditMask = "N00"
-        Me.PotonganTxt.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.PotonganTxt.Size = New System.Drawing.Size(142, 20)
-        Me.PotonganTxt.TabIndex = 50
-        '
-        'DppTxt
-        '
-        Me.DppTxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.DppTxt.Location = New System.Drawing.Point(379, 67)
-        Me.DppTxt.Name = "DppTxt"
-        Me.DppTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DppTxt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.DppTxt.Properties.IsFloatValue = False
-        Me.DppTxt.Properties.Mask.EditMask = "N00"
-        Me.DppTxt.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.DppTxt.Properties.ReadOnly = True
-        Me.DppTxt.Size = New System.Drawing.Size(142, 20)
-        Me.DppTxt.TabIndex = 51
-        '
-        'PPNtxt
-        '
-        Me.PPNtxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.PPNtxt.Location = New System.Drawing.Point(379, 119)
-        Me.PPNtxt.Name = "PPNtxt"
-        Me.PPNtxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.PPNtxt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.PPNtxt.Properties.IsFloatValue = False
-        Me.PPNtxt.Properties.Mask.EditMask = "N00"
-        Me.PPNtxt.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.PPNtxt.Properties.ReadOnly = True
-        Me.PPNtxt.Size = New System.Drawing.Size(142, 20)
-        Me.PPNtxt.TabIndex = 18
-        '
-        'TotalTxt
-        '
-        Me.TotalTxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
-        Me.TotalTxt.Location = New System.Drawing.Point(635, 15)
-        Me.TotalTxt.Name = "TotalTxt"
-        Me.TotalTxt.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.TotalTxt.Properties.Appearance.Options.UseFont = True
-        Me.TotalTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.TotalTxt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
-        Me.TotalTxt.Properties.IsFloatValue = False
-        Me.TotalTxt.Properties.Mask.EditMask = "N00"
-        Me.TotalTxt.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.TotalTxt.Properties.ReadOnly = True
-        Me.TotalTxt.Size = New System.Drawing.Size(202, 26)
-        Me.TotalTxt.TabIndex = 19
-        '
         'DetailGrid
         '
+        Me.DetailGrid.DataSource = Me.DetailBS
         Me.DetailGrid.Location = New System.Drawing.Point(304, 225)
         Me.DetailGrid.MainView = Me.GridView2
         Me.DetailGrid.Name = "DetailGrid"
@@ -502,6 +166,21 @@ Partial Class InputReturPembelianForm
         Me.DetailGrid.TabIndex = 57
         Me.DetailGrid.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         Me.DetailGrid.Visible = False
+        '
+        'DetailBS
+        '
+        Me.DetailBS.DataSource = Me.DetailXP
+        '
+        'DetailXP
+        '
+        Me.DetailXP.DeleteObjectOnRemove = True
+        Me.DetailXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.UnitPurchaseReturnDetailsModel)
+        Me.DetailXP.Session = Me.UOW
+        '
+        'UOW
+        '
+        Me.UOW.IsObjectModifiedOnNonPersistentPropertyChange = Nothing
+        Me.UOW.TrackPropertiesModifications = False
         '
         'GridView2
         '
@@ -697,9 +376,13 @@ Partial Class InputReturPembelianForm
         '
         'ModelTxt
         '
+        Me.ModelTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DetailBS, "Model!Key", True))
         Me.ModelTxt.Location = New System.Drawing.Point(118, 18)
         Me.ModelTxt.Name = "ModelTxt"
+        Me.ModelTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.ModelTxt.Properties.Appearance.Options.UseBackColor = True
         Me.ModelTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.ModelTxt.Properties.DataSource = Me.ModelXP
         Me.ModelTxt.Properties.DisplayMember = "Model"
         Me.ModelTxt.Properties.NullText = ""
         Me.ModelTxt.Properties.PopupFormMinSize = New System.Drawing.Size(800, 0)
@@ -708,6 +391,11 @@ Partial Class InputReturPembelianForm
         Me.ModelTxt.Properties.View = Me.GridView1
         Me.ModelTxt.Size = New System.Drawing.Size(126, 20)
         Me.ModelTxt.TabIndex = 15
+        '
+        'ModelXP
+        '
+        Me.ModelXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.UnitPurchaseModel)
+        Me.ModelXP.Session = Me.UOW
         '
         'GridView1
         '
@@ -753,9 +441,12 @@ Partial Class InputReturPembelianForm
         '
         'NilaiPembelianDetTxt
         '
+        Me.NilaiPembelianDetTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DetailBS, "Nilai", True))
         Me.NilaiPembelianDetTxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
         Me.NilaiPembelianDetTxt.Location = New System.Drawing.Point(118, 96)
         Me.NilaiPembelianDetTxt.Name = "NilaiPembelianDetTxt"
+        Me.NilaiPembelianDetTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.NilaiPembelianDetTxt.Properties.Appearance.Options.UseBackColor = True
         Me.NilaiPembelianDetTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.NilaiPembelianDetTxt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
         Me.NilaiPembelianDetTxt.Properties.IsFloatValue = False
@@ -766,9 +457,12 @@ Partial Class InputReturPembelianForm
         '
         'PotonganDetailTxt
         '
+        Me.PotonganDetailTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DetailBS, "Potongan", True))
         Me.PotonganDetailTxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
         Me.PotonganDetailTxt.Location = New System.Drawing.Point(118, 122)
         Me.PotonganDetailTxt.Name = "PotonganDetailTxt"
+        Me.PotonganDetailTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.PotonganDetailTxt.Properties.Appearance.Options.UseBackColor = True
         Me.PotonganDetailTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.PotonganDetailTxt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
         Me.PotonganDetailTxt.Properties.IsFloatValue = False
@@ -779,6 +473,7 @@ Partial Class InputReturPembelianForm
         '
         'TotalDetailTxt
         '
+        Me.TotalDetailTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.DetailBS, "Total", True))
         Me.TotalDetailTxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
         Me.TotalDetailTxt.Location = New System.Drawing.Point(118, 148)
         Me.TotalDetailTxt.Name = "TotalDetailTxt"
@@ -793,6 +488,406 @@ Partial Class InputReturPembelianForm
         Me.TotalDetailTxt.Size = New System.Drawing.Size(126, 26)
         Me.TotalDetailTxt.TabIndex = 22
         '
+        'PanelControl1
+        '
+        Me.PanelControl1.Controls.Add(Me.TanggalReturPembelianTxt)
+        Me.PanelControl1.Controls.Add(Me.KeteranganTxt)
+        Me.PanelControl1.Controls.Add(Me.PPNCheckEdit)
+        Me.PanelControl1.Controls.Add(Me.NoFakturTxt)
+        Me.PanelControl1.Controls.Add(Me.NoInvoiceTxt)
+        Me.PanelControl1.Controls.Add(Me.LabelControl12)
+        Me.PanelControl1.Controls.Add(Me.LabelControl11)
+        Me.PanelControl1.Controls.Add(Me.LabelControl10)
+        Me.PanelControl1.Controls.Add(Me.LabelControl9)
+        Me.PanelControl1.Controls.Add(Me.LabelControl8)
+        Me.PanelControl1.Controls.Add(Me.LabelControl6)
+        Me.PanelControl1.Controls.Add(Me.LabelControl5)
+        Me.PanelControl1.Controls.Add(Me.LabelControl4)
+        Me.PanelControl1.Controls.Add(Me.LabelControl3)
+        Me.PanelControl1.Controls.Add(Me.LabelControl2)
+        Me.PanelControl1.Controls.Add(Me.LabelControl1)
+        Me.PanelControl1.Controls.Add(Me.IDTxt)
+        Me.PanelControl1.Controls.Add(Me.SupplierTxt)
+        Me.PanelControl1.Controls.Add(Me.NilaiTxt)
+        Me.PanelControl1.Controls.Add(Me.PotonganTxt)
+        Me.PanelControl1.Controls.Add(Me.DppTxt)
+        Me.PanelControl1.Controls.Add(Me.PPNtxt)
+        Me.PanelControl1.Controls.Add(Me.TotalTxt)
+        Me.PanelControl1.Location = New System.Drawing.Point(12, 50)
+        Me.PanelControl1.Name = "PanelControl1"
+        Me.PanelControl1.Size = New System.Drawing.Size(941, 169)
+        Me.PanelControl1.TabIndex = 55
+        '
+        'TanggalReturPembelianTxt
+        '
+        Me.TanggalReturPembelianTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReturBS, "TanggalRetur", True))
+        Me.TanggalReturPembelianTxt.EditValue = Nothing
+        Me.TanggalReturPembelianTxt.Location = New System.Drawing.Point(129, 67)
+        Me.TanggalReturPembelianTxt.Name = "TanggalReturPembelianTxt"
+        Me.TanggalReturPembelianTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.TanggalReturPembelianTxt.Properties.Appearance.Options.UseBackColor = True
+        Me.TanggalReturPembelianTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.TanggalReturPembelianTxt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.TanggalReturPembelianTxt.Properties.DisplayFormat.FormatString = ""
+        Me.TanggalReturPembelianTxt.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.TanggalReturPembelianTxt.Properties.EditFormat.FormatString = ""
+        Me.TanggalReturPembelianTxt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.TanggalReturPembelianTxt.Properties.Mask.EditMask = "d MMMM yyyy"
+        Me.TanggalReturPembelianTxt.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.TanggalReturPembelianTxt.Size = New System.Drawing.Size(142, 20)
+        Me.TanggalReturPembelianTxt.TabIndex = 53
+        ConditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule5.ErrorText = "Harus di isi."
+        Me.HeaderValidator.SetValidationRule(Me.TanggalReturPembelianTxt, ConditionValidationRule5)
+        '
+        'ReturBS
+        '
+        Me.ReturBS.DataSource = Me.ReturXP
+        '
+        'ReturXP
+        '
+        Me.ReturXP.DeleteObjectOnRemove = True
+        Me.ReturXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.UnitPurchaseReturnModel)
+        Me.ReturXP.Session = Me.UOW
+        '
+        'KeteranganTxt
+        '
+        Me.KeteranganTxt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReturBS, "Keterangan", True))
+        Me.KeteranganTxt.Location = New System.Drawing.Point(635, 47)
+        Me.KeteranganTxt.Name = "KeteranganTxt"
+        Me.KeteranganTxt.Size = New System.Drawing.Size(202, 110)
+        Me.KeteranganTxt.TabIndex = 52
+        '
+        'PPNCheckEdit
+        '
+        Me.PPNCheckEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReturBS, "Isppn", True))
+        Me.PPNCheckEdit.EditValue = True
+        Me.PPNCheckEdit.Location = New System.Drawing.Point(379, 94)
+        Me.PPNCheckEdit.Name = "PPNCheckEdit"
+        Me.PPNCheckEdit.Properties.Caption = "PPN"
+        Me.PPNCheckEdit.Size = New System.Drawing.Size(75, 19)
+        Me.PPNCheckEdit.TabIndex = 17
+        '
+        'NoFakturTxt
+        '
+        Me.NoFakturTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReturBS, "NoRetur", True))
+        Me.NoFakturTxt.Location = New System.Drawing.Point(129, 119)
+        Me.NoFakturTxt.Name = "NoFakturTxt"
+        Me.NoFakturTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.NoFakturTxt.Properties.Appearance.Options.UseBackColor = True
+        Me.NoFakturTxt.Size = New System.Drawing.Size(142, 20)
+        Me.NoFakturTxt.TabIndex = 16
+        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule1.ErrorText = "Harus di isi."
+        Me.HeaderValidator.SetValidationRule(Me.NoFakturTxt, ConditionValidationRule1)
+        '
+        'NoInvoiceTxt
+        '
+        Me.NoInvoiceTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReturBS, "NoInvoice", True))
+        Me.NoInvoiceTxt.Location = New System.Drawing.Point(129, 93)
+        Me.NoInvoiceTxt.Name = "NoInvoiceTxt"
+        Me.NoInvoiceTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.NoInvoiceTxt.Properties.Appearance.Options.UseBackColor = True
+        Me.NoInvoiceTxt.Size = New System.Drawing.Size(142, 20)
+        Me.NoInvoiceTxt.TabIndex = 15
+        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule2.ErrorText = "Harus di isi."
+        Me.HeaderValidator.SetValidationRule(Me.NoInvoiceTxt, ConditionValidationRule2)
+        '
+        'LabelControl12
+        '
+        Me.LabelControl12.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.LabelControl12.Appearance.Options.UseFont = True
+        Me.LabelControl12.Location = New System.Drawing.Point(544, 18)
+        Me.LabelControl12.Name = "LabelControl12"
+        Me.LabelControl12.Size = New System.Drawing.Size(43, 19)
+        Me.LabelControl12.TabIndex = 11
+        Me.LabelControl12.Text = "Total"
+        '
+        'LabelControl11
+        '
+        Me.LabelControl11.Location = New System.Drawing.Point(302, 122)
+        Me.LabelControl11.Name = "LabelControl11"
+        Me.LabelControl11.Size = New System.Drawing.Size(19, 13)
+        Me.LabelControl11.TabIndex = 10
+        Me.LabelControl11.Text = "PPN"
+        '
+        'LabelControl10
+        '
+        Me.LabelControl10.Location = New System.Drawing.Point(302, 71)
+        Me.LabelControl10.Name = "LabelControl10"
+        Me.LabelControl10.Size = New System.Drawing.Size(19, 13)
+        Me.LabelControl10.TabIndex = 9
+        Me.LabelControl10.Text = "Dpp"
+        '
+        'LabelControl9
+        '
+        Me.LabelControl9.Location = New System.Drawing.Point(302, 45)
+        Me.LabelControl9.Name = "LabelControl9"
+        Me.LabelControl9.Size = New System.Drawing.Size(46, 13)
+        Me.LabelControl9.TabIndex = 8
+        Me.LabelControl9.Text = "Potongan"
+        '
+        'LabelControl8
+        '
+        Me.LabelControl8.Location = New System.Drawing.Point(302, 19)
+        Me.LabelControl8.Name = "LabelControl8"
+        Me.LabelControl8.Size = New System.Drawing.Size(19, 13)
+        Me.LabelControl8.TabIndex = 7
+        Me.LabelControl8.Text = "Nilai"
+        '
+        'LabelControl6
+        '
+        Me.LabelControl6.Location = New System.Drawing.Point(544, 65)
+        Me.LabelControl6.Name = "LabelControl6"
+        Me.LabelControl6.Size = New System.Drawing.Size(56, 13)
+        Me.LabelControl6.TabIndex = 5
+        Me.LabelControl6.Text = "Keterangan"
+        '
+        'LabelControl5
+        '
+        Me.LabelControl5.Location = New System.Drawing.Point(21, 122)
+        Me.LabelControl5.Name = "LabelControl5"
+        Me.LabelControl5.Size = New System.Drawing.Size(47, 13)
+        Me.LabelControl5.TabIndex = 4
+        Me.LabelControl5.Text = "No Faktur"
+        '
+        'LabelControl4
+        '
+        Me.LabelControl4.Location = New System.Drawing.Point(21, 96)
+        Me.LabelControl4.Name = "LabelControl4"
+        Me.LabelControl4.Size = New System.Drawing.Size(51, 13)
+        Me.LabelControl4.TabIndex = 3
+        Me.LabelControl4.Text = "No Invoice"
+        '
+        'LabelControl3
+        '
+        Me.LabelControl3.Location = New System.Drawing.Point(21, 69)
+        Me.LabelControl3.Name = "LabelControl3"
+        Me.LabelControl3.Size = New System.Drawing.Size(68, 13)
+        Me.LabelControl3.TabIndex = 2
+        Me.LabelControl3.Text = "Tanggal Retur"
+        '
+        'LabelControl2
+        '
+        Me.LabelControl2.Location = New System.Drawing.Point(21, 41)
+        Me.LabelControl2.Name = "LabelControl2"
+        Me.LabelControl2.Size = New System.Drawing.Size(38, 13)
+        Me.LabelControl2.TabIndex = 1
+        Me.LabelControl2.Text = "Supplier"
+        '
+        'LabelControl1
+        '
+        Me.LabelControl1.Location = New System.Drawing.Point(21, 18)
+        Me.LabelControl1.Name = "LabelControl1"
+        Me.LabelControl1.Size = New System.Drawing.Size(94, 13)
+        Me.LabelControl1.TabIndex = 0
+        Me.LabelControl1.Text = "No Retur Pembelian"
+        '
+        'IDTxt
+        '
+        Me.IDTxt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ReturBS, "Id", True))
+        Me.IDTxt.Location = New System.Drawing.Point(129, 15)
+        Me.IDTxt.Name = "IDTxt"
+        Me.IDTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+        Me.IDTxt.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+        Me.IDTxt.Size = New System.Drawing.Size(142, 20)
+        Me.IDTxt.TabIndex = 12
+        '
+        'SupplierTxt
+        '
+        Me.SupplierTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReturBS, "Supplier!Key", True))
+        Me.SupplierTxt.Location = New System.Drawing.Point(129, 41)
+        Me.SupplierTxt.Name = "SupplierTxt"
+        Me.SupplierTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
+        Me.SupplierTxt.Properties.Appearance.Options.UseBackColor = True
+        Me.SupplierTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.SupplierTxt.Properties.DataSource = Me.SupplierXP
+        Me.SupplierTxt.Properties.DisplayMember = "NamaSupplier"
+        Me.SupplierTxt.Properties.NullText = ""
+        Me.SupplierTxt.Properties.PopupFormMinSize = New System.Drawing.Size(800, 0)
+        Me.SupplierTxt.Properties.ValueMember = "Id"
+        Me.SupplierTxt.Properties.View = Me.GridLookUpEdit1View
+        Me.SupplierTxt.Size = New System.Drawing.Size(142, 20)
+        Me.SupplierTxt.TabIndex = 13
+        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule3.ErrorText = "Harus di isi."
+        Me.HeaderValidator.SetValidationRule(Me.SupplierTxt, ConditionValidationRule3)
+        '
+        'SupplierXP
+        '
+        Me.SupplierXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.UnitSupplierModel)
+        Me.SupplierXP.Session = Me.UOW
+        '
+        'GridLookUpEdit1View
+        '
+        Me.GridLookUpEdit1View.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colId, Me.colNamaSupplier, Me.colNpwp, Me.colNamaNpwp})
+        Me.GridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus
+        Me.GridLookUpEdit1View.Name = "GridLookUpEdit1View"
+        Me.GridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = False
+        Me.GridLookUpEdit1View.OptionsView.ShowAutoFilterRow = True
+        Me.GridLookUpEdit1View.OptionsView.ShowGroupPanel = False
+        Me.GridLookUpEdit1View.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.colNamaSupplier, DevExpress.Data.ColumnSortOrder.Ascending)})
+        '
+        'colId
+        '
+        Me.colId.FieldName = "Id"
+        Me.colId.Name = "colId"
+        Me.colId.Visible = True
+        Me.colId.VisibleIndex = 0
+        Me.colId.Width = 77
+        '
+        'colNamaSupplier
+        '
+        Me.colNamaSupplier.FieldName = "NamaSupplier"
+        Me.colNamaSupplier.Name = "colNamaSupplier"
+        Me.colNamaSupplier.Visible = True
+        Me.colNamaSupplier.VisibleIndex = 1
+        Me.colNamaSupplier.Width = 164
+        '
+        'colNpwp
+        '
+        Me.colNpwp.FieldName = "Npwp"
+        Me.colNpwp.Name = "colNpwp"
+        Me.colNpwp.Visible = True
+        Me.colNpwp.VisibleIndex = 2
+        Me.colNpwp.Width = 164
+        '
+        'colNamaNpwp
+        '
+        Me.colNamaNpwp.FieldName = "NamaNpwp"
+        Me.colNamaNpwp.Name = "colNamaNpwp"
+        Me.colNamaNpwp.Visible = True
+        Me.colNamaNpwp.VisibleIndex = 3
+        Me.colNamaNpwp.Width = 171
+        '
+        'NilaiTxt
+        '
+        Me.NilaiTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReturBS, "Nilai", True))
+        Me.NilaiTxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.NilaiTxt.Location = New System.Drawing.Point(379, 15)
+        Me.NilaiTxt.Name = "NilaiTxt"
+        Me.NilaiTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.NilaiTxt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.NilaiTxt.Properties.IsFloatValue = False
+        Me.NilaiTxt.Properties.Mask.EditMask = "N00"
+        Me.NilaiTxt.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.NilaiTxt.Properties.ReadOnly = True
+        Me.NilaiTxt.Size = New System.Drawing.Size(142, 20)
+        Me.NilaiTxt.TabIndex = 49
+        '
+        'PotonganTxt
+        '
+        Me.PotonganTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReturBS, "Potongan", True))
+        Me.PotonganTxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.PotonganTxt.Location = New System.Drawing.Point(379, 41)
+        Me.PotonganTxt.Name = "PotonganTxt"
+        Me.PotonganTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.PotonganTxt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.PotonganTxt.Properties.IsFloatValue = False
+        Me.PotonganTxt.Properties.Mask.EditMask = "N00"
+        Me.PotonganTxt.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.PotonganTxt.Size = New System.Drawing.Size(142, 20)
+        Me.PotonganTxt.TabIndex = 50
+        '
+        'DppTxt
+        '
+        Me.DppTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReturBS, "Dpp", True))
+        Me.DppTxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.DppTxt.Location = New System.Drawing.Point(379, 67)
+        Me.DppTxt.Name = "DppTxt"
+        Me.DppTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DppTxt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.DppTxt.Properties.IsFloatValue = False
+        Me.DppTxt.Properties.Mask.EditMask = "N00"
+        Me.DppTxt.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.DppTxt.Properties.ReadOnly = True
+        Me.DppTxt.Size = New System.Drawing.Size(142, 20)
+        Me.DppTxt.TabIndex = 51
+        '
+        'PPNtxt
+        '
+        Me.PPNtxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReturBS, "Ppn", True))
+        Me.PPNtxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.PPNtxt.Location = New System.Drawing.Point(379, 119)
+        Me.PPNtxt.Name = "PPNtxt"
+        Me.PPNtxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.PPNtxt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.PPNtxt.Properties.IsFloatValue = False
+        Me.PPNtxt.Properties.Mask.EditMask = "N00"
+        Me.PPNtxt.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.PPNtxt.Properties.ReadOnly = True
+        Me.PPNtxt.Size = New System.Drawing.Size(142, 20)
+        Me.PPNtxt.TabIndex = 18
+        '
+        'TotalTxt
+        '
+        Me.TotalTxt.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ReturBS, "Total", True))
+        Me.TotalTxt.EditValue = New Decimal(New Integer() {0, 0, 0, 0})
+        Me.TotalTxt.Location = New System.Drawing.Point(635, 15)
+        Me.TotalTxt.Name = "TotalTxt"
+        Me.TotalTxt.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.TotalTxt.Properties.Appearance.Options.UseFont = True
+        Me.TotalTxt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.TotalTxt.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.[Default]
+        Me.TotalTxt.Properties.IsFloatValue = False
+        Me.TotalTxt.Properties.Mask.EditMask = "N00"
+        Me.TotalTxt.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.TotalTxt.Properties.ReadOnly = True
+        Me.TotalTxt.Size = New System.Drawing.Size(202, 26)
+        Me.TotalTxt.TabIndex = 19
+        '
+        'SimpanBtn
+        '
+        Me.SimpanBtn.Enabled = False
+        Me.SimpanBtn.Location = New System.Drawing.Point(108, 12)
+        Me.SimpanBtn.Name = "SimpanBtn"
+        Me.SimpanBtn.Size = New System.Drawing.Size(90, 32)
+        Me.SimpanBtn.TabIndex = 50
+        Me.SimpanBtn.Text = "Simpan"
+        '
+        'PrintBtn
+        '
+        Me.PrintBtn.Enabled = False
+        Me.PrintBtn.Location = New System.Drawing.Point(300, 12)
+        Me.PrintBtn.Name = "PrintBtn"
+        Me.PrintBtn.Size = New System.Drawing.Size(90, 32)
+        Me.PrintBtn.TabIndex = 51
+        Me.PrintBtn.Text = "Print"
+        '
+        'BatalBtn
+        '
+        Me.BatalBtn.Enabled = False
+        Me.BatalBtn.Location = New System.Drawing.Point(204, 12)
+        Me.BatalBtn.Name = "BatalBtn"
+        Me.BatalBtn.Size = New System.Drawing.Size(90, 32)
+        Me.BatalBtn.TabIndex = 54
+        Me.BatalBtn.Text = "Batal"
+        '
+        'EditBtn
+        '
+        Me.EditBtn.Location = New System.Drawing.Point(396, 12)
+        Me.EditBtn.Name = "EditBtn"
+        Me.EditBtn.Size = New System.Drawing.Size(90, 32)
+        Me.EditBtn.TabIndex = 52
+        Me.EditBtn.Text = "Edit"
+        '
+        'TambahBtn
+        '
+        Me.TambahBtn.Location = New System.Drawing.Point(12, 12)
+        Me.TambahBtn.Name = "TambahBtn"
+        Me.TambahBtn.Size = New System.Drawing.Size(90, 32)
+        Me.TambahBtn.TabIndex = 49
+        Me.TambahBtn.Text = "Tambah"
+        '
+        'HapusBtn
+        '
+        Me.HapusBtn.Location = New System.Drawing.Point(492, 12)
+        Me.HapusBtn.Name = "HapusBtn"
+        Me.HapusBtn.Size = New System.Drawing.Size(90, 32)
+        Me.HapusBtn.TabIndex = 53
+        Me.HapusBtn.Text = "Hapus"
+        '
         'InputReturPembelianForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -802,24 +897,10 @@ Partial Class InputReturPembelianForm
         Me.Name = "InputReturPembelianForm"
         Me.Text = "Retur Pembelian"
         Me.XtraScrollableControl1.ResumeLayout(False)
-        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelControl1.ResumeLayout(False)
-        Me.PanelControl1.PerformLayout()
-        CType(Me.TanggalPembelianTxt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TanggalPembelianTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KeteranganTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PPNCheckEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NoFakturTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NoInvoiceTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.IDTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SupplierTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GridLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NilaiTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PotonganTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DppTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PPNtxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TotalTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DetailGrid, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DetailBS, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DetailXP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UOW, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PanelDetail, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelDetail.ResumeLayout(False)
@@ -827,10 +908,33 @@ Partial Class InputReturPembelianForm
         CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ModelTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ModelXP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NilaiPembelianDetTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PotonganDetailTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TotalDetailTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelControl1.ResumeLayout(False)
+        Me.PanelControl1.PerformLayout()
+        CType(Me.TanggalReturPembelianTxt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TanggalReturPembelianTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReturBS, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReturXP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KeteranganTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PPNCheckEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NoFakturTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NoInvoiceTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.IDTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SupplierTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SupplierXP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridLookUpEdit1View, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NilaiTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PotonganTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DppTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PPNtxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TotalTxt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HeaderValidator, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DetailValidator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -843,7 +947,7 @@ Partial Class InputReturPembelianForm
     Friend WithEvents TambahBtn As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents HapusBtn As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents PanelControl1 As DevExpress.XtraEditors.PanelControl
-    Friend WithEvents TanggalPembelianTxt As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents TanggalReturPembelianTxt As DevExpress.XtraEditors.DateEdit
     Friend WithEvents KeteranganTxt As DevExpress.XtraEditors.MemoEdit
     Friend WithEvents PPNCheckEdit As DevExpress.XtraEditors.CheckEdit
     Friend WithEvents NoFakturTxt As DevExpress.XtraEditors.TextEdit
@@ -901,4 +1005,13 @@ Partial Class InputReturPembelianForm
     Friend WithEvents NilaiPembelianDetTxt As DevExpress.XtraEditors.SpinEdit
     Friend WithEvents PotonganDetailTxt As DevExpress.XtraEditors.SpinEdit
     Friend WithEvents TotalDetailTxt As DevExpress.XtraEditors.SpinEdit
+    Friend WithEvents UOW As DevExpress.Xpo.UnitOfWork
+    Friend WithEvents ReturXP As DevExpress.Xpo.XPCollection
+    Friend WithEvents ReturBS As BindingSource
+    Friend WithEvents SupplierXP As DevExpress.Xpo.XPCollection
+    Friend WithEvents DetailBS As BindingSource
+    Friend WithEvents DetailXP As DevExpress.Xpo.XPCollection
+    Friend WithEvents ModelXP As DevExpress.Xpo.XPCollection
+    Friend WithEvents HeaderValidator As DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider
+    Friend WithEvents DetailValidator As DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider
 End Class

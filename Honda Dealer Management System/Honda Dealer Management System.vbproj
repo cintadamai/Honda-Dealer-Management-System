@@ -214,6 +214,14 @@
       <DependentUpon>UnitPurchaseModel.vb</DependentUpon>
     </Compile>
     <Compile Include="DB\DMSCode\UnitPurchaseModel.vb" />
+    <Compile Include="DB\DMSCode\UnitPurchaseReturnDetailsModel.Designer.vb">
+      <DependentUpon>UnitPurchaseReturnDetailsModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitPurchaseReturnDetailsModel.vb" />
+    <Compile Include="DB\DMSCode\UnitPurchaseReturnModel.Designer.vb">
+      <DependentUpon>UnitPurchaseReturnModel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DMSCode\UnitPurchaseReturnModel.vb" />
     <Compile Include="DB\DMSCode\UnitReceiveModel.Designer.vb">
       <DependentUpon>UnitReceiveModel.vb</DependentUpon>
     </Compile>
