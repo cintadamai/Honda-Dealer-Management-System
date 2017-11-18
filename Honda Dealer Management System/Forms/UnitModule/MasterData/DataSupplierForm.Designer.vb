@@ -221,7 +221,7 @@ Partial Class DataSupplierForm
         Me.NPWPTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.NPWPTxt.Properties.Appearance.Options.UseBackColor = True
         Me.NPWPTxt.Size = New System.Drawing.Size(154, 20)
-        Me.NPWPTxt.TabIndex = 13
+        Me.NPWPTxt.TabIndex = 6
         '
         'LabelControl7
         '
@@ -239,7 +239,7 @@ Partial Class DataSupplierForm
         Me.NamaNPWPTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.NamaNPWPTxt.Properties.Appearance.Options.UseBackColor = True
         Me.NamaNPWPTxt.Size = New System.Drawing.Size(205, 20)
-        Me.NamaNPWPTxt.TabIndex = 11
+        Me.NamaNPWPTxt.TabIndex = 7
         '
         'LabelControl6
         '
@@ -257,7 +257,7 @@ Partial Class DataSupplierForm
         Me.NoTeleponTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.NoTeleponTxt.Properties.Appearance.Options.UseBackColor = True
         Me.NoTeleponTxt.Size = New System.Drawing.Size(154, 20)
-        Me.NoTeleponTxt.TabIndex = 9
+        Me.NoTeleponTxt.TabIndex = 5
         '
         'LabelControl5
         '
@@ -275,7 +275,7 @@ Partial Class DataSupplierForm
         Me.KotaTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.KotaTxt.Properties.Appearance.Options.UseBackColor = True
         Me.KotaTxt.Size = New System.Drawing.Size(154, 20)
-        Me.KotaTxt.TabIndex = 7
+        Me.KotaTxt.TabIndex = 4
         '
         'LabelControl4
         '
@@ -301,7 +301,7 @@ Partial Class DataSupplierForm
         Me.NamaSupplierTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.NamaSupplierTxt.Properties.Appearance.Options.UseBackColor = True
         Me.NamaSupplierTxt.Size = New System.Drawing.Size(205, 20)
-        Me.NamaSupplierTxt.TabIndex = 3
+        Me.NamaSupplierTxt.TabIndex = 2
         '
         'LabelControl2
         '
@@ -337,7 +337,7 @@ Partial Class DataSupplierForm
         Me.AlamatTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.AlamatTxt.Properties.Appearance.Options.UseBackColor = True
         Me.AlamatTxt.Size = New System.Drawing.Size(237, 63)
-        Me.AlamatTxt.TabIndex = 5
+        Me.AlamatTxt.TabIndex = 3
         '
         'BatalBtn
         '
@@ -345,7 +345,7 @@ Partial Class DataSupplierForm
         Me.BatalBtn.Location = New System.Drawing.Point(204, 12)
         Me.BatalBtn.Name = "BatalBtn"
         Me.BatalBtn.Size = New System.Drawing.Size(90, 32)
-        Me.BatalBtn.TabIndex = 36
+        Me.BatalBtn.TabIndex = 10
         Me.BatalBtn.Text = "Batal"
         '
         'HapusBtn
@@ -353,7 +353,7 @@ Partial Class DataSupplierForm
         Me.HapusBtn.Location = New System.Drawing.Point(492, 12)
         Me.HapusBtn.Name = "HapusBtn"
         Me.HapusBtn.Size = New System.Drawing.Size(90, 32)
-        Me.HapusBtn.TabIndex = 35
+        Me.HapusBtn.TabIndex = 13
         Me.HapusBtn.Text = "Hapus"
         '
         'EditBtn
@@ -361,7 +361,7 @@ Partial Class DataSupplierForm
         Me.EditBtn.Location = New System.Drawing.Point(396, 12)
         Me.EditBtn.Name = "EditBtn"
         Me.EditBtn.Size = New System.Drawing.Size(90, 32)
-        Me.EditBtn.TabIndex = 34
+        Me.EditBtn.TabIndex = 12
         Me.EditBtn.Text = "Edit"
         '
         'PrintBtn
@@ -370,7 +370,7 @@ Partial Class DataSupplierForm
         Me.PrintBtn.Location = New System.Drawing.Point(300, 12)
         Me.PrintBtn.Name = "PrintBtn"
         Me.PrintBtn.Size = New System.Drawing.Size(90, 32)
-        Me.PrintBtn.TabIndex = 33
+        Me.PrintBtn.TabIndex = 11
         Me.PrintBtn.Text = "Print"
         '
         'SimpanBtn
@@ -379,7 +379,7 @@ Partial Class DataSupplierForm
         Me.SimpanBtn.Location = New System.Drawing.Point(108, 12)
         Me.SimpanBtn.Name = "SimpanBtn"
         Me.SimpanBtn.Size = New System.Drawing.Size(90, 32)
-        Me.SimpanBtn.TabIndex = 32
+        Me.SimpanBtn.TabIndex = 9
         Me.SimpanBtn.Text = "Simpan"
         '
         'TambahBtn
@@ -387,7 +387,7 @@ Partial Class DataSupplierForm
         Me.TambahBtn.Location = New System.Drawing.Point(12, 12)
         Me.TambahBtn.Name = "TambahBtn"
         Me.TambahBtn.Size = New System.Drawing.Size(90, 32)
-        Me.TambahBtn.TabIndex = 31
+        Me.TambahBtn.TabIndex = 8
         Me.TambahBtn.Text = "Tambah"
         '
         'DataSupplierForm

@@ -66,4 +66,16 @@ Public Class DataUnitAccessory
             ViewState()
         End If
     End Sub
+
+    Private Sub idTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles idTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            NamaAccessoryTxt.Focus()
+        End If
+    End Sub
+
+    Private Sub NamaAccessoryTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles NamaAccessoryTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            keteranganTxt.Focus()
+        End If
+    End Sub
 End Class

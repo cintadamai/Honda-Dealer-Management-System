@@ -72,4 +72,40 @@ Public Class DataSupplierForm
             ViewState()
         End If
     End Sub
+
+    Private Sub idTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles idTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            NamaSupplierTxt.Focus()
+        End If
+    End Sub
+
+    Private Sub NamaSupplierTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles NamaSupplierTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            AlamatTxt.Focus()
+        End If
+    End Sub
+
+    Private Sub AlamatTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles AlamatTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            KotaTxt.Focus()
+        End If
+    End Sub
+
+    Private Sub KotaTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles KotaTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            NoTeleponTxt.Focus()
+        End If
+    End Sub
+
+    Private Sub NoTeleponTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles NoTeleponTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            NPWPTxt.Focus()
+        End If
+    End Sub
+
+    Private Sub NPWPTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles NPWPTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            NamaNPWPTxt.Focus()
+        End If
+    End Sub
 End Class

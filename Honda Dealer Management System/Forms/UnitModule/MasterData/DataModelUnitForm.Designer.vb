@@ -39,6 +39,7 @@ Partial Class DataModelUnitForm
         Me.GridControl2 = New DevExpress.XtraGrid.GridControl()
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.idAccTxt = New DevExpress.XtraEditors.GridLookUpEdit()
         Me.UAccXP = New DevExpress.Xpo.XPCollection(Me.components)
         Me.GridLookUpEdit1View = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -62,7 +63,6 @@ Partial Class DataModelUnitForm
         Me.TambahBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.UAccMoBS = New System.Windows.Forms.BindingSource(Me.components)
         Me.UAccMoXP = New DevExpress.Xpo.XPCollection(Me.components)
-        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.XtraScrollableControl1.SuspendLayout()
         CType(Me.PanelControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl2.SuspendLayout()
@@ -216,7 +216,7 @@ Partial Class DataModelUnitForm
         Me.HapusAccBtn.Location = New System.Drawing.Point(280, 9)
         Me.HapusAccBtn.Name = "HapusAccBtn"
         Me.HapusAccBtn.Size = New System.Drawing.Size(75, 23)
-        Me.HapusAccBtn.TabIndex = 11
+        Me.HapusAccBtn.TabIndex = 8
         Me.HapusAccBtn.Text = "Hapus"
         '
         'TambahAccBtn
@@ -224,7 +224,7 @@ Partial Class DataModelUnitForm
         Me.TambahAccBtn.Location = New System.Drawing.Point(199, 9)
         Me.TambahAccBtn.Name = "TambahAccBtn"
         Me.TambahAccBtn.Size = New System.Drawing.Size(75, 23)
-        Me.TambahAccBtn.TabIndex = 10
+        Me.TambahAccBtn.TabIndex = 7
         Me.TambahAccBtn.Text = "Tambah"
         '
         'PanelControl4
@@ -267,6 +267,15 @@ Partial Class DataModelUnitForm
         Me.GridColumn4.VisibleIndex = 1
         Me.GridColumn4.Width = 914
         '
+        'GridColumn1
+        '
+        Me.GridColumn1.Caption = "Id"
+        Me.GridColumn1.FieldName = "AccId.Id"
+        Me.GridColumn1.Name = "GridColumn1"
+        Me.GridColumn1.Visible = True
+        Me.GridColumn1.VisibleIndex = 0
+        Me.GridColumn1.Width = 154
+        '
         'idAccTxt
         '
         Me.idAccTxt.EditValue = "Accessory"
@@ -282,7 +291,7 @@ Partial Class DataModelUnitForm
         Me.idAccTxt.Properties.ValueMember = "This"
         Me.idAccTxt.Properties.View = Me.GridLookUpEdit1View
         Me.idAccTxt.Size = New System.Drawing.Size(186, 20)
-        Me.idAccTxt.TabIndex = 9
+        Me.idAccTxt.TabIndex = 5
         '
         'UAccXP
         '
@@ -338,7 +347,7 @@ Partial Class DataModelUnitForm
         Me.TransmisiTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.TransmisiTxt.Properties.Appearance.Options.UseBackColor = True
         Me.TransmisiTxt.Size = New System.Drawing.Size(83, 20)
-        Me.TransmisiTxt.TabIndex = 7
+        Me.TransmisiTxt.TabIndex = 4
         '
         'LabelControl4
         '
@@ -356,7 +365,7 @@ Partial Class DataModelUnitForm
         Me.TipeTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.TipeTxt.Properties.Appearance.Options.UseBackColor = True
         Me.TipeTxt.Size = New System.Drawing.Size(136, 20)
-        Me.TipeTxt.TabIndex = 5
+        Me.TipeTxt.TabIndex = 3
         '
         'LabelControl3
         '
@@ -374,7 +383,7 @@ Partial Class DataModelUnitForm
         Me.ModelTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.ModelTxt.Properties.Appearance.Options.UseBackColor = True
         Me.ModelTxt.Size = New System.Drawing.Size(167, 20)
-        Me.ModelTxt.TabIndex = 3
+        Me.ModelTxt.TabIndex = 2
         '
         'LabelControl2
         '
@@ -408,7 +417,7 @@ Partial Class DataModelUnitForm
         Me.BatalBtn.Location = New System.Drawing.Point(204, 12)
         Me.BatalBtn.Name = "BatalBtn"
         Me.BatalBtn.Size = New System.Drawing.Size(90, 32)
-        Me.BatalBtn.TabIndex = 42
+        Me.BatalBtn.TabIndex = 11
         Me.BatalBtn.Text = "Batal"
         '
         'HapusBtn
@@ -416,7 +425,7 @@ Partial Class DataModelUnitForm
         Me.HapusBtn.Location = New System.Drawing.Point(492, 12)
         Me.HapusBtn.Name = "HapusBtn"
         Me.HapusBtn.Size = New System.Drawing.Size(90, 32)
-        Me.HapusBtn.TabIndex = 41
+        Me.HapusBtn.TabIndex = 14
         Me.HapusBtn.Text = "Hapus"
         '
         'EditBtn
@@ -424,7 +433,7 @@ Partial Class DataModelUnitForm
         Me.EditBtn.Location = New System.Drawing.Point(396, 12)
         Me.EditBtn.Name = "EditBtn"
         Me.EditBtn.Size = New System.Drawing.Size(90, 32)
-        Me.EditBtn.TabIndex = 40
+        Me.EditBtn.TabIndex = 13
         Me.EditBtn.Text = "Edit"
         '
         'PrintBtn
@@ -433,7 +442,7 @@ Partial Class DataModelUnitForm
         Me.PrintBtn.Location = New System.Drawing.Point(300, 12)
         Me.PrintBtn.Name = "PrintBtn"
         Me.PrintBtn.Size = New System.Drawing.Size(90, 32)
-        Me.PrintBtn.TabIndex = 39
+        Me.PrintBtn.TabIndex = 12
         Me.PrintBtn.Text = "Print"
         '
         'SimpanBtn
@@ -442,7 +451,7 @@ Partial Class DataModelUnitForm
         Me.SimpanBtn.Location = New System.Drawing.Point(108, 12)
         Me.SimpanBtn.Name = "SimpanBtn"
         Me.SimpanBtn.Size = New System.Drawing.Size(90, 32)
-        Me.SimpanBtn.TabIndex = 38
+        Me.SimpanBtn.TabIndex = 10
         Me.SimpanBtn.Text = "Simpan"
         '
         'TambahBtn
@@ -450,7 +459,7 @@ Partial Class DataModelUnitForm
         Me.TambahBtn.Location = New System.Drawing.Point(12, 12)
         Me.TambahBtn.Name = "TambahBtn"
         Me.TambahBtn.Size = New System.Drawing.Size(90, 32)
-        Me.TambahBtn.TabIndex = 37
+        Me.TambahBtn.TabIndex = 9
         Me.TambahBtn.Text = "Tambah"
         '
         'UAccMoBS
@@ -461,15 +470,6 @@ Partial Class DataModelUnitForm
         '
         Me.UAccMoXP.ObjectType = GetType(Honda_Dealer_Management_System.HDMS.UnitAccessoryModelModel)
         Me.UAccMoXP.Session = Me.UOW
-        '
-        'GridColumn1
-        '
-        Me.GridColumn1.Caption = "Id"
-        Me.GridColumn1.FieldName = "AccId.Id"
-        Me.GridColumn1.Name = "GridColumn1"
-        Me.GridColumn1.Visible = True
-        Me.GridColumn1.VisibleIndex = 0
-        Me.GridColumn1.Width = 154
         '
         'DataModelUnitForm
         '

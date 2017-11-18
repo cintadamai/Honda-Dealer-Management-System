@@ -177,7 +177,7 @@ Partial Class DataUnitAccessory
         Me.NamaAccessoryTxt.Location = New System.Drawing.Point(118, 46)
         Me.NamaAccessoryTxt.Name = "NamaAccessoryTxt"
         Me.NamaAccessoryTxt.Size = New System.Drawing.Size(189, 20)
-        Me.NamaAccessoryTxt.TabIndex = 56
+        Me.NamaAccessoryTxt.TabIndex = 2
         '
         'LabelControl3
         '
@@ -212,7 +212,7 @@ Partial Class DataUnitAccessory
         Me.statusTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.[Default]
         Me.statusTxt.Properties.Caption = "isActive"
         Me.statusTxt.Size = New System.Drawing.Size(100, 19)
-        Me.statusTxt.TabIndex = 58
+        Me.statusTxt.TabIndex = 4
         '
         'keteranganTxt
         '
@@ -220,7 +220,7 @@ Partial Class DataUnitAccessory
         Me.keteranganTxt.Location = New System.Drawing.Point(118, 72)
         Me.keteranganTxt.Name = "keteranganTxt"
         Me.keteranganTxt.Size = New System.Drawing.Size(260, 56)
-        Me.keteranganTxt.TabIndex = 54
+        Me.keteranganTxt.TabIndex = 3
         '
         'idTxt
         '
@@ -228,7 +228,7 @@ Partial Class DataUnitAccessory
         Me.idTxt.Location = New System.Drawing.Point(118, 20)
         Me.idTxt.Name = "idTxt"
         Me.idTxt.Size = New System.Drawing.Size(100, 20)
-        Me.idTxt.TabIndex = 52
+        Me.idTxt.TabIndex = 1
         '
         'BatalBtn
         '
@@ -236,7 +236,7 @@ Partial Class DataUnitAccessory
         Me.BatalBtn.Location = New System.Drawing.Point(204, 12)
         Me.BatalBtn.Name = "BatalBtn"
         Me.BatalBtn.Size = New System.Drawing.Size(90, 32)
-        Me.BatalBtn.TabIndex = 48
+        Me.BatalBtn.TabIndex = 7
         Me.BatalBtn.Text = "Batal"
         '
         'HapusBtn
@@ -244,7 +244,7 @@ Partial Class DataUnitAccessory
         Me.HapusBtn.Location = New System.Drawing.Point(492, 12)
         Me.HapusBtn.Name = "HapusBtn"
         Me.HapusBtn.Size = New System.Drawing.Size(90, 32)
-        Me.HapusBtn.TabIndex = 47
+        Me.HapusBtn.TabIndex = 10
         Me.HapusBtn.Text = "Hapus"
         '
         'EditBtn
@@ -252,7 +252,7 @@ Partial Class DataUnitAccessory
         Me.EditBtn.Location = New System.Drawing.Point(396, 12)
         Me.EditBtn.Name = "EditBtn"
         Me.EditBtn.Size = New System.Drawing.Size(90, 32)
-        Me.EditBtn.TabIndex = 46
+        Me.EditBtn.TabIndex = 9
         Me.EditBtn.Text = "Edit"
         '
         'PrintBtn
@@ -261,7 +261,7 @@ Partial Class DataUnitAccessory
         Me.PrintBtn.Location = New System.Drawing.Point(300, 12)
         Me.PrintBtn.Name = "PrintBtn"
         Me.PrintBtn.Size = New System.Drawing.Size(90, 32)
-        Me.PrintBtn.TabIndex = 45
+        Me.PrintBtn.TabIndex = 8
         Me.PrintBtn.Text = "Print"
         '
         'SimpanBtn
@@ -270,7 +270,7 @@ Partial Class DataUnitAccessory
         Me.SimpanBtn.Location = New System.Drawing.Point(108, 12)
         Me.SimpanBtn.Name = "SimpanBtn"
         Me.SimpanBtn.Size = New System.Drawing.Size(90, 32)
-        Me.SimpanBtn.TabIndex = 44
+        Me.SimpanBtn.TabIndex = 6
         Me.SimpanBtn.Text = "Simpan"
         '
         'TambahBtn
@@ -278,7 +278,7 @@ Partial Class DataUnitAccessory
         Me.TambahBtn.Location = New System.Drawing.Point(12, 12)
         Me.TambahBtn.Name = "TambahBtn"
         Me.TambahBtn.Size = New System.Drawing.Size(90, 32)
-        Me.TambahBtn.TabIndex = 43
+        Me.TambahBtn.TabIndex = 5
         Me.TambahBtn.Text = "Tambah"
         '
         'DataUnitAccessory

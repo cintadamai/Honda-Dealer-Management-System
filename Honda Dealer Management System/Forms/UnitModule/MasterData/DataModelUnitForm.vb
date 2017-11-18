@@ -107,4 +107,44 @@ Public Class DataModelUnitForm
     Private Sub UnitModelBS_PositionChanged(sender As Object, e As EventArgs) Handles UnitModelBS.PositionChanged
         RefreshGrid()
     End Sub
+
+    Private Sub idTxt_EditValueChanged(sender As Object, e As EventArgs) Handles idTxt.EditValueChanged
+
+    End Sub
+
+    Private Sub idTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles idTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            ModelTxt.Focus()
+        End If
+    End Sub
+
+    Private Sub ModelTxt_EditValueChanged(sender As Object, e As EventArgs) Handles ModelTxt.EditValueChanged
+
+    End Sub
+
+    Private Sub ModelTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles ModelTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            TipeTxt.Focus()
+        End If
+    End Sub
+
+    Private Sub TipeTxt_EditValueChanged(sender As Object, e As EventArgs) Handles TipeTxt.EditValueChanged
+
+    End Sub
+
+    Private Sub TipeTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles TipeTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            TransmisiTxt.Focus()
+        End If
+    End Sub
+
+    Private Sub TransmisiTxt_EditValueChanged(sender As Object, e As EventArgs) Handles TransmisiTxt.EditValueChanged
+
+    End Sub
+
+    Private Sub TransmisiTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles TransmisiTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            idAccTxt.Focus()
+        End If
+    End Sub
 End Class

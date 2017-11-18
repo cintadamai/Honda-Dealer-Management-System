@@ -62,4 +62,10 @@ Public Class DataWarnaUnitForm
             ViewState()
         End If
     End Sub
+
+    Private Sub idTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles idTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            WarnaTxt.Focus()
+        End If
+    End Sub
 End Class

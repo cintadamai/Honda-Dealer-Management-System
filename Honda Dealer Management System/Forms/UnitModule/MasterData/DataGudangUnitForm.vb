@@ -63,4 +63,24 @@ Public Class DataGudangUnitForm
             ViewState()
         End If
     End Sub
+
+    Private Sub idTxt_EditValueChanged(sender As Object, e As EventArgs) Handles idTxt.EditValueChanged
+
+    End Sub
+
+    Private Sub idTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles idTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            NamaTxt.Focus()
+        End If
+    End Sub
+
+    Private Sub NamaTxt_EditValueChanged(sender As Object, e As EventArgs) Handles NamaTxt.EditValueChanged
+
+    End Sub
+
+    Private Sub NamaTxt_KeyDown(sender As Object, e As KeyEventArgs) Handles NamaTxt.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            AlamatTxt.Focus()
+        End If
+    End Sub
 End Class

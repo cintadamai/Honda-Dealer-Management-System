@@ -170,7 +170,7 @@ Partial Class DataGudangUnitForm
         Me.NamaTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.NamaTxt.Properties.Appearance.Options.UseBackColor = True
         Me.NamaTxt.Size = New System.Drawing.Size(220, 20)
-        Me.NamaTxt.TabIndex = 3
+        Me.NamaTxt.TabIndex = 2
         '
         'LabelControl2
         '
@@ -206,7 +206,7 @@ Partial Class DataGudangUnitForm
         Me.AlamatTxt.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose
         Me.AlamatTxt.Properties.Appearance.Options.UseBackColor = True
         Me.AlamatTxt.Size = New System.Drawing.Size(220, 82)
-        Me.AlamatTxt.TabIndex = 5
+        Me.AlamatTxt.TabIndex = 3
         '
         'BatalBtn
         '
@@ -214,7 +214,7 @@ Partial Class DataGudangUnitForm
         Me.BatalBtn.Location = New System.Drawing.Point(204, 12)
         Me.BatalBtn.Name = "BatalBtn"
         Me.BatalBtn.Size = New System.Drawing.Size(90, 32)
-        Me.BatalBtn.TabIndex = 42
+        Me.BatalBtn.TabIndex = 8
         Me.BatalBtn.Text = "Batal"
         '
         'HapusBtn
@@ -222,7 +222,7 @@ Partial Class DataGudangUnitForm
         Me.HapusBtn.Location = New System.Drawing.Point(492, 12)
         Me.HapusBtn.Name = "HapusBtn"
         Me.HapusBtn.Size = New System.Drawing.Size(90, 32)
-        Me.HapusBtn.TabIndex = 41
+        Me.HapusBtn.TabIndex = 11
         Me.HapusBtn.Text = "Hapus"
         '
         'EditBtn
@@ -230,7 +230,7 @@ Partial Class DataGudangUnitForm
         Me.EditBtn.Location = New System.Drawing.Point(396, 12)
         Me.EditBtn.Name = "EditBtn"
         Me.EditBtn.Size = New System.Drawing.Size(90, 32)
-        Me.EditBtn.TabIndex = 40
+        Me.EditBtn.TabIndex = 10
         Me.EditBtn.Text = "Edit"
         '
         'PrintBtn
@@ -239,7 +239,7 @@ Partial Class DataGudangUnitForm
         Me.PrintBtn.Location = New System.Drawing.Point(300, 12)
         Me.PrintBtn.Name = "PrintBtn"
         Me.PrintBtn.Size = New System.Drawing.Size(90, 32)
-        Me.PrintBtn.TabIndex = 39
+        Me.PrintBtn.TabIndex = 9
         Me.PrintBtn.Text = "Print"
         '
         'SimpanBtn
@@ -248,7 +248,7 @@ Partial Class DataGudangUnitForm
         Me.SimpanBtn.Location = New System.Drawing.Point(108, 12)
         Me.SimpanBtn.Name = "SimpanBtn"
         Me.SimpanBtn.Size = New System.Drawing.Size(90, 32)
-        Me.SimpanBtn.TabIndex = 38
+        Me.SimpanBtn.TabIndex = 7
         Me.SimpanBtn.Text = "Simpan"
         '
         'TambahBtn
@@ -256,7 +256,7 @@ Partial Class DataGudangUnitForm
         Me.TambahBtn.Location = New System.Drawing.Point(12, 12)
         Me.TambahBtn.Name = "TambahBtn"
         Me.TambahBtn.Size = New System.Drawing.Size(90, 32)
-        Me.TambahBtn.TabIndex = 37
+        Me.TambahBtn.TabIndex = 6
         Me.TambahBtn.Text = "Tambah"
         '
         'DataGudangUnitForm
