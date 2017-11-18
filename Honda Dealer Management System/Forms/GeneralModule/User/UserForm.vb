@@ -62,7 +62,7 @@ Public Class UserForm
         user.Role = (From r In RoleColl Where r.Id = Convert.ToInt64(role.EditValue) Select r).First
         user.Karyawan = (From k In KaryawanColl Where k.Id = Convert.ToInt64(Karyawan.EditValue)).First
         If user.Id = 0 Or user.Id = vbNull Then
-            user.Password = "123"
+            user.Password = hash.HashPassword("123")
         End If
         UserXpCollection.Add(user)
         UserBS.EndEdit()
